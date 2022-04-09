@@ -1,0 +1,369 @@
+/* IndividualsPage styling */
+
+/* The css styling used for the individuals page. */
+
+/* Add custom individuals page styling. */
+
+/* Slightly change the main-content-area of the individuals page to avoid the normal margin-top offset. */
+
+#IndividualsPage-main-content-area {
+	margin-top: 0rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Profile Tab */
+
+#profilePicture {
+	height: 5rem;
+	width: 5rem;
+	object-fit: cover;
+	border-radius: 50%;
+	margin: 1rem auto; /* Add a margin above and below the image and align it centrally. */
+}
+
+/* Add individuals table styling. */
+
+.individualsTable {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	width: 100%;
+	text-align: center;
+}
+
+.individualsTable td {
+	text-align: left;
+	line-height: 1.25rem;
+}
+
+.individualsTable tr:hover {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font: bold;
+}
+
+/* individuals table icon styling. */
+.individualsPageIcon {
+	width: 1.25rem;
+	height: auto;
+	filter: brightness(0) invert(1);
+}
+
+/* Add specific styling to the item (first) column. */
+
+.iconColumn {
+	width: 15%;
+	text-align: center;
+}
+
+.itemColumn {
+	width: 30%;
+	font: bold;
+}
+
+.infoColumn {
+	width: 35%;
+}
+
+.reporting-link:hover {
+	color: var(--accent-color-white, white);
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Football Tab */
+
+#footballHeader {
+	width: var(--pagewidth, 98%);
+	height: auto;
+	border-radius: 0.3125rem;
+	margin: 1rem auto; /* Add a margin above the football header that offsets it down the same as page-section. */
+}
+
+#proTeamLeagueLogo {
+	width: 80%;
+	height: auto;
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	margin-bottom: 1rem; /* Add space below the logo. */
+}
+
+/* Wrapper div around the pro team table. */
+
+.pro-team-table-div {
+	width: 100%;
+	overflow: auto;
+	background-color: var(--accent-color-white, white);
+	margin: auto auto 1rem auto; /* Add space to the text below. */
+}
+
+/* Add pro team table styling. */
+
+#pro-team-table {
+	width: 100%;
+	text-align: center;
+	font-size: 0.7rem;
+	line-height: 1.25rem;
+	border: none;
+	border-collapse: collapse;
+	background-color: var(--accent-color-white,white);
+}
+
+.premierLeague td, .premierLeague th {
+	color: var(--proTeam-text-color,black);
+}
+
+.championship td, .championship th {
+	color: var(--championship-text-color,black);
+}
+
+/* premierLeague Styling. */
+
+/* Add the border below the header rows. */
+.premierLeague>thead>:nth-child(1) {
+	border-bottom: 0.25rem solid var(--proTeam-accent-color, #02F785);
+}
+
+/* Select the 4th row to highlight the selected team. */
+/* .premierLeague>thead>:nth-child(4){ 
+	background-color: var(--proTeam-text-color, #37003d);
+	color: var(--accent-color-white,white);
+} */
+
+.premierLeague-highlight-row {
+	background-color: var(--proTeam-text-color, #37003d);
+	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
+}
+
+/* Ensure the header row is white and clear the normal header box-shadow. */
+.premierLeague th {
+	background-color: var(--accent-color-white,white);
+	box-shadow: none;
+}
+
+/* Add a highlighting row effect on hover. */
+.premierLeague tr:hover {
+	background-color: var(--proTeam-accent-color, #02F785);
+	color: var(--proTeam-text-color, #37003d);
+}
+
+/* championship Styling. */
+
+/* Add the border below the header rows. */
+.championship>thead>:nth-child(1) {
+	border-bottom: 0.25rem solid var(--championship-accent-color, #FA0F10);
+}
+
+/* Select the 4th row to highlight the selected team. */
+/* .championship>thead>:nth-child(4){ 
+	background-color: var(--championship-text-color, #2346A0);
+	color: white;
+} */
+
+.championship-highlight-row {
+	background-color: var(--championship-text-color, #2346A0);
+	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
+}
+
+/* Ensure the header row is white and clear the normal header box-shadow. */
+.championship th {
+	background-color: var(--accent-color-white,white);
+	box-shadow: none;
+}
+
+/* Add a highlighting row effect on hover. */
+.championship tr:hover {
+	background-color: var(--championship-accent-color, #FA0F10);
+	color: white;
+}
+
+
+/* Dorkinians Information */
+
+/* Add a header container section to hold the logo and title. */
+.dorkiniansHeaderContainer {
+	display: grid;
+	grid-column-gap: 0.625rem;
+	grid-template-columns: 3.75rem 70%;
+  	grid-template-rows: 3.75rem;
+  	grid-template-areas: "logo-section text-section";
+	margin-bottom: 1rem; /* Add space below the logo. */
+}
+
+.dorkiniansLogoContainer {
+	grid-area: logo-section;	
+}
+
+#dorkiniansLogo {
+	height: 3.75rem;
+	width: auto;
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+	/* filter: brightness(0) invert(1); */
+}
+
+.dorkiniansTextContainer {
+	grid-area: text-section;
+	display: flex;
+	align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.dorkiniansHeaderText {
+	margin: auto 0rem; /* Add an auto margin above and below the text to vertically center align the header. */
+}
+
+.dorkiniansTableHeaderText {
+	margin-bottom: 1rem;
+}
+
+/* AFC Table Formatting */
+
+/* Offset the table left to fit it on screen. */
+.AFCTable table {
+	width: 100%;
+	margin-bottom: 1rem; /* Add space below the table. */
+}
+
+/* Reset the colour of the hyperlinks in the AFCTable. */
+.AFCTable a {
+	color: #333;
+}
+
+/* Offset the England Logo back into place. */
+.AFCTable table tbody tr td table tbody tr td a img {
+	margin-left: 1.5rem;
+}
+
+/* AFC Results and Fixtures Formatting */
+
+/* Offset the table left to fit it on screen. */
+.AFCResultsAndFixtures table {
+	width: 100%;
+	margin-bottom: 1rem; /* Add space below the table. */
+}
+
+/* Offset the England Logo back into place. */
+.AFCResultsAndFixtures table tbody tr td table tbody tr td a img {
+	margin-left: 1.5rem;
+}
+
+/* Make the font size in the table smaller to fit the table in. */
+.AFCResultsAndFixtures table td {
+	font-size: 0.4rem;
+}
+
+/* Offset the button slightly down. */
+#toggleResultsAndFixtures {
+	margin-top: 1rem;
+}
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* History Tab */
+
+.quote-section {
+	margin-bottom: 2rem;
+}
+
+.quote-section-header {
+	margin-bottom: 1rem;
+}
+
+/* Ashcombe School */
+
+#ashcombeSchoolLogoContainer {
+	display: flex; /* Add flexbox to the container. */
+	flex-direction: row; /* Wrap along in a row direction. */
+	flex-wrap: nowrap; /* Don't allow the images to wrap down onto different lines. */
+	margin-bottom: 1rem; /* Add space below the logo. */
+	justify-content: flex-start;
+}
+
+#ashcombeLogo {
+	height: 3rem;
+	width: auto;
+	margin: 0rem 1rem 0rem 0.5rem; /* Add no margin above or below, but small margins either side to position the logo. */
+	align-self: center; /* Vertically center the image. */
+}
+
+#ashcombeLogoText {
+	height: 4rem;
+	width: auto;
+	margin: 0rem 0rem 0rem -0.5rem; /* Add no margin above or below, but a small negative margin to the left to position the logo. */
+	align-self: center; /* Vertically center the image. */
+	text-align: left;
+}
+
+/* Brockham Badgers */
+
+/* Add a header container section to hold the logo and title. */
+.brockhamBadgersHeaderContainer {
+	display: grid;
+	grid-column-gap: 0.625rem;
+	grid-template-columns: 3.75rem 70%;
+  	grid-template-rows: 3.75rem;
+  	grid-template-areas: "logo-section text-section";
+	margin-bottom: 1rem; /* Add space below the logo. */
+}
+
+.brockhamBadgersLogoContainer {
+	grid-area: logo-section;	
+}
+
+#brockhamBadgersLogo {
+	height: 3.75rem;
+	width: auto;
+	margin: 0rem auto; /* Add no margin above or below, but auto margin either side to center the logo. */
+}
+
+.brockhamBadgersTextContainer {
+	grid-area: text-section;
+	display: flex;
+	align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.brockhamBadgersHeaderText {
+	margin: auto 0rem; /* Add an auto margin above and below the text to vertically center align the header. */
+}
+
+#brockhamBadgersPicture {
+	height: 8rem; /* Define the height of the Brockham Badgers photo card. */
+	width: auto;
+	margin: auto;
+	margin-bottom: 2rem; /* Add space below the logo. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+}
+
+cite {
+	width: 100%;
+	margin: 0rem auto;
+	padding-left: 60%;
+	text-align: right;
+}
+
+/* Make the awards text larger to match the quote sizes above. */
+#BBsAwards {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Stats and Titan Tab */
+
+.first-col-individuals-stats {
+	font-size: 0.8rem;
+}
+
+.data-col-individuals-stats {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-weight: bold;
+	text-align: right;
+}
+
+#individuals-stats-section {
+	height: calc(max-content + 1rem);
+}
+
+#individuals-titan-table {
+	margin-bottom: 2rem; /* Add space below the table. */
+}

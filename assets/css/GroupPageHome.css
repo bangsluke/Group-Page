@@ -1,0 +1,228 @@
+/* GroupPageHome Styling Guide. */
+
+/* The css style file used to update the Group Page Home styling. */
+
+/* Specific Homepage Header styling is in HeaderComponent.css. */
+
+/* Lock all scrolling just on the homepgae. */
+html, body {
+	overflow: hidden;
+}
+
+/* Style the main content area on the home page. */
+
+.homepage-content-area {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	min-height: 20rem;
+	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
+	width: 100%; /* Note padding in all-content-area limiting width */
+	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
+	text-align: center; /* Center align both heading texts below. */
+	transition: transform 250ms; /* Add a transform transition to both sets of text. */
+	padding-top: 5rem; /* Add space from the top of the container (just below the header) to the top of the avatar image. */
+}
+
+/* Avatar class for the main image. */
+
+.avatar {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	padding: 0rem; /* Clear all padding on the image. */
+	margin: 0rem auto 1rem auto; /* Set up margins on the image. */
+	height: 8rem; /* Set the height of the image. */
+	width: auto; /* Set the width of the image to be automatically the same as the image height. */
+	border-radius: 100%; /* Add a 100% border radius to make it a circle. */
+	cursor: pointer; /* Change the cursor to become a pointer on hover over. */
+}
+
+/* Add a hover animation to the clickable image link. */
+.avatar:hover {
+	transform: translateY(-0.3125rem); /* Make the image move slightly up on hover. */
+}
+
+/* Style the visible text on the homepage. */
+
+/* The header container around "TITS GROUP PAGE". */
+.headercontainer {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	padding: 0.5rem 0.2rem; /* Add padding between the text and the surrounding box. */
+	margin: 0rem auto 1rem auto; /* Set up margins on the text container. */
+	width: 15rem; /* Set the width of the header box. */
+}
+
+/* Add a hover animation to the clickable link. */
+.content-text h1:hover {
+	transform: translateY(-0.3125rem); /* Make the text move slightly up on hover. */
+}
+
+/* The sub header container around "CLICK TO ENTER". */
+.subheadercontainer {
+	padding: 0rem; /* Clear all padding on the image. */
+	margin: 0rem auto 1rem auto; /* Set up margins on the text container. */
+	width: 12rem; /* Set the width of the sub header box. */
+}
+
+/* Add a hover animation to the clickable link. */
+.content-text h3:hover {
+	transform: translateY(-0.3125rem); /* Make the text move slightly up on hover. */
+}
+
+/* Quotes Ticker Styling - (https://codeconvey.com/horizontal-news-ticker-css/) */
+
+/* Ticker container */
+.ticker-wrap {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	position: fixed; /* Lock the position of the ticker container box. */
+	top: 0rem; /* Set the top position of the ticker container box from the top of the screen. */
+    left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
+    width: 100%; /* Set the width of the ticker container box. */
+    overflow: hidden; /* Hide scroll bar */
+    margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
+	height: 2rem; /* Control the height of the ticker. */
+	box-sizing: content-box; /* Add box-sizing control. */
+}
+
+/* Ticker animation CSS */
+.ticker-wrap .ticker {
+	--ticker-animation-duration: 10s; /* Set up the animation duration. */
+	display: inline-block; /* Update the display of the elements. */
+	height: 2rem; /* Define the height of the elements. */
+	white-space: nowrap; /* Remove all white space between text. */
+	padding-right: 100%; /* Intially offset the text off to the right out of the screen. */
+	box-sizing: content-box; /* Add box-sizing control. */
+	-webkit-animation-iteration-count: infinite; /* Loop the animation infinitely. */
+	animation-iteration-count: infinite; /* Loop the animation infinitely. */
+	-webkit-animation-timing-function: linear; /* Add a linear animation function. */
+	animation-timing-function: linear; /* Add a linear animation function. */
+	-webkit-animation-name: ticker; /* Link the div to the animation function. */
+	animation-name: ticker; /* Link the div to the animation function. */
+	-webkit-animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
+	animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
+}
+
+/* Ticker item styling */
+.ticker-wrap .ticker-item {
+	display: inline-block; /* Update the display of the elements. */
+	padding: 0.5rem 5rem; /* Add padding within the ticker wrap and between ticker items. */
+	color: white; /* Define the font colour of the ticker. */
+	font-style: italic;
+}
+
+/* Add animation CSS styles for horizontal ticker movement. */
+
+@-webkit-keyframes ticker {
+	0% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	  visibility: visible;
+	}
+	100% {
+	  -webkit-transform: translate3d(-100%, 0, 0);
+	  transform: translate3d(-100%, 0, 0);
+	}
+}
+
+@keyframes ticker {
+	0% {
+	  -webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	  visibility: visible;
+	}
+	100% {
+	  -webkit-transform: translate3d(-100%, 0, 0);
+	  transform: translate3d(-100%, 0, 0);
+	}
+}
+
+/* lock the position of the footer, just on the homepage. */
+footer {
+	position: fixed;
+	width: 100%;
+}
+
+/* Group Page Home media queries. */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+		/* background: blue; */
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 18s; /* Set up the animation duration. */
+		}
+	}
+	
+	@media only screen and (min-width: 480px) and (max-width: 768px) {
+		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		/* background: green; */
+		.avatar {
+			height: 8rem;
+		}
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 16s; /* Set up the animation duration. */
+		}
+	}
+	
+	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		/* Covers iPads and other tablets. */
+		/* background: orange; */
+		.avatar {
+			height: 8rem;
+		}
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 18s; /* Set up the animation duration. */
+		}
+	}
+	
+	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+		/* background: cyan; */
+		.avatar {
+			height: 8rem;
+		}
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 30s; /* Set up the animation duration. */
+		}
+	}
+	
+	@media only screen and (min-width: 1224px) {
+		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+		/* background: red; */
+		.avatar {
+			height: 8rem;
+		}
+		.content-text h1 {
+			padding: 15px 35px;
+		}
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 35s; /* Set up the animation duration. */
+		}
+	}
+	
+	@media only screen and (min-width: 1824px) {
+		/* Desktops and Laptops - For larger monitors and displays. */
+		/* background: yellow; */
+		.avatar {
+			height: 8rem;
+		}
+		.content-text h1 {
+			padding: 15px 35px;
+		}
+		.ticker-wrap .ticker { /* Ticker animation CSS */
+			--ticker-animation-duration: 40s; /* Set up the animation duration. */
+		}
+	}

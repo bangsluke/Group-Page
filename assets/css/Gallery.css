@@ -1,0 +1,132 @@
+/* Gallery styling */
+
+/* The css styling used for the Gallery page. */
+
+/* Add custom gallery page styling. */
+
+.peaModeToggleArea {
+    display: flex; /* Add flex to the container. */
+    flex-direction: row; 
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: center; /* Horizontally center the links inside the container. */
+    flex-wrap: nowrap; /* Ensure the items always stay in line with each other. */
+    align-self: center;
+}
+
+/* Toggle Button styling. https://www.w3schools.com/howto/howto_css_switch.asp */
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.75rem;
+    height: 2rem;
+    margin-right: 0.5rem; /* Add a slight margin to the right to add space between the switch and the text. */
+}
+  
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0rem;
+    height: 0rem;
+}
+  
+/* The slider */
+.slider {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    position: absolute;
+    cursor: pointer;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    position: absolute;
+    content: "";
+    height: 1.6rem;
+    width: 1.6rem;
+    left: 0.25rem;
+    bottom: 0.2rem;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
+}
+  
+input:focus + .slider {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(1.625rem);
+    -ms-transform: translateX(1.625rem);
+    transform: translateX(1.625rem);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 2rem;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#peaModeToggleHeader {
+    padding: 0rem;
+    margin: 0rem;
+    align-self: center;
+    margin-left: 0.5rem; /* Add a slight margin to the left to add space between the switch and the text. */
+    margin-bottom: 0.4rem; /* Add a slight margin to the bottom to push the text up to align with the switch. */
+}
+
+/* Album cover styling. */
+
+.album-covers-container {
+    height: max-content;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.gallery-cover-container {
+    height: var(--gallery-image-height);
+    width: var(--gallery-image-height);
+    margin: 0.3rem;
+    cursor: pointer;
+    position: relative; /* This parent needs to be relative to give it a position in the document flow, so that it's children items can be set as position: absolute. */
+}
+
+.gallery-cover-text {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 6.25rem; /* Controls the height of the text down the picture. */
+    padding: 0.5rem;
+    position: relative;
+}
+
+.gallery-cover-image {
+    height: var(--gallery-image-height);
+    width: var(--gallery-image-height);
+    object-fit:cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+    position: absolute; /* By making this position absolute (and having its parent as relative), we're defining this item to have position absolute in relation to its parent. */
+    top: 0rem;
+    left: 0rem;
+    z-index: -1;
+    /* Find a way to add a filter over the top of these gallery images to make the text easier to read. */
+}

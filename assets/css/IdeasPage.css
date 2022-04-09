@@ -1,0 +1,17 @@
+/* Ideas Styling Guide. */
+
+/* The css style file used to update the Ideas Page styling. */
+
+/* Text styling. */
+
+h2, h3, h4 {
+	color: white;
+}
+
+h3 {
+	padding-left: 0.6rem;
+}
+
+p {
+	padding-left: 1.2rem;
+}

@@ -1,0 +1,66 @@
+/* StatsPage styling */
+
+/* The css styling used for the stats page. */
+
+/* Add custom stats page styling. */
+
+/* Create a drop down selection container. */
+.stats-selection-area {
+	height: max-content;
+	width: 100%;
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius. */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between; /* Add horizontal space between each element. */
+	align-items: flex-start; /* Vertically start the flex box at the top of the container. */
+	align-content: flex-start; /* Vertically start the flex box at the top of the container. */
+}
+
+/* Style the drop down menus. */
+.dropdown-div {
+	text-align: center;
+	min-width: 40%;
+	width: 28rem;
+	flex: 0 1 auto;
+	align-self: flex-start; /* Vertically align the element within the container. */
+	margin-bottom: 1rem;
+}
+
+.stats-dropdown {
+	width: 80%;
+	margin: auto;
+	margin-top: 0.5rem; /* Add spacing betwen the p text and the dropdown box. */
+}
+
+/* Change font size of dropdown so that mobile doesn't zoom. (https://github.com/jquery/jquery-mobile/issues/2069). */
+.stats-dropdown select{
+	font-size: 2rem;
+}
+
+/* Syle the displayed stats information. */
+
+/* Add a min height to the stats holding div so it doesn't look weird on initial load when there's no data. */
+.stats-page-section {
+	min-height: 10rem;
+}
+
+#stats-title {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	text-align: center;
+	padding-bottom: 0.5rem;
+}
+
+#stats-source {
+	margin-top: 1rem; /* Add space from the last updated text to the source text. */
+}
+
+/* Reporting Link formatting */
+
+.reporting-link {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	text-align: center;
+}
+
+.reporting-link:hover {
+	color: var(--accent-color-white, white);
+}

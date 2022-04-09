@@ -1,0 +1,36 @@
+/* EventsPage styling */
+
+/* The css styling used for the events page. */
+
+/* Add custom events page styling. */
+
+/* Add calendar styling. */
+.shared-calendar-area {
+    height: max-content;
+    width: 100%;
+    margin: auto;
+	margin-top: 0.625rem;
+}
+
+.shared-calendar {
+	height: 25rem;
+	width: 100%;
+}
+
+/* Add calendar text styling. */
+.calendar-text-area {
+	height: max-content;
+    width: 95%;
+    margin: auto;
+	margin-top: 0.625rem;
+}
+
+a {
+	text-decoration: underline;
+}
+
+/* Add Peter Griffin button styling. */
+button, #peterAlertImage {
+	height: auto;
+	margin-bottom: 1.5rem !important;
+}

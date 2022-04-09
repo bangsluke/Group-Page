@@ -1,0 +1,219 @@
+/* SideMenu Component styling */
+
+/* The css styling used for the side menu component. */
+
+/* Side Menu CSS */
+
+/* SideMenu is the full side menu that appears on click of the burger menu icon. */
+
+.sideMenu {
+	background: var(--accent-color-shadow, black);
+	/* background-color: lightgreen; */
+	height: 100%;
+	width: 0rem; /* Width of sideMenu is modified dynamically in sideMenu.js. */
+	position: fixed;
+	z-index: 3;
+	top: 0rem;
+	right: -0.1rem; /* Slightly position the side-menu off to the side to avoid seing the border. */
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 3.75rem;
+	border-left: solid 0.125rem var(--accent-color-1);
+	display: inline;
+}
+
+/* The x close button. */
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0.7rem; /* Offset the button from the top of the page. */
+	right: 1.5rem;
+	font-size: 2.25rem;
+	margin-left: 3.125rem;
+	padding: 0.2rem;
+}
+
+/* sideMenu-Main-Container holds all of the smaller icon and text containers. */
+.sideMenu-Main-Container {
+	/* background-color: lightpink; */
+	padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: column;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+/* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
+.sideMenu-Container {
+    /* background-color: lightseagreen; */
+	padding: 0rem 1.25rem; /* Add padding to the left and right of the links to offset them from the far left and right. */
+    margin-bottom: 0.2rem; /* Add vertical spacing between each link. */
+	display: flex; /* Add flex to the top level container. */
+    flex-direction: row;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+/* sideMenu-Icon-Container holds just the sideMenu-Icon. */
+.sideMenu-Icon-Container {
+    /* background-color: lime; */
+	width: 3.75rem;
+    height: max-content;
+	height: 3rem; /* Controls the vertical height between each set of icons and links. */
+}
+
+.sideMenu-Icon {
+	height: 2.5rem;
+	filter: brightness(0) invert(1);
+	margin-top: -0.1rem;
+}
+
+.sideMenu-Text-Container {
+    /* background-color: maroon; */
+	width: 9.5rem;
+	height: 2rem;
+    text-align: left; /* Left align the text in the div. */
+    margin-left: 0rem; /* Add spacing between the icon and text. */
+}
+
+/* Style the text in the side menu to be Montserrat. */
+.sideMenu a {
+	color: var(--accent-color-white, white);
+	padding: 0.5rem 0.5rem 0.5rem 2rem;
+	text-decoration: none;
+	display: block;
+	transition: 0.3s;
+	margin-bottom: 1.25rem;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.sideMenu a i {
+	padding-right: 1rem;
+}
+
+.main-menu a:hover {
+	color: var(--accent-color-2);
+	background: var(--accent-color-white, white);
+}
+
+/* Style the theme buttons. */
+
+/* Add a styled container around each button. */
+.sideMenu-Button-Container {
+	padding: 0.1rem;
+	margin-left: 0.1rem;
+}
+
+.sideMenu-Button-Container-Border {
+	border: 0.1rem solid var(--accent-color-3);
+}
+
+/* Select all three buttons first. */
+.sideMenu-Container button {
+	width: max-content;
+	padding: 0.4rem 0.2rem;
+	margin: 0.2rem;
+	border: none;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 0.1rem;
+}
+
+#button-theme-1 {
+	background-color: #FF3CAC;
+	color: white;
+}
+
+#button-theme-2 {
+	background-color: #32303E;
+	color: #F7573A;
+}
+
+#button-theme-3 {
+	background-color: #2D3047;
+	color: white;
+	box-shadow: 0rem 0rem 0.125rem 0.125rem var(--accent-color-white, white), 0rem 0rem 0.06rem 0.06rem var(--accent-color-white, white); /* Add the glowing white effect. */
+}
+
+
+/* Side menu media queries. */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* background: blue; */
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: green; */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	/* background: orange; */
+	.sideMenu {
+		display: inline;
+		/* Show the side menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	/* background: red; */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	/* background: yellow; */
+	.sideMenu {
+		display: none;
+		/* Hide the side menu for larger screens. */
+	}
+	.burgericon {
+		display: none;
+		/* Hide the burger icon for larger screens. */
+	}
+}

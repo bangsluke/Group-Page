@@ -1,0 +1,257 @@
+<!-- Gallery.html -->
+<!-- A gallery of the groups most flattering images. -->
+
+<!DOCTYPE html>
+
+<!-- Declare the language of the Web Page. -->
+<html lang="en-uk">
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+	<title>Gallery | Group Page</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="The single most awesome and offensive friends group website ever created." />
+	<meta name="author" content="bangsluke" />
+	<meta name="copyright" content="bangsluke" />
+	<meta name="robots" content="nofollow" />
+
+	<!-- Link to fonts to be used on site. -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+		rel="stylesheet">
+
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<!-- Main CSS styling -->
+	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet">
+	<!-- Loader Dots styling -->
+	<link href="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
+	<!-- CSS site theme -->
+	<link href="/pages/Group-Page/assets/css/Themes/DarkGreyOrange.css" rel="stylesheet" type="text/css" media="all"
+		id="css-theme" />
+	<!-- Gallery styling -->
+	<link href="/pages/Group-Page/assets/css/Gallery.css" rel="stylesheet">
+
+	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+	<!-- The Header styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Header/HeaderComponent.css" rel="stylesheet" as="style">
+	<!-- The Side Menu styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
+	<!-- The Footer styling -->
+	<link rel="preload" href="/pages/Group-Page/assets/components/Footer/FooterComponent.css" rel="stylesheet" as="style">
+
+	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
+
+	<!-- Add the loader dots JS -->
+	<script src="/pages/Group-Page/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+
+	<!-- Header -->
+
+	<header>
+
+		<!-- Add the common website header using shadow DOMs. See /pages/Group-Page/assets/components/Header/header.js for the header code. -->
+		<header-component>
+			<span slot="pageMainHeader" id="pageMainHeader">Gallery</span>
+			<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+		</header-component>
+
+	</header>
+
+	<!-- Side Menu -->
+
+	<!-- Add the common website side menu using shadow DOMs. See /pages/Group-Page/assets/components/SideMenu/sideMenu.js for the side menu code. -->
+	<side-menu-component></side-menu-component>
+
+	<!-- Main Page Content -->
+
+	<!-- This is all the content between the header and footer. -->
+	<div class="main-content-area fadein">
+
+		<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+		<div class="loader" id="loader-div">
+			<div class="duo-loader">
+				<div class="duo duo1">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+				<div class="duo duo2">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Gallery Section -->
+		<section class="page-section">
+
+			<!-- Add a page header. -->
+			<h2 class="center">Tits Gallery.</h2>
+
+			<!-- Add div to hold the switch and text. -->
+			<div class="peaModeToggleArea center">
+
+				<!-- Rounded switch - https://www.w3schools.com/howto/howto_css_switch.asp -->
+				<label class="switch">
+					<input type="checkbox" id="peaModeToggle" onclick="togglePeaMode();">
+					<span class="slider round"></span>
+				</label>
+
+				<!-- Add a header text next to the switch. -->
+				<h3 id="peaModeToggleHeader">Pea Mode</h3>
+
+			</div>
+
+			<!-- Try to add spotify style images gallery. -->
+
+			<div class="album-covers-container fadein">
+
+				<!-- Big Nights Out Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Big Nights Out"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Big Nights Out</h3>
+						<img class="gallery-cover-image" id="bigNightsOutCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Big Nights Out Cover.jpg"
+							alt="Big Nights Out Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Croatia Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Croatia"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Croatia</h3>
+						<img class="gallery-cover-image" id="croatiaCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Croatia Cover.jpg"
+							alt="Croatia Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Edinburgh Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Edinburgh"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Edinburgh</h3>
+						<img class="gallery-cover-image" id="edinburghCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Edinburgh Cover.jpg"
+							alt="Edinburgh Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Football Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Football"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Football</h3>
+						<img class="gallery-cover-image" id="footballCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Football Cover.jpg"
+							alt="Football Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- General Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="General"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">General</h3>
+						<img class="gallery-cover-image" id="generalCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/General Cover.jpg"
+							alt="General Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Glastonbury Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Glastonbury"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Glasto</h3>
+						<img class="gallery-cover-image" id="glastonburyCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Glastonbury Cover.jpg"
+							alt="Glastonbury Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Lockdown Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Lockdown"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Lockdown</h3>
+						<img class="gallery-cover-image" id="lockdownCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Lockdown Cover.jpg"
+							alt="Lockdown Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Pagham Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Pagham"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Pagham</h3>
+						<img class="gallery-cover-image" id="paghamCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Pagham Cover.jpg"
+							alt="Pagham Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Portugal Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Portugal"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Portugal</h3>
+						<img class="gallery-cover-image" id="portugalCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Portugal Cover.jpg"
+							alt="Portugal Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+				<!-- Skiing Album Cover -->
+				<div class="gallery-cover-container fadein">
+					<a href="/pages/Group-Page/Sub-Pages/GallerySubpage.html" id="Skiing"
+						onclick="passClickedAlbumName(this);">
+						<h3 class="gallery-cover-text">Skiing</h3>
+						<img class="gallery-cover-image" id="skiingCover"
+							src="/pages/Group-Page/assets/images/GalleryImages/Covers/Skiing Cover.jpg"
+							alt="Skiing Album Cover" width="130" height="130">
+					</a>
+				</div>
+
+			</div>
+
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+
+	<footer>
+
+		<!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
+		<footer-component></footer-component>
+
+	</footer>
+
+	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+	
+	<!-- Add the common header JS -->
+	<script src="/pages/Group-Page/assets/components/Header/header.js" type="text/javascript" defer></script>
+	<!-- Add the common sideMenu JS -->
+	<script src="/pages/Group-Page/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+	<!-- Add the common footer JS -->
+	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<!-- Get Gallery JS -->
+	<script src="/pages/Group-Page/assets/js/jGallery.js"></script>
+	<!-- Add the Main Functions JS -->
+	<script src="/pages/Group-Page/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+
+</body>
+
+</html>

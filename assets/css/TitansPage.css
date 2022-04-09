@@ -1,0 +1,40 @@
+/* TitansPage styling */
+
+/* The css styling used for the titans page. */
+
+/* Add custom titans page styling. */
+
+#data-source {
+	margin-top: 1rem; /* Add space from the last updated text to the source text. */
+}
+
+/* Add an area for the titan summary text. */
+
+.titan-summary-statement-area {
+	margin: 0.5rem auto 1rem auto;
+}
+
+/* Make all p text within the .titan-summary-statement-area inline to keep the flow natural. */
+.titan-summary-statement-area p {
+	display: inline;
+}
+
+/* Add a class to hold the buttons at the bottom of the Titans page. */
+
+.additional-titan-detail-area {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+	align-items: center;
+}
+
+/* Add a class for the Titan Buttons. */
+
+.titanButtons {
+	width: 48%;
+	height: 3rem;
+	align-self: center;
+}

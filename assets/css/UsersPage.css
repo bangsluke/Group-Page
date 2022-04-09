@@ -1,0 +1,104 @@
+/* UsersPage styling */
+
+/* The css styling used for the users page. */
+
+/* Add custom users page styling. */
+
+/* The main container for each user, holding the image, name and aliases text.  */
+.glass-card {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	width: var(--pagewidth, 90%);
+	height: max-content;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Space the content inside the glass card. */
+	margin: 1rem 0rem 1rem 0rem; /* Add vertical spacing between the glass cards */	
+	backdrop-filter: blur( 0.75rem );
+	-webkit-backdrop-filter: blur( 0.75rem );
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+}
+
+/* A secondary smaller flex container that sits in the glass-card and allows the users image/text order to be reversed. */
+.user-container {
+	margin: 0rem; /* Remove all margin. */
+	padding: 0rem; /* Remove all padding. */
+	width: 100%;
+	height: var(--user-card-height, 8rem); /* Make the container larger to increase the size of each user card to hold all content. */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-evenly; /* Centers the content centrally. */
+}
+
+/* Reverse the flex. */
+.user-container.reverse {
+	flex-direction: row-reverse;
+}
+
+/* User Images Styling */
+
+/* The div holding the users image. */
+.user-image-container {
+	justify-content: center;
+	align-content: center;
+	height: var(--user-card-height, 8rem);
+	position:relative; /* Set as position relative to the IMG will move relative to this container */
+}
+
+/* Add a helper span class. (https://stackoverflow.com/a/7310398/14290169). */
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* The user image. */
+.user-image {
+	height: var(--user-image-height);
+	width: var(--user-image-height);
+	object-fit: cover; /* This crops the picture to the defined height and width. https://reactgo.com/css-crop-images/. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+	vertical-align: middle;
+}
+
+/* User Texts Styling */
+
+/* The div holding all text about the user. */
+.user-text-container {
+	height: 100%;
+	width: 60%;
+}
+
+/* The div holding the users name. */
+.user-name {
+	height: var(--user-name-height);
+	margin-bottom: 0.3rem;
+}
+
+h3 {
+	margin-bottom: 0.2rem; /* Reduce the margin below the h3 (Aliases text) for the Users page only. */
+}
+
+.alias-container {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+	height: calc(var(--user-card-height) - var(--user-name-height) - 0.3rem);
+	overflow-x: none;
+	text-overflow: clip; /* Stops the text overrunning the size of the box */
+	padding: 0.1rem 0.5rem 0.5rem;
+}
+
+ul {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	list-style-type: circle;
+	list-style: circle;
+	list-style-position: inside;
+}
+
+ul > li {
+	font-size: 0.6rem;
+	line-height: 0.9rem;
+}
+
+li:hover {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
+}

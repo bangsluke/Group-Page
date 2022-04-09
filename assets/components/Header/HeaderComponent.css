@@ -1,0 +1,320 @@
+/* HeaderComponent styling */
+
+/* The css styling used for the header component. */
+
+/* Header styling. */
+
+/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/header.css" */
+.header-area {
+    /* background-color: pink; */
+    left: 0rem;
+    top: 0rem;
+    height: 2.8rem; /* Fallback if needed. */
+    height: var(--headerHeight, 2.8rem); /* Get the header height variable from GroupPageMain.css. */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.125rem;
+    z-index: 2;
+    position: fixed;
+    border-bottom: solid 0.125rem var(--accent-color-white, white);
+}
+
+/* For homepage only. */
+
+.header-area.homepage {
+    height: 2.8rem; /* Fallback if needed. */
+    height: var(--headerHeight, 2.8rem); /* Define the header height using the variable. */
+    padding: 1rem;
+    border-bottom: none;
+}
+
+/* For subpages. */
+
+.header-area.subpage {
+    background-color: var(--accent-color-shadow, darkgrey); /* Note that CSS custom properties can get into the Shadow DOM from the outside (https://css-tricks.com/encapsulating-style-and-structure-with-shadow-dom/#css-custom-properties). */
+}
+
+/* Avatar classes for the main image. */
+.avatar-container {
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    width: 2.7rem; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+}
+
+.avatar {
+    background-color: rgba(255, 255, 255, 0.075);
+    border: solid 0.06rem var(--accent-color-white, white);
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the avatar just smaller than the header height. */
+    width: auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+/* Main subpage header text class. */
+
+.heading-container {
+    height: max-content;
+    margin: auto;
+}
+
+.subpage-header-text {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    height: max-content;
+    margin: auto;
+    color: var(--accent-color-white, white);
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+
+/* Top Menu styling. */
+
+/* The Top Menu is the larger menu that appears along the top of the screen on bigger screens. */
+
+/* Originally from "/pages/Group-Page/assets/components/Header/CSS Files/TopMenu.css" */
+
+.topMenu { /* The top menu bar which conatins all further containers. */
+    background: var(--accent-color-shadow, black);
+    /* background-color: green; */
+    border-left: solid 0.125rem var(--accent-color-1);
+    position: fixed;
+    /* height: 5rem; */
+    height: 2.8rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight, 2.8rem) + 0.3rem); /* Get the header height variable from GroupPageMain.css. Add a small value to account for other paddding. */
+    width: 90%;
+    top: 0rem;
+    left: 10%;
+    z-index: 1;
+    transition: 0.5s;
+    /* padding-top: 1.25rem; */
+}
+
+.topMenu-Container {
+    /* background-color: lightblue; */
+    width: 100%;
+    height: inherit;
+    padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
+    display: flex; /* Add flex to the top level container. */
+    flex-direction: row;
+    align-items: center; /* Vertically center the div's inside the container. */
+    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+}
+
+.topMenu-Icon-Container {
+    /* background-color: lightcoral; */
+    width: max-content;
+    height: auto;
+}
+
+/* Style the text in the top header to be Montserrat. */
+.topMenu-Text-Container a {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.topMenu-Icon {
+	height: 2.5rem;
+    width: 2.5rem;
+	filter: brightness(0) invert(1);
+	margin-top: 0.25rem;
+}
+
+.topMenu-Text-Container {
+    /* background-color: lightgreen; */
+    width: max-content;
+    height: max-content; /* Set the div th be the height of the text. */
+    text-align: center; /* Center the text in the div. */
+    margin-left: 0.25rem; /* Add spacing between the icon and text. */
+    margin-right: 1rem; /* Add spacing between each link. */
+}
+
+.topMenu a {
+    color: var(--accent-color-white, white);
+    text-decoration: none;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.topMenu a:hover {
+    color: var(--accent-color-2);
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------- */
+
+/* The burger icon is considered part of the header. */
+
+.burgericon-container {
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
+    width: 2.7rem; /* Fallback if needed. */
+    width: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
+    padding-right: 0.3rem;
+}
+
+.burgericon {
+    color: var(--accent-color-white, white);
+    filter: invert(1) hue-rotate(180deg);
+    top: 0rem;
+    left: 0rem;
+    height: 2.7rem; /* Fallback if needed. */
+    height: calc(var(--headerHeight) - 0.125rem); /* Make the burger icon just smaller than the header height. */
+    width: auto;
+    display: block;
+    font-size: 2.5rem;
+    cursor: pointer;
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.burgericon:hover {
+    color: var(--accent-color-2);
+}
+
+
+
+
+
+
+
+
+
+/* Header area, Top Menu and Burger Icon media queries. */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 320px) {
+    /* Stop the top menu appearing just in Chrome tools. */
+    .topMenu {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+    /* background: blue; */
+    .topMenu {
+        display: none;
+        /* Hide the top menu for smaller screens. */
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: green; */
+    .avatar {
+        height: 3.2rem; /* Fallback if needed. */
+        height: calc(var(--headerHeight) - 0.8rem); /* Make the avatar just smaller than the header height. */
+        margin: 0.3rem 0.7rem;
+    }
+    .subpage-header-text {
+        font-size: 30px;
+    }
+    .burgericon {
+        height: 3.2rem; /* Fallback if needed. */
+        height: calc(var(--headerHeight) - 0.8rem); /* Make the burger icon just smaller than the header height. */
+        margin-top: 0.4rem;
+    }
+    .topMenu {
+        display: none;
+        /* Hide the top menu for smaller screens. */
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Covers iPads and other tablets. */
+    /* background: orange; */
+    .avatar {
+        height: 70px;
+        margin: 0.3rem 0.7rem;
+    }
+    .subpage-header-text {
+        font-size: 35px;
+    }
+    .topMenu {
+        display: none;
+        /* Hide the top menu for smaller screens. */
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+    .avatar {
+        height: 70px;
+        margin: 0.3rem 0.7rem;
+    }
+    .subpage-header-text {
+        font-size: 35px;
+    }
+    .topMenu {
+        display: inline;
+        /* Show the top menu for larger screens. */
+    }
+}
+
+@media only screen and (min-width: 1224px) {
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+    /* background: red; */
+    .avatar {
+        height: 70px;
+        margin: 0.3rem 0.7rem;
+    }
+    .subpage-header-text {
+        font-size: 40px;
+    }
+    .topMenu {
+        display: inline;
+        /* Show the top menu for larger screens. */
+    }
+}
+
+@media only screen and (min-width: 1824px) {
+    /* Desktops and Laptops - For larger monitors and displays. */
+    /* background: yellow; */
+    .avatar {
+        height: 70px;
+        margin: 0.3rem 0.7rem;
+    }
+    .subpage-header-text {
+        font-size: 40px;
+    }
+    .topMenu {
+        display: inline;
+        /* Show the top menu for larger screens. */
+    }
+}

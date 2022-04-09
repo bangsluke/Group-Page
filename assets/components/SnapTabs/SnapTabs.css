@@ -1,0 +1,341 @@
+/* Web tabs styling */
+
+/* The css styling used for SnapTabs. */
+
+/* https://web.dev/building-a-tabs-component/. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+    --ChromeSafari-bottom-bar-height: 5.2rem; /* Add an estimated height of the bar along the bottom of the Chrome/Safari mobile browser that limits the screen size. */
+    --indicator-size: 0.125rem; /* Used in the snap-indicator class later on. */
+    --vertical-space: 1rem; /* Controls the vertical space around the anchor text and for the article text. */
+    --horizontal-space: 1.2rem; /* Controls the horizontal space around the anchor text and for the article text. */
+}
+
+/* Added Luke Styling. */
+
+.snap-tabs-container {
+    /* background-color: darkgreen; */
+    top: 0rem;
+    left: 0rem;
+    padding-top: 0rem;
+    margin-top: var(--headerHeight, 2.8rem);
+    width: 100%;
+    
+    /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    /* min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    /* height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    /* min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+    height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Calculate the height of the snap-tabs-container as the viewport height, minus the fixed header height and minus the Chrome/Safari browser bar height (estimated). */
+    min-height: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Same calculation as above. */
+    
+    /* Below is copied from body above. */
+    box-sizing: border-box;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    place-content: center;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Original (but modified) Snap Tabs CSS Styling. */
+
+/* Specific snap-tabs styling with elements not used elsewhere on site. */
+
+snap-tabs {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* snap-tabs {
+    --hue: 328deg;
+    --accent: var(--hue) 100% 54%;
+    --indicator-size: 2px;
+    --space-1: .5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+} */
+
+snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+}
+
+/* snap-tabs>section {
+    block-size: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+} */
+
+/* Add a section with class .scroll-snap-x. */
+.scroll-snap-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+
+/* .scroll-snap-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: auto hidden;
+    overscroll-behavior-x: contain;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+} */
+
+@media (prefers-reduced-motion:no-preference) {
+    .scroll-snap-x {
+        scroll-behavior: smooth;
+    }
+}
+
+/* @media (prefers-reduced-motion:no-preference) {
+    .scroll-snap-x {
+        scroll-behavior: smooth;
+    }
+} */
+
+@media (hover:none) {
+    .scroll-snap-x {
+        scrollbar-width: none;
+    }
+    .scroll-snap-x::-webkit-scrollbar {
+        width: 0rem;
+        height: 0rem;
+    }
+}
+
+/* @media (hover:none) {
+    .scroll-snap-x {
+        scrollbar-width: none;
+    }
+    .scroll-snap-x::-webkit-scrollbar {
+        width: 0rem;
+        height: 0rem;
+    }
+} */
+
+snap-tabs>section>article {
+    /* background-color: blue; */
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    /* padding: var(--vertical-space) var(--horizontal-space); */
+    padding: 0rem 0rem;
+}
+
+/* snap-tabs>section>article {
+    scroll-snap-align: start;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    padding: var(--space-2) var(--space-3);
+} */
+
+article {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    box-sizing: border-box;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+/* article {
+    box-sizing: border-box;
+    font-family: Blokk;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #333
+} */
+
+/* Control the snap-tabs-header section. Currently positioned at the bottom of the page. */
+snap-tabs>snap-tabs-header {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    position: fixed; /* Fix the position of the snap-tabs-header to stop weird movement behaviour. */
+    top: calc(100vh - var(--headerHeight, 2.8rem) - var(--ChromeSafari-bottom-bar-height, 5.6rem)); /* Position the snap tabs header to sit just above the Chrome and Safari browser bottom section. */
+    left: 0rem; /* Force the header section to the left. */
+    width: 100vw; /* Set the width to be the full viewport width. */
+    flex-shrink: 0;
+    min-block-size: -webkit-fit-content;
+    min-block-size: -moz-fit-content;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+/* snap-tabs>header {
+    --text-color: hsl(var(--hue) 5% 40%);
+    --text-active-color: hsl(var(--hue) 20% 10%);
+    flex-shrink: 0;
+    min-block-size: -webkit-fit-content;
+    min-block-size: -moz-fit-content;
+    min-block-size: fit-content;
+    display: flex;
+    flex-direction: column;
+} */
+
+
+snap-tabs>snap-tabs-header>nav {
+    display: flex;
+}
+
+/* snap-tabs>header>nav {
+    display: flex;
+} */
+
+snap-tabs>snap-tabs-header a {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 1rem; /* Make the snap-tabs-header hyperlinks larger than normal hyperlinks. */
+    text-decoration: none;
+    padding: var(--vertical-space) var(--horizontal-space);
+}
+
+/* snap-tabs>header a {
+    scroll-snap-align: start;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: .8rem;
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;
+    padding: var(--space-2) var(--space-3);
+} */
+
+/* snap-tabs>header a>svg {
+    inline-size: 1.5rem;
+    pointer-events: none;
+} */
+
+snap-tabs>snap-tabs-header a:hover {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    font-size: inherit;
+}
+
+/* snap-tabs>header a:hover {
+    background: hsl(var(--accent)/5%);
+} */
+
+snap-tabs>snap-tabs-header a:focus {
+    outline-offset: -.5ch;
+}
+
+/* snap-tabs>header a:focus {
+    outline-offset: -.5ch;
+} */
+
+snap-tabs>snap-tabs-header>.snap-indicator {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    inline-size: 0rem;
+    block-size: var(--indicator-size);
+    border-radius: var(--indicator-size);
+}
+
+/* snap-tabs>header>.snap-indicator {
+    inline-size: 0;
+    block-size: var(--indicator-size);
+    border-radius: var(--indicator-size);
+    background: hsl(var(--accent));
+} */
+
+
+@media (prefers-reduced-motion:reduce) {
+    snap-tabs .snap-indicator {
+        visibility: hidden;
+    }
+}
+
+/* @media (prefers-reduced-motion:reduce) {
+    snap-tabs>header a {
+        -webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
+        border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
+        transition: color .7s ease, border-color .5s ease;
+    }
+    snap-tabs>header a:active, snap-tabs>header a:target, snap-tabs>header a[active] {
+        color: var(--text-active-color);
+        border-block-end-color: hsl(var(--accent));
+    }
+    snap-tabs .snap-indicator {
+        visibility: hidden
+    }
+} */
+
+/* Method C from http://nicolasgallagher.com/jump-links-and-viewport-positioning/demo/ */
+.nav-targets {
+    border-top: 3.125rem solid transparent;
+    margin-top: -3.125rem;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+}
+
+snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+    outline-offset: -0.3rem;
+}
+
+/* snap-tabs a, snap-tabs article, snap-tabs header, snap-tabs nav, snap-tabs section {
+    outline-color: hsl(var(--accent));
+    outline-offset: -5px;
+} */
+
+h2 {
+    /* font-size: 1.5rem; */
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1;
+}
+
+/* h2 {
+    font-size: 2.5rem;
+    -webkit-margin-after: .5rem;
+    margin-block-end: .5rem;
+    line-height: 1
+} */
+
+h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+}
+
+/* h2:first-of-type {
+    -webkit-margin-before: 0rem;
+    margin-block-start: 0rem;
+} */
+
+p {
+    max-inline-size: 35ch;
+    margin-block: .5ch;
+}
+
+/* p {
+    max-inline-size: 35ch;
+    margin-block: .5ch
+} */
+
+p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem;
+}
+
+/* p+p {
+    -webkit-margin-before: 1rem;
+    margin-block-start: 1rem
+} */

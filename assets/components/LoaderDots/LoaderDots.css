@@ -1,0 +1,231 @@
+/* Loader Dots styling */
+
+/* The css styling used for the loader dots. */
+
+/* https://codepen.io/desandro/pen/HhdrA. */
+
+/* The top level container div. */
+.loader {
+    /* background-color: blue; */
+    background-color: rgba(255, 255, 255, 0.20);
+    position: fixed; /* Fix the position of the container div. */
+    z-index: 6; /* Bring the container div to the very front. */
+    height: 100vh; /* Make the container div the height of the viewport. */
+    width: 100vw; /* Make the container div the width of the viewport. */
+    top: 0rem; /* Position the container div at the top of the page. */
+    left: 0rem; /* Position the container div at the left of the page. */
+    display: flex; /* Apply Flex to the parent div. */
+    justify-content: center; /* Horizontally center the dots in the container div. */
+    justify-content: center; /* Vertically center the dots in the container div. */
+    align-items: center; /* Vertically center the dots in the container div. */
+}
+
+/* The top level container div for the smaller loading dots. Define the sizes by using the id. */
+.loader-small {
+    /* background-color: pink; */
+    /*position: fixed; /* Fix the position of the container div. */
+    z-index: 6; /* Bring the container div to the very front. */
+    top: 0rem; /* Position the container div at the top of the page. */
+    left: 0rem; /* Position the container div at the left of the page. */
+    /*height: Controlled by ids, see below. */
+    width: 100%; /* Update the width of the smaller loaders to fill the width of their container. */
+    display: flex; /* Apply Flex to the parent div. */
+    justify-content: center; /* Horizontally center the dots in the container div. */
+    justify-content: center; /* Vertically center the dots in the container div. */
+    align-items: center; /* Vertically center the dots in the container div. */
+}
+
+
+#football-loader {
+    height: 10rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#individuals-stats-table-loader {
+    height: 21rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#individuals-titans-table-loader {
+    height: 10rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#stats-loader {
+    height: 12rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+#titan-loader {
+    height: 21rem; /* Update the height of the smaller loaders to be bespoke. */
+}
+
+/* Create a helper holder div above the duo dots that allows me to center the dots in the middle of the screen. */
+.duo-loader {
+    /* background-color: red; */
+    height: 1.3rem;
+    width: 5.05rem;
+    position: absolute; /* Set the position to be absolute to allow me to set the children to also be absolute. */
+}
+
+.duo {
+    height: 1.25rem;
+    width: 3.125rem;
+    background: hsla(0, 0%, 0%, 0.0);
+    position: absolute;
+}
+
+.duo, .dot {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.duo1 {
+    left: 0;
+}
+
+.duo2 {
+    left: 1.875rem;
+}
+
+.dot {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 10px;
+    background: white;
+    position: absolute;
+}
+
+.dot-a {
+    left: 0rem;
+}
+
+.dot-b {
+    right: 0rem;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg)
+    }
+    50% {
+        transform: rotate(180deg)
+    }
+    100% {
+        transform: rotate(180deg)
+    }
+}
+
+@keyframes onOff {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.duo1 {
+    animation-name: spin;
+}
+
+.duo2 {
+    animation-name: spin;
+    animation-direction: reverse;
+}
+
+.duo2 .dot-b {
+    animation-name: onOff;
+}
+
+.duo1 .dot-a {
+    opacity: 0;
+    animation-name: onOff;
+    animation-direction: reverse;
+}
+
+
+
+
+
+/* .loader {
+    position: relative;
+    width: 80px;
+    margin: 100px auto;
+  } */
+  
+  /* .duo {
+    height: 20px;
+    width: 50px;
+    background: hsla(0, 0%, 0%, 0.0);
+    position: absolute;
+    
+  }
+  
+  .duo, .dot {
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  .duo1 {
+    left: 0;
+  }
+  
+  .duo2 {
+    left: 30px
+  }
+  
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background: #333;
+    position: absolute;
+  }
+  
+  .dot-a {
+    left: 0px;  
+  }
+  
+  .dot-b {
+    right: 0px;
+  }
+  
+  
+  @keyframes spin {
+      0% { transform: rotate(0deg) }
+     50% { transform: rotate(180deg) }
+    100% { transform: rotate(180deg) }
+  }
+  
+  @keyframes onOff {
+      0% { opacity: 0; }
+     49% { opacity: 0; }
+     50% { opacity: 1; }
+    100% { opacity: 1; }
+  }
+  
+  .duo1 {
+    animation-name: spin;
+  }
+  
+  .duo2 {
+    animation-name: spin;
+    animation-direction: reverse;
+  }
+  
+  .duo2 .dot-b {
+    animation-name: onOff;
+  }
+  
+  .duo1 .dot-a {
+    opacity: 0;
+    animation-name: onOff;
+    animation-direction: reverse;
+  }
+   */

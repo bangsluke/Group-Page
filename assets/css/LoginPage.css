@@ -1,0 +1,79 @@
+/* LoginPage styling */
+
+/* The css styling used for the login page. */
+
+/* Add custom login page styling. */
+
+.loginContainer {
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 18.75rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 0.625rem;
+}
+
+h1 {
+    color: var(--accent-color-white);
+    padding: 1.25rem;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.usertext-container {
+    width: 100%;
+    height: 1.875rem;
+}
+
+.passwordtext-container {
+    width: 100%;
+    height: 1.875rem;
+}
+
+.right-align {
+    text-align: right;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.userdropdown-container {
+    width: 100%;
+    height: 1.875rem;
+}
+
+.userdropdown {
+    padding: 0.3125rem;
+}
+
+.passwordbox-container {
+    width: 100%;
+    height: 1.875rem;
+}
+
+#pwd {
+    width: 90%;
+    height: 1.25rem;
+    left: 0.3125rem;
+    top: 0rem;
+    margin: auto;
+    display: block;
+}
+
+.loginbuttondiv {
+    padding: 2.5rem;
+}
+
+.loginbutton {
+    background-color: var(--accent-color-1);
+    font-size: 0.9rem;
+    color: var(--accent-color-white);
+    height: 2.5rem;
+    width: 3.75rem;
+    border-radius: 0.3125rem;
+}

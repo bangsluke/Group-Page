@@ -1,0 +1,672 @@
+/* GroupPage Styling Guide. */
+
+/* The main css style file used for the Group Page styling. */
+
+/* Initial basis started from https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html */
+
+/* CSS Best Coding Practice
+	https://github.com/bangsluke/bangsluke.github.io/blob/main/README.md#css-best-coding-practice
+*/
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+	
+	/* CSS variables - Add variables below like the given example. */
+	
+	/* Colours */
+
+	/* The main colour variables are controlled by the theme CSS files. */
+
+	/* The below colour variables are constant throughout all themes and so exist here. */
+	--accent-color-black-rgb: 34, 34, 34;
+	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
+	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
+	--championship-text-color: #2346A0; /* Pro Team Championship Formatting - for the Individuals Page */
+	--championship-accent-color: #FA0F10; /* Pro Team Championship Formatting - for the Individuals Page */
+
+	/* Distances & Spacing */
+
+	/* The below distance variables are constant throughout themes and so exist here. */
+	--headerHeight: 2.8rem; /* Define the header height variable. */
+	--footerHeight: 3.75rem; /* Define the footer height variable. */
+	--table-padding: 0.2rem;
+	--gallery-image-height: 8.125rem; /* For the Gallery page */
+	--user-card-height: 9rem; /* For the Users page */
+	--user-image-height: 6rem; /* For the Users page */
+	--user-name-height: 2.6rem; /* For the Users page */
+	--pagewidth: 98%; /* Used for controlling the width of items on each page */
+	--border-radius: 0.2rem;
+}
+
+/* HTML updates to cover the full webpage. */
+html {
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	background-size: cover;
+    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+	
+	height: max-content;
+	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
+	block-size: 100%;
+	inline-size: 100%;
+	overflow-y: scroll;
+
+	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
+	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
+	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
+
+	/* DELETE IF MAJOR ISSUES */
+	block-size: 100%;
+    inline-size: 100%
+}
+
+/* Add code below. */
+
+/* Everything below initially designed for mobile. */
+
+/* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
+* {
+	box-sizing: border-box;
+	margin: 0rem;
+	padding: 0rem;
+	max-width: 100%; /* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */  /* overflow-x: hidden;  overflow-y: hidden;  position: relative; */  /* display: block; */
+}
+
+/* Generic body class for all HTML pages using this CSS format. */
+body {
+	top: 0rem;
+	left: 0rem;
+	height: max-content; /* Note: adding height: 100vh; causes issues on pages that are taller than the viewheight. */
+	min-block-size: 100%;
+	min-inline-size: 100%;
+	margin: 0rem;
+	padding: 0rem;
+	/* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */
+	max-width: 100%;
+	overflow-x: hidden;
+	position: relative;
+}
+
+/* Main content styling. */
+.main-content-area {
+	margin-top: 3.125rem; /* Add an "offset" value for all content so that it sits below the fixed header. Note that 50 makes up for borders and paddings in the 2.8rem header. */
+	top: 0rem;
+	left: 0rem;
+	width: 100%;
+	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
+	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: -o-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Opera */
+	min-height: -webkit-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Google, Safari */
+	min-height: -moz-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Firefox */
+	height: max-content;
+	transition: margin-left .5s;
+	padding: 0.3125rem; /* Add all round padding to content to slightly center it. */
+	overflow-x: hidden;
+	max-width: 100%;
+}
+
+/* Add a lighter opacity rounded edges container to split up the sections. */
+.page-section {
+	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
+	backdrop-filter: blur( 0.75rem );
+	-webkit-backdrop-filter: blur( 0.75rem );
+	height: max-content;
+	width: var(--pagewidth, 98%);
+	margin: 1rem auto 1rem auto; /* Add a margin above and below each section. */
+	padding: 1rem 0.5rem; /* Add internal padding to the page-section. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+}
+
+/* Added bottom margin for some page sections on individuals page. */
+.page-section-added-bottom-margin {
+	margin-bottom: 4rem;
+}
+
+/* Text styling. */
+
+h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-family: inherit;
+}
+
+/* Font Families */
+
+/* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
+h1, h2, h3, h4, h5, h6, span {
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* Apply the 'Roboto' body font style to all body elements. */
+p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, button {
+	font-family: 'Roboto', sans-serif;
+}
+
+/* Define the sizes and other styles to each individual text style. */
+
+/* Used for top header text. */
+h1 {
+	font-size: 32px; /* Fallback value. */
+  	font-size: 2rem; /* Relative to root value. */
+  	text-transform: uppercase;
+	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
+}
+
+/* Used for main headers in page-content section. */
+h2 {
+	font-size: 24px; /* Fallback value. */
+	font-size: 1.5rem; /* Relative to root value. */
+	text-transform: uppercase;
+	margin-bottom: 1.5rem;
+}
+
+/* Used for smaller headers in page-content section. */
+h3 {
+	font-size: 19px; /* Fallback value. */
+	font-size: 1.2rem; /* Relative to root value. */
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+/* Used for even smaller headers in page-content section. */
+h4 {
+	font-size: 18px; /* Fallback value. */
+	font-size: 1.1rem; /* Relative to root value. */
+	margin-bottom: 0.5rem;
+}
+
+/* Used for even smaller headers in page-content section. */
+h5 {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+	text-transform: uppercase;
+	margin-bottom: 0.25rem;
+}
+
+/* Used for the smallest headers in page-content section. */
+h6 {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+	margin-bottom: 0.25rem;
+	font-style: italic;
+}
+
+/* Used for the header text across the site in the header-component. */
+span {
+	font-size: 21px; /* Fallback value. */
+	font-size: 1.3rem; /* Relative to root value. */
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* Used for text bulk on page. */
+p {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+}
+
+/* Used for hyperlinks across the site. */
+a {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Used for table headers across the site. */
+th {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-style: bold; /* Make the header text bold */
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	position: -webkit-sticky; /* Make the header row sticky position to lock it out - https://www.w3docs.com/snippets/html/how-to-create-a-table-with-a-fixed-header-and-scrollable-body.html. */
+	position: sticky; /* Make the header row sticky position to lock it out. */
+	top: 0rem; /* Make the header row sticky position to lock it out. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the header cell to give the table space. */
+}
+
+/* Used for table rows across the site. */
+tr {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.9rem; /* Relative to root value. */
+}
+
+/* Used for table cell text across the site. */
+td {
+	font-size: 14px; /* Fallback value. */
+	font-size: 0.8rem; /* Relative to root value. */
+	text-align: center; /* By default, center all table text. */
+	padding: var(--table-padding, 0.2rem); /* Add padding within the cell to give the table space. */
+	-webkit-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-moz-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+	-ms-text-size-adjust: 100%; /* Stop mobile browsers increasing the text size. (https://stackoverflow.com/a/5540312/14290169). */
+}
+
+/* Tooltip Styling - used in tables. https://www.w3schools.com/css/css_tooltip.asp. */
+
+/* Tooltip container */
+.tooltip {
+	text-decoration: underline; /* Add dots under the hoverable text. */
+    text-decoration-color: white;  
+    text-decoration-style: dotted; 
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	visibility: hidden; /* Initially set the visibility as hidden. */
+	min-height: 2rem;
+	max-height: 30rem;
+	width: 15rem;
+	min-width: 8rem;
+	/* min-width: 150%; */
+
+	/* overflow: visible; */
+
+	padding: 0.5rem 0.5rem; /* Add interior padding to the tool tip. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all tool tips. */
+	/* Position the tooltip text below the text its explaining. */
+	position: absolute;
+	z-index: 1;
+ 	top: 100%;
+	left: 0rem;
+}
+  
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+	visibility: visible;
+}
+
+/* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
+.tooltip .tooltiptext::after {
+    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	content: " ";
+    position: absolute;
+    bottom: 100%;  /* This will position the arrow at the top of the tooltip */
+    left: 10%;
+    margin-left: -0.3rem;    
+    border-width: 0.2rem;
+    border-style: solid;
+}
+
+p.tooltiptext {
+	font-size: 12.8px; /* Fallback value. */
+	font-size: 0.8rem; /* Relative to root value. */
+	text-transform: none;
+	text-align: left;
+}
+
+/* Used for quotes mainly on individuals page. */
+q {
+	font-style: italic; /* Make the text italic. */
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+}
+
+/* Used for small text quotes and sources. */
+cite {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+}
+
+/* section and article don't need further CSS rules. */
+
+/* Used for unordered and ordered lists text across the site. */
+ul, li {
+	font-size: 12px; /* Fallback value. */
+	font-size: 0.75rem; /* Relative to root value. */
+}
+
+/* legend is an unused property. */
+
+/* Used for dropdown selection lists text across the site. */
+select, option {
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+}
+
+/* Style the dropdown options. */
+select {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	height: 2rem;
+	width: 10rem;
+	text-align: center;
+	border: none;
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+	padding: 0.2rem;
+}
+
+/* Used for buttons text across the site. See (https://dev.to/gscode/20-css-buttons-4cni) for styles and details. */
+button {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: 16px; /* Fallback value. */
+	font-size: 1rem; /* Relative to root value. */
+	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
+	width: 10rem; /* Define a base button width. */
+	height: 3rem; /* Define a base button height. */
+    border-style: none; /* Remove the border. */
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0.2rem;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+/* Used on the Gallery page. */
+label {
+	margin-bottom: 0.5rem;
+}
+
+/* Text Styles */
+
+.underline {
+	text-decoration: underline;
+}
+
+.textcenter {
+	text-align: center;
+}
+
+.textleft {
+	text-align: left;
+}
+
+.textright {
+	text-align: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-style: oblique;
+}
+
+/* Other classes and styles. */
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.wordwrap {
+	/* Wrap long text and urls - (https://www.dotnettricks.com/learn/stylesheet/css-to-force-long-text-and-urls-to-wrap-on-all-browser) */
+	white-space: pre; /* CSS 2.0 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3.0 */
+	white-space: -pre-wrap; /* Opera 4-6 */
+	white-space: -o-pre-wrap; /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	word-wrap: break-word; /* IE 5+ */
+}
+
+.colour-invert {
+	filter: brightness(0) invert(1);
+}
+
+.no-bottom-margin {
+	margin-bottom: 0rem !important;
+}
+
+.deactivated {
+	color: grey; /* Grey out the deactivated selection box. */
+	pointer-events: none; /* Disable any actions from the user clicking on the deactivated component. */
+}
+
+/* Table classes */
+
+table {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	width: 100%;
+	text-align: center;
+	border: none;
+	border-collapse: collapse;
+	border-radius: var(--border-radius, 0.2rem);
+	/*overflow: hidden; /* Required for column highlighting. */
+	/* For interior borders, look at the td class. */
+	/* overflow: scroll; */
+}
+
+/* Cell highlighting. */
+td:hover {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-weight: bold;
+}
+
+/* Add row highlighting. */
+tr:hover {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font: bold;
+}
+
+/* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */ 
+
+td, th {
+	position: relative;
+}
+
+/* Column highlighting. Only on tables with class "column-highlight". */
+.column-highlight td:hover::after, th:hover::after {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	content: "";
+	position: absolute;
+	left: 0;
+	top: -5000px;
+	/* top: 0px; */
+	height: 10000px;
+	/* height: 100%; */
+	width: 100%;
+	z-index: -1;
+}
+
+/* Add table column lines. */
+.table-column-lines {
+	/* Add table borders. */
+	border-right-style: solid;
+	border-width: 0.1rem;
+}
+
+/* Add a border radius to all tables. (https://stackoverflow.com/a/4094151/14290169). */
+tr:first-child th:first-child {
+	border-top-left-radius: var(--border-radius, 0.2rem);
+}
+tr:first-child th:last-child {
+	border-top-right-radius: var(--border-radius, 0.2rem);
+}
+tr:last-child td:first-child {
+	border-bottom-left-radius: var(--border-radius, 0.2rem);
+}
+tr:last-child td:last-child {
+	border-bottom-right-radius: var(--border-radius, 0.2rem);
+}
+
+/* Sticky column and row - https://stackoverflow.com/a/53526213/14290169 */
+
+.table-wrapper {
+	position: relative;
+	overflow: auto;
+	overflow-y: hidden;
+	/* overflow: hidden; */
+	white-space: nowrap;
+	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
+}
+
+.sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	position: -webkit-sticky;
+	position: sticky;
+	z-index: 1;
+}
+
+.first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
+	width: max-content;
+	left: 0rem;
+}
+
+.first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
+	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
+	border-top-left-radius: var(--border-radius, 0.2rem);
+}
+
+/* Add 4th row underline for Titan status. */
+/* .titan4thRow tr:nth-child(4){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	/* font-size: inherit;
+}*/
+
+/* Add 5th row underline for Titan status. */
+.titan5thRow tr:nth-child(5){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
+}
+
+/* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
+.titan6thRow tr:nth-child(6){
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
+}
+
+/* Add a hidden class for hiding components that are not yet ready. */
+.hidden {
+	display: none !important;
+}
+
+/* Add a class to stop scrolling in certain divs. */
+.noscroll {
+	overflow: hidden;
+}
+
+/* Add a area class for the Stats and Titan pages. */
+.date-and-source-area {
+	margin-top: 1rem; /* Add space from the table down to the last updated text. */
+}
+
+/* Add an id for fading in an item over two seconds. */
+.fadein {
+	animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+	from {
+		display: none;
+		opacity: 0;
+	}
+	to {
+		display: block;
+		opacity: 1;
+	}
+}
+
+/* Main styling sheet media queries. */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* background: blue; */
+    :root {
+		--headerHeight: 2.8rem; /* Define the header height variable. */
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: green; */
+	:root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 95%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 18px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Covers iPads and other tablets. */
+	/* background: orange; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+	:root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 20px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	/* background: red; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 22px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+    /* Desktops and Laptops - For larger monitors and displays. */
+	/* background: yellow; */
+    :root {
+		--headerHeight: 4rem; /* Define the header height variable. */
+		--pagewidth: 80%; /* Used for controlling the width of items on each page */
+	}
+	html {
+		font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
+	}
+}
+
+
+
+
+/* Add a set up for media devices with preference for dark mode. */
+
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/
+https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9 */
+
+/* @media (prefers-color-scheme: dark) {
+	:root {
+		background: #000000;
+		filter: invert(1) hue-rotate(180deg);
+	}
+	img {
+		opacity: .75;
+		transition: opacity .5s ease-in-out;
+	}
+	img:hover {
+		opacity: 1;
+	}
+} */

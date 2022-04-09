@@ -1,0 +1,167 @@
+/* Index styling */
+
+/* The css styling used for the index page. */
+
+/* Add custom index page styling. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+:root {
+	
+	/* CSS variables - Add variables below like the given example. */
+	
+	--font-size: 0.8rem;
+}
+
+body {
+  background-image: url('/pages/Group-Page/assets/images/Background.jpg');
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-size: auto 100%;
+  color: #333;
+}
+
+.lightbox {
+  zoom: 1.5;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  width: 100%; /* Width of the black overlay of the background image. */
+  height: 100%;
+  background: rgba(10, 10, 10, 0.8);
+  text-align: center;
+  margin: auto;
+}
+
+#passwordLoginPageBackButton {
+  font-size: 2rem;
+  color: #333;
+  z-index: 3;
+  padding: 0.5rem;
+  font-size: var(--font-size, 1rem);
+}
+
+div.horizontal {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+div.vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: var(--pagewidth, 98%); /* Width of the lighter holding div box. */
+}
+
+/* The lighter coloured box with the content in it. */
+.box {
+  border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+  background: rgba(101, 101, 101, 0.7);
+  margin: auto;
+  padding: 1rem;
+}
+
+form {
+  font-size: var(--font-size, 1rem);
+  width: 10rem;
+  text-align: center;
+}
+
+select {
+  font-size: var(--font-size, 1rem);
+  margin-bottom: 1rem;
+}
+
+input {
+  font-size: var(--font-size, 1rem);
+  width: 14rem;
+}
+
+::-webkit-input-placeholder {
+  color: #222;
+  text-align: center;
+}
+
+::-moz-placeholder {
+  color: #222;
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  color: #222;
+  text-align: center;
+}
+
+button {
+  background-color: #888;
+  width: 8rem;
+  height: 2.5rem;
+  font-size: var(--font-size, 1rem);
+}
+
+/* Index Media Queries */
+
+/* Scale up for screens larger than mobile. Resizing the webpage for all devices. */
+
+/* https://www.thesitewizard.com/css/mobile-friendly-responsive-design.shtml
+	240 pixels (old Android portrait mode)
+	320 pixels (iPhone 3 to 5 and iPhone SE portrait mode)
+	375 pixels (iPhone 6, 6s, 7, 8 and X portrait)
+	384 pixels (Android Nexus portrait)
+	414 pixels (iPhone 6 Plus, 6s Plus, 7 Plus and 8 Plus portrait)
+	480 pixels (iPhone 3 and 4 landscape mode)
+	568 pixels (iPhone 5 and iPhone SE landscape)
+	600 pixels (Android Nexus landscape, Kindle portrait)
+	667 pixels (iPhone 6, 7 and 8 landscape)
+	736 pixels (iPhone 6 Plus, 7 Plus and 8 Plus landscape)
+	768 pixels (iPad portrait)
+	812 pixels (iPhone X landscape)
+	1024 pixels (iPad landscape) */
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+    /* background: blue; */
+    body {
+      background-size: auto 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 480px) and (max-width: 768px) {
+    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: green; */
+    body {
+      background-size: auto 100%;
+    }
+  }
+  
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* Covers iPads and other tablets. */
+    /* background: orange; */
+    body {
+      background-size: auto 100%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+    /* background: cyan; */
+    body {
+      background-size: 100% auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1224px) {
+    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+    /* background: red; */
+    body {
+      background-size: 100% auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1824px) {
+    /* Desktops and Laptops - For larger monitors and displays. */
+    /* background: yellow; */
+    body {
+      background-size: 100% auto;
+    }
+  }
