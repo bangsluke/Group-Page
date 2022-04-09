@@ -32,7 +32,7 @@ sideMenuTemplate.innerHTML = `
             <div class="sideMenu-Main-Container">
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
+                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/assets/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
@@ -41,7 +41,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Users.html"><img src="/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
+                        <a href="/Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Users.html">Users</a>
@@ -50,7 +50,7 @@ sideMenuTemplate.innerHTML = `
                 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Events.html"><img src="/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
+                        <a href="/Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Events.html">Events</a>
@@ -59,7 +59,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Stats.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                        <a href="/Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Stats.html">Stats</a>
@@ -68,7 +68,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Titans.html"><img src="/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                        <a href="/Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Titans.html">Titans</a>
@@ -77,7 +77,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Gallery.html"><img src="/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
+                        <a href="/Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Gallery.html">Gallery</a>
@@ -108,7 +108,7 @@ sideMenuTemplate.innerHTML = `
 
                 <!-- <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Ideas.html"><img src="/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
+                        <a href="/Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/Sub-Pages/Ideas.html">Ideas</a>

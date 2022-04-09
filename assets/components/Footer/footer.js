@@ -26,10 +26,10 @@ footerTemplate.innerHTML = `
 
       <ul>
 
-        <li><a href="mailto:bangsluke@gmail.com"><img src="/images/Icons&Logos/EmailLogo.png" class="footer-logo" alt="Email Logo"></a></li>
-        <li><a href="https://github.com/bangsluke/bangsluke"><img src="/images/Icons&Logos/GitHubLogo.png" class="footer-logo" alt="GitHub Logo"></a></li>
-        <li><a href="https://twitter.com/bangsluke"><img src="/images/Icons&Logos/TwitterLogo.png" class="footer-logo" alt="Twitter Logo"></a></li>
-        <li><a href="https://www.linkedin.com/in/bangsluke/"><img src="/images/Icons&Logos/LinkedInLogo.png" class="footer-logo" alt="LinkedIn Logo"></a></li>
+        <li><a href="mailto:bangsluke@gmail.com"><img src="/assets/images/Icons&Logos/EmailLogo.png" class="footer-logo" alt="Email Logo"></a></li>
+        <li><a href="https://github.com/bangsluke/bangsluke"><img src="/assets/images/Icons&Logos/GitHubLogo.png" class="footer-logo" alt="GitHub Logo"></a></li>
+        <li><a href="https://twitter.com/bangsluke"><img src="/assets/images/Icons&Logos/TwitterLogo.png" class="footer-logo" alt="Twitter Logo"></a></li>
+        <li><a href="https://www.linkedin.com/in/bangsluke/"><img src="/assets/images/Icons&Logos/LinkedInLogo.png" class="footer-logo" alt="LinkedIn Logo"></a></li>
 
       </ul>
 
