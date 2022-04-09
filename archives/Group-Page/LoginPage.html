@@ -1,0 +1,123 @@
+<!-- LoginPage.html -->
+<!-- The login page for the best friendship group in the world. -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<!-- Website Title - shows up in tab at top of page. -->
+	<title>Login Page</title>
+
+	<!-- Initial Meta Data -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet"> <!-- Main CSS styling -->
+	<link href="/pages/Group-Page/assets/css/LoginPage.css" rel="stylesheet"> <!-- Main CSS styling -->
+
+	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
+
+	<!-- Link into font-awesome logos and icons. -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+
+	<header>
+
+	</header>
+
+	<!-- All Page Content. This is all the content between the header and footer. -->
+
+	<div class="allContentFrame wrapper">
+
+		<!-- Main Page Content. -->
+		<div class="main-content-area">
+
+			<a href="/pages/Group-Page/GroupPageHome.html"><img class="avatar center fadein"
+					src="/pages/Group-Page/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+
+			<!-- Create a large transparent login container. -->
+			<div class="loginContainer fadein">
+
+				<!-- Add a heading. -->
+				<h1 class="center" id="pageMainHeader">Login</h1>
+
+				<!-- Add a container to split the text and items apart. -->
+				<div class="center-container">
+					<div class="left-text-container right-align">
+						<div class="usertext-container">
+							<p>User:</p>
+						</div>
+						<div class="passwordtext-container">
+							<p>Password:</p>
+						</div>
+					</div>
+					<div class="right-items-container left-align">
+
+						<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
+						<div class="userdropdown-container">
+							<form class="userdropdown">
+								<select name="User">
+									<option value="Alex">Althom</option>
+									<option value="Ali">Pea</option>
+									<option value="Andy">Higgins</option>
+									<option value="Dom">DP</option>
+									<option value="Jon">Big Nose</option>
+									<option value="Kieran">Karen</option>
+									<option value="Luke">Bongo</option>
+									<option value="Oli">OG</option>
+								</select>
+							</form>
+						</div>
+
+						<!-- Add a password input box - https://www.w3schools.com/Tags/att_input_type_password.asp -->
+						<div class="passwordbox-container">
+							<!-- <label for="pwd"></label> -->
+							<input type="password" id="pwd" name="pwd">
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="loginbuttondiv center">
+					<a href="/pages/Group-Page/Sub-Pages/NewIndividualsPage.html">
+						<button class="loginbutton">Login</button>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+		<div class="push"></div>
+
+	</div>
+
+	<!-- Footer -->
+
+	<footer>
+
+		<!-- Create a sticky footer - https://stackoverflow.com/questions/42294/how-do-you-get-the-footer-to-stay-at-the-bottom-of-a-web-page -->
+
+		<!-- Add the common website footer using shadow DOMs. See /pages/Group-Page/assets/components/Footer/footer.js for the header code. -->
+		<footer-component></footer-component>
+
+	</footer>
+
+	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+	<script src="/pages/Group-Page/assets/components/Footer/footer.js" type="text/javascript" defer></script>
+	<!-- Add the common footer JS -->
+
+</body>
+
+</html>

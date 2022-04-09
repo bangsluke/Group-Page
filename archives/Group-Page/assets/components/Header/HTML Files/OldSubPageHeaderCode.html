@@ -1,0 +1,49 @@
+<!-- OldSubPageHeaderCode.html -->
+
+<!-- The below code was previously used on all sub pages as the header. It has now been replaced by header.js and the shadow DOM created by that. -->
+
+<!-- It was previously positioned directly below;         <div class="allContentFrame wrapper"> -->
+
+
+    <!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
+    <div class="subpage-header-area">
+
+        <!-- Add a homepage link by adding a group icon image. Add it within a container. -->
+        <div class="avatar-container">
+
+            <!-- Add group icon image. -->
+            <a href="/pages/Group-Page/GroupPageHome.html"><img class="avatar center fadein"
+                    src="/pages/Group-Page/assets/images/Page Icon.jpg" alt="Group Page Logo"></a>
+
+        </div>
+
+        <!-- Add some heading text. Add it within a container. -->
+        <div class="heading-container">
+            <!-- Add some heading text. -->
+            <h1 class="center subpage-header-text fadein" id="pageMainHeader">Stats</h1>
+        </div>
+
+        <!-- Top Menu - not considered part of the "main-content-area" -->
+
+        <div class="topMenu" id="top-menu">
+            <!-- The main top nav bar options. -->
+            <a href="/pages/Group-Page/GroupPageHome.html"><i class="fa fa-home"></i>Home</a>
+            <a href="/pages/Group-Page/Sub-Pages/Users.html"><i class="fa fa-users"></i>Users</a>
+            <a href="/pages/Group-Page/Sub-Pages/Events.html"><i class="fa fa-calendar"></i>Events</a>
+            <a href="/pages/Group-Page/Sub-Pages/Titans.html"><i class="fa fa-trophy"></i>Titans</a>
+            <a href="/pages/Group-Page/Sub-Pages/Stats.html"><i class="fa fa-database"></i>Stats</a>
+            <a href="/pages/Group-Page/Sub-Pages/Gallery.html"><i class="fa fa-picture-o"></i>Gallery</a>
+            <a href="/pages/Group-Page/Sub-Pages/Ideas.html"><i class="fa fa-lightbulb-o"></i>Ideas</a>
+        </div>
+
+        <!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
+        <div class="burgericon-container">
+
+            <!-- Add burger icon with JavaScript functionality. -->
+            <!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
+            <img class="center burgericon fadein" src="/pages/Group-Page/assets/images/Burger Menu Icon.png"
+                alt="Burger Menu Icon" onclick="openNav()">
+
+        </div>
+
+    </div>

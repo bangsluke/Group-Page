@@ -1,0 +1,96 @@
+/* TopMenu styling */
+
+/* The css styling used for the top menu. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+	/* line-height: 15px; */
+}
+
+/* Top Menu CSS */
+
+.topMenu {
+	background: var(--accent-color-black);
+	position: fixed;
+	height: 80px;
+	width: 80%;
+	top: 0rem;
+	left: 20%;
+	z-index: 1;
+	transition: 0.5s;
+	padding-top: 20px;
+	border-left: solid 1px var(--accent-color-1);
+	display: flex;
+	flex-direction: row;
+	/* align-items: flex-end;
+	align-content: flex-end;
+	justify-items: flex-end;
+	justify-content: flex-end; */
+}
+
+.topMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: var(--accent-color-white);
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+.topMenu a i {
+	padding-right: 15px;
+}
+
+.topMenu a:hover {
+	color: var(--accent-color-2);
+	background: var(--accent-color-white);
+}
+
+/* Top menu media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.topMenu {
+		display: none; /* Hide the top menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	.topMenu {
+		display: none; /* Hide the top menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	.topMenu {
+		display: none; /* Hide the top menu for smaller screens. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	.topMenu {
+		display: inline; /* Show the top menu for larger screens. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	.topMenu {
+		display: inline; /* Show the top menu for larger screens. */
+	}
+}

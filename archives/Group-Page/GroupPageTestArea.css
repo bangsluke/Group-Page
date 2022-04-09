@@ -1,0 +1,196 @@
+/* GroupPageTestArea Styling Guide. */
+
+/* The main css style file used for the Group Page Test Area styling. */
+
+/*
+Key CSS Notes:
+- Remember that attributes started with .attribute are for classes, and attributes started with #attribute are for ids
+- For details on class vs ids see here: https://careerkarma.com/blog/css-class-vs-id-2/
+- CSS variables - To create a CSS variable, you just need to give it a name with two hyphens in front of it and assign it a value like this: --penguin-skin: gray;
+- See the bottom of this file for key tips and tricks
+*/
+
+/*:root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+    --main-style-color: #2a3950;
+    /*CSS variable*/
+    --accent-color-blue: #41436A;
+    /*CSS variable*/
+    --accent-color-darkred: #974063;
+    /*CSS variable*/
+    --accent-color-red: #f54768;
+    /*CSS variable*/
+    --accent-color-orange: #ff9678;
+    /*CSS variable*/
+    --accent-color-green: #99b998;
+    /*CSS variable*/
+    --accent-color-white: #ffffff;
+    /*CSS variable*/
+    --main-font-family: 'Calibri', sans-serif;
+    /*CSS variable*/
+    /* line-height: 15px; */
+}
+
+/* Header area styling. */
+
+.header-area {
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-style-color, #2a3950);
+    transition: 0.5s;
+    width: 100%;
+    height: 100px;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+}
+
+/* Navigation bar styling */
+
+/* .navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background-color: var(--main-style-color, #2a3950);
+} */
+
+.navbar-text {
+    font-size: 20px;
+    font-family: var(--main-font-family, 'Calibri', sans-serif);
+    font-weight: 400;
+    color: var(--accent-color-green, white);
+}
+
+/* Add a filler div to add height to the page for testing scrolling. */
+
+.filler {
+    height: 1500px;
+}
+
+/*Main page background colour*/
+
+body {
+    background-image: url("/images/Group-Page/Background.JPG");
+    /* background-color: var(--main-style-color, black); */
+    background-blend-mode: screen;
+}
+
+body>#bg {
+    height: 100%;
+    width: 100%;
+    left: 0rem;
+    top: 0rem;
+    /* https://cssgradient.io/ */
+    background: rgb(42, 57, 80);
+    background: linear-gradient(34deg, rgba(42, 57, 80, 1) 0%, rgba(65, 67, 106, 1) 35%, rgba(151, 64, 99, 1) 100%);
+    /* Test out clip path. */
+    /* https://www.youtube.com/watch?v=wfaDzSL6ll0&ab_channel=MDB-justcodeit */
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 83% 100%, 94% 35%, 0 19%);
+    position: absolute;
+    z-index: -1;
+}
+
+.avatar {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0rem 0rem 2em 0rem;
+    padding: 0.2rem;
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.075);
+}
+
+/* Hyperlink (anchor) formatting. */
+
+a:link {
+    /* Normal link */
+    color: var(--accent-color-green, greenyellow);
+    text-decoration: none;
+}
+
+a:visited {
+    /* Visited link */
+    color: var(--accent-color-orange, orange);
+    text-decoration: none;
+}
+
+a:hover {
+    /* Hover over link */
+    color: var(--accent-color-orange, orange);
+    text-decoration: none;
+}
+
+a:active {
+    /* Selected link */
+    color: var(--accent-color-orange, orange);
+    text-decoration: none;
+}
+
+/* Add an id for fading in an item over three seconds. */
+
+#fadein {
+    animation: fadein 3s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        display: none;
+        opacity: 0;
+    }
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+/* CSS Tips and Tricks. */
+
+/* Change the background colour of when a user highlights text to orange. */
+
+h1::selection {
+    background: var(--accent-color-orange, orange);
+}
+
+strong::selection {
+    background: var(--accent-color-orange, orange);
+}
+
+a::selection {
+    background: var(--accent-color-orange, orange);
+}
+
+p::selection {
+    background: var(--accent-color-orange, orange);
+}
+
+/* Smooth the scrolling function of any internal hyperlinks. */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add a set up for media devices with preference for dark mode. */
+
+/* https://polypane.app/blog/the-complete-guide-to-css-media-queries/ */
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background: var(--background-color-grey, #282828);
+        filter: invert(1) hue-rotate(180deg);
+    }
+}

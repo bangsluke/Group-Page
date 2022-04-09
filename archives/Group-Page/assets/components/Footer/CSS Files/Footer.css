@@ -1,0 +1,55 @@
+/* Footer styling */
+
+/* The css styling used for the footer. */
+/* Note, all of the CSS defined here is used within footer.js as part of a shadow element and so this file is not used directly. */
+
+/* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
+
+:root {
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #FF3CAC;
+	--main-background-color: #FF3CAC;
+	--accent-color-1: #FF3CAC;
+	--accent-color-2: #784BA0;
+	--accent-color-3: #2B86C5;
+	--accent-color-white: #ffffff;
+	--accent-color-black: #222222;
+}
+
+/* Footer styling. */
+
+.footer {
+	/* background-color: green; */
+	/* background: var(--accent-color-black); */
+	background-color: rgba(var(--accent-color-black-rgb), 0.5);
+	grid-area: footer;
+	width: 100%;
+	/* top: 90%; */
+	height: 25px;
+	color: var(--accent-color-white);
+	justify-self: center;
+	align-content: center;
+	text-align: center;
+	padding: auto;
+}
+
+.footer a {
+	color: var(--accent-color-white);
+	text-decoration: none;
+	font-size: 20px;
+}
+
+.footer a:hover {
+	color: var(--accent-color-1);
+	text-decoration: var(--accent-color-white);
+}
+
+/* Footer media queries. */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	.footer a {
+		font-size: 10px;
+	}
+}
