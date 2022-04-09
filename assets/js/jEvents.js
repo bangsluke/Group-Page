@@ -23,9 +23,7 @@ window.addEventListener("load", function () {
 
 // Other Functions
 
-var peterGriffinAudio = new Audio(
-  "/pages/Group-Page/assets/audio/DecoysLois.mp3"
-); // Define the audio file to be played for the Peter Griffin image.
+var peterGriffinAudio = new Audio("/assets/audio/DecoysLois.mp3"); // Define the audio file to be played for the Peter Griffin image.
 
 // The intial function does the initial work required on the page, as soon as the DOM has loaded.
 function init() {

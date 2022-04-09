@@ -7,127 +7,145 @@
 
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
+  <head>
+    <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+    <title>Login | Group Page</title>
 
-<head>
+    <!-- Initial Meta Data -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The single most awesome and offensive friends group website ever created."
+    />
+    <meta name="author" content="bangsluke" />
+    <meta name="copyright" content="bangsluke" />
+    <meta name="robots" content="nofollow" />
 
-	<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-	<title>Login | Group Page</title>
+    <!-- Link to fonts to be used on site. -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- Initial Meta Data -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="The single most awesome and offensive friends group website ever created." />
-	<meta name="author" content="bangsluke" />
-	<meta name="copyright" content="bangsluke" />
-	<meta name="robots" content="nofollow" />
+    <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+    <!-- Main CSS styling -->
+    <link href="/assets/css/GroupPageMain.css" rel="stylesheet" />
+    <!-- CSS site theme -->
+    <link
+      href="/assets/css/Themes/DarkGreyOrange.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+      id="css-theme"
+    />
+    <!-- Index Page styling -->
+    <link href="/assets/css/index.css" rel="stylesheet" />
 
-	<!-- Link to fonts to be used on site. -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-		rel="stylesheet">
+    <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/assets/images/Page Icon Circle.png"
+    />
 
-	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-	<!-- Main CSS styling -->
-	<link href="/pages/Group-Page/assets/css/GroupPageMain.css" rel="stylesheet">
-	<!-- CSS site theme -->
-	<link href="/pages/Group-Page/assets/css/Themes/DarkGreyOrange.css" rel="stylesheet" type="text/css" media="all"
-		id="css-theme" />
-	<!-- Index Page styling -->
-	<link href="/pages/Group-Page/assets/css/index.css" rel="stylesheet">
+    <!-- Link into font-awesome logos and icons. -->
+    <script
+      src="https://kit.fontawesome.com/e0e1bfc304.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/pages/Group-Page/assets/images/Page Icon Circle.png" />
+  <body>
+    <!-- Add a dark coloured "lightbox" cover across the background image. -->
+    <div id="loginbox" class="lightbox">
+      <!-- Center the content of the page horizontally. -->
+      <div class="horizontal">
+        <!-- Center the content of the page vertically. -->
+        <div class="vertical">
+          <!-- Add a back button to my main page. Make it small and not too clear. -->
+          <a href="/Homepage.html">
+            <p class="textleft" id="passwordLoginPageBackButton">&lt;</p>
+          </a>
 
-	<!-- Link into font-awesome logos and icons. -->
-	<script src="https://kit.fontawesome.com/e0e1bfc304.js" crossorigin="anonymous"></script>
+          <!-- Add a lighter coloured box to hold the main content. -->
+          <div class="box center">
+            <!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
+            <form class="userdropdown center">
+              <select name="User" id="userdropdown">
+                <option value="Alex">Althom</option>
+                <option value="Ali">Pea</option>
+                <option value="Andy">Higgins</option>
+                <option value="Dom">DP</option>
+                <option value="Jonny">Jon Boy</option>
+                <option value="Kieran">Karen</option>
+                <option value="Luke">Bongo</option>
+                <option value="Oli">OG</option>
+              </select>
+            </form>
 
-</head>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter password"
+              class="center"
+            />
 
-<body>
+            <br />
 
-	<!-- Add a dark coloured "lightbox" cover across the background image. -->
-	<div id="loginbox" class="lightbox">
+            <button id="loginbutton" type="button" class="center">Enter</button>
+            <p id="wrongPassword" style="display: none" class="center">
+              Wrong password
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		<!-- Center the content of the page horizontally. -->
-		<div class="horizontal">
-
-			<!-- Center the content of the page vertically. -->
-			<div class="vertical">
-
-				<!-- Add a back button to my main page. Make it small and not too clear. -->
-				<a href="/Homepage.html">
-					<p class="textleft" id="passwordLoginPageBackButton">&lt;</p>
-				</a>
-
-				<!-- Add a lighter coloured box to hold the main content. -->
-				<div class="box center">
-
-					<!-- Add a drop down form - https://www.bbc.co.uk/bitesize/guides/zrpqy9q/revision/5 -->
-					<form class="userdropdown center">
-						<select name="User" id="userdropdown">
-							<option value="Alex">Althom</option>
-							<option value="Ali">Pea</option>
-							<option value="Andy">Higgins</option>
-							<option value="Dom">DP</option>
-							<option value="Jonny">Jon Boy</option>
-							<option value="Kieran">Karen</option>
-							<option value="Luke">Bongo</option>
-							<option value="Oli">OG</option>
-						</select>
-					</form>
-
-					<input id="password" type="password" placeholder="Enter password" class="center" />
-
-					<br />
-
-					<button id="loginbutton" type="button" class="center">Enter</button>
-					<p id="wrongPassword" style="display: none" class="center">Wrong password</p>
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	<script type="text/javascript" src="/pages/Group-Page/assets/js/jindex.js"></script> <!-- Get index JS -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script> <!-- Get jQuery JS -->
-	<script type="text/javascript"
-		src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
-	<!-- Get sha1 JS -->
-	<script type="text/javascript">
-		"use strict";
-		function loadPage(pwd) {
-			var hash = pwd;
-			hash = Sha1.hash(pwd);
-			var url = hash + "/GroupHomePage.html";
-			$.ajax({
-				url: url,
-				dataType: "html",
-				success: function (data) {
-					window.location = url;
-				},
-				error: function (xhr, ajaxOptions, thrownError) {
-
-					parent.location.hash = hash;
-					//$("#wrongPassword").show();
-					$("#password").attr("placeholder", "wrong password");
-					$("#password").val("");
-				}
-			});
-		}
-		$("#loginbutton").on("click", function () {
-			loadPage($("#password").val());
-		});
-		$("#password").keypress(function (e) {
-			if (e.which == 13) {
-				loadPage($("#password").val());
-			}
-		});
-		$("#password").focus();
-	</script>
-
-</body>
-
+    <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+    <script type="text/javascript" src="/assets/js/jindex.js"></script>
+    <!-- Get index JS -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.12.0.min.js"
+    ></script>
+    <!-- Get jQuery JS -->
+    <script
+      type="text/javascript"
+      src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"
+    ></script>
+    <!-- Get sha1 JS -->
+    <script type="text/javascript">
+      "use strict";
+      function loadPage(pwd) {
+        var hash = pwd;
+        hash = Sha1.hash(pwd);
+        var url = hash + "/GroupHomePage.html";
+        $.ajax({
+          url: url,
+          dataType: "html",
+          success: function (data) {
+            window.location = url;
+          },
+          error: function (xhr, ajaxOptions, thrownError) {
+            parent.location.hash = hash;
+            //$("#wrongPassword").show();
+            $("#password").attr("placeholder", "wrong password");
+            $("#password").val("");
+          },
+        });
+      }
+      $("#loginbutton").on("click", function () {
+        loadPage($("#password").val());
+      });
+      $("#password").keypress(function (e) {
+        if (e.which == 13) {
+          loadPage($("#password").val());
+        }
+      });
+      $("#password").focus();
+    </script>
+  </body>
 </html>

@@ -8,7 +8,7 @@
 
 //console.log("Footer Component Added")
 
-const footerTemplate = document.createElement('template');
+const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
   
     <!-- Footer CSS -->
@@ -41,7 +41,6 @@ footerTemplate.innerHTML = `
 
 // Create a class for the element
 class Footer extends HTMLElement {
-
   // Always call super first in constructor
   constructor() {
     super();
@@ -49,12 +48,15 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: 'open' });
+    const shadowRoot = this.attachShadow({ mode: "open" });
 
     // Apply external styles to the shadow DOM
-    const styleSheet = document.createElement('link');
-    styleSheet.setAttribute('rel', 'stylesheet');
-    styleSheet.setAttribute('href', '/pages/Group-Page/assets/components/Footer/FooterComponent.css');
+    const styleSheet = document.createElement("link");
+    styleSheet.setAttribute("rel", "stylesheet");
+    styleSheet.setAttribute(
+      "href",
+      "/assets/components/Footer/FooterComponent.css"
+    );
     shadowRoot.appendChild(styleSheet);
 
     // Attach the created elements to the shadow DOM
@@ -62,4 +64,4 @@ class Footer extends HTMLElement {
   }
 }
 
-customElements.define('footer-component', Footer);
+customElements.define("footer-component", Footer);
