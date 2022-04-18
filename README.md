@@ -11,8 +11,8 @@ The single most awesome and offensive friends group website ever created.
   <a href="https://github.com/bangsluke/Group-Page" alt="Stable release version badge">
     <img src="https://img.shields.io/badge/version-1.1.0-blue)" />
   </a>
-  <a href="https://app.netlify.com/sites/group-page/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/c401143c-a8f6-43e7-a788-64671b9972ef/deploy-status" alt="Netlify status badge" />
+  <a href="https://group-page.netlify.app/#da39a3ee5e6b4b0d3255bfef95601890afd80709">
+    <img src="https://api.netlify.com/api/v1/badges/bc7cec7f-69fb-4eb2-9e40-656c72c22272/deploy-status" alt="Netlify status badge" />
   </a>
 </p>
 
