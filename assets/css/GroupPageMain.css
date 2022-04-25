@@ -10,9 +10,8 @@
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
-	
 	/* CSS variables - Add variables below like the given example. */
-	
+
 	/* Colours */
 
 	/* The main colour variables are controlled by the theme CSS files. */
@@ -20,9 +19,9 @@
 	/* The below colour variables are constant throughout all themes and so exist here. */
 	--accent-color-black-rgb: 34, 34, 34;
 	--proTeam-text-color: #37003d; /* Pro Team Formatting - for the Individuals Page */
-	--proTeam-accent-color: #02F785; /* Pro Team Formatting - for the Individuals Page */
-	--championship-text-color: #2346A0; /* Pro Team Championship Formatting - for the Individuals Page */
-	--championship-accent-color: #FA0F10; /* Pro Team Championship Formatting - for the Individuals Page */
+	--proTeam-accent-color: #02f785; /* Pro Team Formatting - for the Individuals Page */
+	--championship-text-color: #2346a0; /* Pro Team Championship Formatting - for the Individuals Page */
+	--championship-accent-color: #fa0f10; /* Pro Team Championship Formatting - for the Individuals Page */
 
 	/* Distances & Spacing */
 
@@ -42,21 +41,21 @@
 html {
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
 	background-size: cover;
-    background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
-	
+	background-attachment: fixed; /* https://stackoverflow.com/questions/19363978/how-to-use-100-css-background-image-with-scrolling-content */
+
 	height: max-content;
 	scroll-behavior: smooth; /* Smooth the scrolling function of any internal hyperlinks. */
 	block-size: 100%;
 	inline-size: 100%;
 	overflow-y: scroll;
 
-	font-family: 'Roboto', sans-serif; /* Specify the main body font family to be used across the site. */
+	font-family: "Roboto", sans-serif; /* Specify the main body font family to be used across the site. */
 	font-size: 16px; /* Add a top level font size that all other CSS is relative to. */
 	line-height: 125%; /* Specify an increased line height to be used across the site to make it feel more spacious. */
 
 	/* DELETE IF MAJOR ISSUES */
 	block-size: 100%;
-    inline-size: 100%
+	inline-size: 100%;
 }
 
 /* Add code below. */
@@ -68,7 +67,7 @@ html {
 	box-sizing: border-box;
 	margin: 0rem;
 	padding: 0rem;
-	max-width: 100%; /* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */  /* overflow-x: hidden;  overflow-y: hidden;  position: relative; */  /* display: block; */
+	max-width: 100%; /* https://uxplanet.org/10-lifesaving-html-css-tricks-for-designers-11bbf76729eb */ /* overflow-x: hidden;  overflow-y: hidden;  position: relative; */ /* display: block; */
 }
 
 /* Generic body class for all HTML pages using this CSS format. */
@@ -93,12 +92,18 @@ body {
 	left: 0rem;
 	width: 100%;
 	min-height: 35.5rem; /* Fallback if needed - 568 is the minimum device height available in the Chrome developer tools. */
-	min-height: calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
+	min-height: calc(
+		100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)
+	); /* 2.8rem header + 0.5rem padding + 3.75rem footer (https://stackoverflow.com/a/26090114/14290169) */
 	min-height: -o-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Opera */
-	min-height: -webkit-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Google, Safari */
-	min-height: -moz-calc(100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)); /* Firefox */
+	min-height: -webkit-calc(
+		100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)
+	); /* Google, Safari */
+	min-height: -moz-calc(
+		100vh - var(--headerHeight, 2.8rem) - 0.5rem - var(--footerHeight, 3.75rem)
+	); /* Firefox */
 	height: max-content;
-	transition: margin-left .5s;
+	transition: margin-left 0.5s;
 	padding: 0.3125rem; /* Add all round padding to content to slightly center it. */
 	overflow-x: hidden;
 	max-width: 100%;
@@ -107,8 +112,8 @@ body {
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
 	/* Note that background is controlled by theme, so look at the CSS theme sheets. */
-	backdrop-filter: blur( 0.75rem );
-	-webkit-backdrop-filter: blur( 0.75rem );
+	backdrop-filter: blur(0.75rem);
+	-webkit-backdrop-filter: blur(0.75rem);
 	height: max-content;
 	width: var(--pagewidth, 98%);
 	margin: 1rem auto 1rem auto; /* Add a margin above and below each section. */
@@ -123,7 +128,28 @@ body {
 
 /* Text styling. */
 
-h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+th,
+tr,
+td,
+q,
+cite,
+section,
+article,
+span,
+ul,
+li,
+legend,
+select,
+option,
+button {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-family: inherit;
 }
@@ -131,13 +157,33 @@ h1, h2, h3, h4, h5, h6, p, a, th, tr, td, q, cite, section, article, span, ul, l
 /* Font Families */
 
 /* Apply the 'Montserrat' header font style to all header elements. Note that Span is included as it's used in the header-component. */
-h1, h2, h3, h4, h5, h6, span {
-	font-family: 'Montserrat', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+	font-family: "Montserrat", sans-serif;
 }
 
 /* Apply the 'Roboto' body font style to all body elements. */
-p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, button {
-	font-family: 'Roboto', sans-serif;
+p,
+a,
+th,
+tr,
+td,
+q,
+cite,
+section,
+article,
+ul,
+li,
+legend,
+select,
+option,
+button {
+	font-family: "Roboto", sans-serif;
 }
 
 /* Define the sizes and other styles to each individual text style. */
@@ -145,8 +191,8 @@ p, a, th, tr, td, q, cite, section, article, ul, li, legend, select, option, but
 /* Used for top header text. */
 h1 {
 	font-size: 32px; /* Fallback value. */
-  	font-size: 2rem; /* Relative to root value. */
-  	text-transform: uppercase;
+	font-size: 2rem; /* Relative to root value. */
+	text-transform: uppercase;
 	line-height: 90%; /* Specify an reduced line height to compress the home page h1 text. */
 }
 
@@ -246,8 +292,8 @@ td {
 /* Tooltip container */
 .tooltip {
 	text-decoration: underline; /* Add dots under the hoverable text. */
-    text-decoration-color: white;  
-    text-decoration-style: dotted; 
+	text-decoration-color: white;
+	text-decoration-style: dotted;
 }
 
 /* Tooltip text */
@@ -267,10 +313,10 @@ td {
 	/* Position the tooltip text below the text its explaining. */
 	position: absolute;
 	z-index: 1;
- 	top: 100%;
+	top: 100%;
 	left: 0rem;
 }
-  
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
 	visibility: visible;
@@ -278,14 +324,14 @@ td {
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .tooltip .tooltiptext::after {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: " ";
-    position: absolute;
-    bottom: 100%;  /* This will position the arrow at the top of the tooltip */
-    left: 10%;
-    margin-left: -0.3rem;    
-    border-width: 0.2rem;
-    border-style: solid;
+	position: absolute;
+	bottom: 100%; /* This will position the arrow at the top of the tooltip */
+	left: 10%;
+	margin-left: -0.3rem;
+	border-width: 0.2rem;
+	border-style: solid;
 }
 
 p.tooltiptext {
@@ -311,7 +357,8 @@ cite {
 /* section and article don't need further CSS rules. */
 
 /* Used for unordered and ordered lists text across the site. */
-ul, li {
+ul,
+li {
 	font-size: 12px; /* Fallback value. */
 	font-size: 0.75rem; /* Relative to root value. */
 }
@@ -319,7 +366,8 @@ ul, li {
 /* legend is an unused property. */
 
 /* Used for dropdown selection lists text across the site. */
-select, option {
+select,
+option {
 	font-size: 16px; /* Fallback value. */
 	font-size: 1rem; /* Relative to root value. */
 }
@@ -343,15 +391,15 @@ button {
 	border-radius: var(--border-radius, 0.2rem); /* Add a border-radius to all select components. */
 	width: 10rem; /* Define a base button width. */
 	height: 3rem; /* Define a base button height. */
-    border-style: none; /* Remove the border. */
-    font-size: 1rem;
-    font-family: inherit;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    padding: 0.2rem;
-    overflow: hidden;
-    transition: all .5s;
+	border-style: none; /* Remove the border. */
+	font-size: 1rem;
+	font-family: inherit;
+	outline: none;
+	cursor: pointer;
+	position: relative;
+	padding: 0.2rem;
+	overflow: hidden;
+	transition: all 0.5s;
 }
 
 /* Used on the Gallery page. */
@@ -444,14 +492,16 @@ tr:hover {
 	font: bold;
 }
 
-/* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */ 
+/* Add column highlighting (https://css-tricks.com/simple-css-row-column-highlighting/). */
 
-td, th {
+td,
+th {
 	position: relative;
 }
 
 /* Column highlighting. Only on tables with class "column-highlight". */
-.column-highlight td:hover::after, th:hover::after {
+.column-highlight td:hover::after,
+th:hover::after {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	content: "";
 	position: absolute;
@@ -496,19 +546,22 @@ tr:last-child td:last-child {
 	max-height: 50rem; /* Limit the height of table to allow the header row to be locked. */
 }
 
-.sticky-col { /* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
+.sticky-col {
+	/* Add a sticky-col class that is applied to each table dynamically in JavaScript files. */
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: -webkit-sticky;
 	position: sticky;
 	z-index: 1;
 }
 
-.first-col { /* Add a first-col class that is applied to each table dynamically in JavaScript files. */
+.first-col {
+	/* Add a first-col class that is applied to each table dynamically in JavaScript files. */
 	width: max-content;
 	left: 0rem;
 }
 
-.first-cell { /* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
+.first-cell {
+	/* Add a first-cell class that is applied to each table dynamically in JavaScript files. */
 	z-index: 2; /* Add a z-index for the top left cell high enough to keep it at the top of the order for both x and y scrolling. */
 	border-top-left-radius: var(--border-radius, 0.2rem);
 }
@@ -516,17 +569,17 @@ tr:last-child td:last-child {
 /* Add 4th row underline for Titan status. */
 /* .titan4thRow tr:nth-child(4){
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
-	/* font-size: inherit;
+/* font-size: inherit;
 }*/
 
 /* Add 5th row underline for Titan status. */
-.titan5thRow tr:nth-child(5){
+.titan5thRow tr:nth-child(5) {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-size: inherit;
 }
 
 /* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
-.titan6thRow tr:nth-child(6){
+.titan6thRow tr:nth-child(6) {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	font-size: inherit;
 }
@@ -582,16 +635,16 @@ tr:last-child td:last-child {
 	1024 pixels (iPad landscape) */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    /* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 	/* background: blue; */
-    :root {
+	:root {
 		--headerHeight: 2.8rem; /* Define the header height variable. */
 	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
-    /* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-    /* background: green; */
+	/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: green; */
 	:root {
 		--headerHeight: 4rem; /* Define the header height variable. */
 		--pagewidth: 95%; /* Used for controlling the width of items on each page */
@@ -602,9 +655,9 @@ tr:last-child td:last-child {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    /* Covers iPads and other tablets. */
+	/* Covers iPads and other tablets. */
 	/* background: orange; */
-    :root {
+	:root {
 		--headerHeight: 4rem; /* Define the header height variable. */
 		--pagewidth: 80%; /* Used for controlling the width of items on each page */
 	}
@@ -614,8 +667,8 @@ tr:last-child td:last-child {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
-    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-    /* background: cyan; */
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: cyan; */
 	:root {
 		--headerHeight: 4rem; /* Define the header height variable. */
 		--pagewidth: 80%; /* Used for controlling the width of items on each page */
@@ -626,9 +679,9 @@ tr:last-child td:last-child {
 }
 
 @media only screen and (min-width: 1224px) {
-    /* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	/* background: red; */
-    :root {
+	:root {
 		--headerHeight: 4rem; /* Define the header height variable. */
 		--pagewidth: 80%; /* Used for controlling the width of items on each page */
 	}
@@ -638,9 +691,9 @@ tr:last-child td:last-child {
 }
 
 @media only screen and (min-width: 1824px) {
-    /* Desktops and Laptops - For larger monitors and displays. */
+	/* Desktops and Laptops - For larger monitors and displays. */
 	/* background: yellow; */
-    :root {
+	:root {
 		--headerHeight: 4rem; /* Define the header height variable. */
 		--pagewidth: 80%; /* Used for controlling the width of items on each page */
 	}
@@ -648,9 +701,6 @@ tr:last-child td:last-child {
 		font-size: 24px; /* Add a top level font size that all other CSS is relative to. */
 	}
 }
-
-
-
 
 /* Add a set up for media devices with preference for dark mode. */
 

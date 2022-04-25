@@ -6,133 +6,137 @@
 /* Add custom Dom's Corner page styling. */
 
 #outer {
-    width: 90%;
-    max-width: 37.5rem;
-    background: #fff;
-    margin: 0rem auto;
+	width: 90%;
+	max-width: 37.5rem;
+	background: #fff;
+	margin: 0rem auto;
 }
 
 #cover {
-    border: 0.125rem solid #111;
-    padding: 1rem 0rem;
+	border: 0.125rem solid #111;
+	padding: 1rem 0rem;
 }
 
 .main {
-    table-layout: fixed;
-    width: 94%;
-    border: 0rem;
-    border-collapse: collapse;
-    margin: 0rem auto;
+	table-layout: fixed;
+	width: 94%;
+	border: 0rem;
+	border-collapse: collapse;
+	margin: 0rem auto;
 }
 
 .main td {
-    padding: 0rem 8.5rem;
-    vertical-align: middle;
-    border: 0rem;
+	padding: 0rem 8.5rem;
+	vertical-align: middle;
+	border: 0rem;
 }
 
 .main input {
-    width: 100%;
-    border: 0.06rem solid #ccc;
-    margin: 0.125rem 0rem;
-    padding: 0rem 2%;
-    height: 1.375rem;
-    text-align: right
+	width: 100%;
+	border: 0.06rem solid #ccc;
+	margin: 0.125rem 0rem;
+	padding: 0rem 2%;
+	height: 1.375rem;
+	text-align: right;
 }
 
 .ac {
-    text-align: center;
+	text-align: center;
 }
 
 .b {
-    font-weight: bold;
+	font-weight: bold;
 }
 
 .main select {
-    width: 100%;
-    border: 0.06rem solid #ccc;
-    margin: 0.125rem 0rem;
-    background: #fff;
-    height: 1.375rem;
+	width: 100%;
+	border: 0.06rem solid #ccc;
+	margin: 0.125rem 0rem;
+	background: #fff;
+	height: 1.375rem;
 }
 
 .w50 {
-    width: 50%;
+	width: 50%;
 }
 
 .main button {
-    width: 100%;
-    font-weight: bold;
-    margin: 0.18rem 0rem;
+	width: 100%;
+	font-weight: bold;
+	margin: 0.18rem 0rem;
 }
 
-#box1, #tab0, #tab1 {
-    width: 100%;
+#box1,
+#tab0,
+#tab1 {
+	width: 100%;
 }
 
 .main {
-    width: 90%;
+	width: 90%;
 }
 
 .main td {
-    width: 25%;
+	width: 25%;
 }
 
 .Answer {
-    text-shadow: 0rem 0rem;
-    letter-spacing: 0.06rem;
-    text-align: center;
-    text-decoration: none;
+	text-shadow: 0rem 0rem;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	text-decoration: none;
 }
 
 .Question {
-    text-shadow: 0rem 0rem;
-    letter-spacing: 0.06rem;
-    text-align: center;
-    color: #f00;
+	text-shadow: 0rem 0rem;
+	letter-spacing: 0.06rem;
+	text-align: center;
+	color: #f00;
 }
 
 .Sign {
-    text-shadow: 0rem 0rem;
-    letter-spacing: 0.06rem;
-    text-align: center;
+	text-shadow: 0rem 0rem;
+	letter-spacing: 0.06rem;
+	text-align: center;
 }
 
 .High {
-    letter-spacing: 0.06rem;
-    text-align: center;
+	letter-spacing: 0.06rem;
+	text-align: center;
 }
 
-#tx, #tx1 {
-    text-align: center;
-    letter-spacing: 0.06rem;
+#tx,
+#tx1 {
+	text-align: center;
+	letter-spacing: 0.06rem;
 }
 
 #sans {
-    text-align: center;
-    letter-spacing: 0.06rem;
-    color: #00f;
+	text-align: center;
+	letter-spacing: 0.06rem;
+	color: #00f;
 }
 
 .w25 {
-    width: 25%;
+	width: 25%;
 }
 
 .ar {
-    text-align: right;
+	text-align: right;
 }
 
 #tab1 {
-    display: none;
-    width: 100%;
+	display: none;
+	width: 100%;
 }
 
-#tab0 td, #tab1 td {
-    padding: 0.125rem;
+#tab0 td,
+#tab1 td {
+	padding: 0.125rem;
 }
 
 .response {
-    text-shadow: 0rem 0rem;
-    letter-spacing: 0.06rem;
-    text-align: center;
+	text-shadow: 0rem 0rem;
+	letter-spacing: 0.06rem;
+	text-align: center;
 }

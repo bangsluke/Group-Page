@@ -1,4 +1,4 @@
-// footer.js JavaScript
+// Footer.js JavaScript
 
 // Common Footer script
 // This footer.js file creates a footer template which is then used by the majority of pages on the website.
@@ -6,7 +6,7 @@
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
-//console.log("Footer Component Added")
+//Console.log("Footer Component Added")
 
 const footerTemplate = document.createElement("template");
 footerTemplate.innerHTML = `
@@ -41,27 +41,24 @@ footerTemplate.innerHTML = `
 
 // Create a class for the element
 class Footer extends HTMLElement {
-  // Always call super first in constructor
-  constructor() {
-    super();
-  }
+	// Always call super first in constructor
+	constructor() {
+		super();
+	}
 
-  connectedCallback() {
-    // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: "open" });
+	connectedCallback() {
+		// Create a shadow root
+		const shadowRoot = this.attachShadow({ mode: "open" });
 
-    // Apply external styles to the shadow DOM
-    const styleSheet = document.createElement("link");
-    styleSheet.setAttribute("rel", "stylesheet");
-    styleSheet.setAttribute(
-      "href",
-      "/assets/components/Footer/FooterComponent.css"
-    );
-    shadowRoot.appendChild(styleSheet);
+		// Apply external styles to the shadow DOM
+		const styleSheet = document.createElement("link");
+		styleSheet.setAttribute("rel", "stylesheet");
+		styleSheet.setAttribute("href", "/assets/components/Footer/FooterComponent.css");
+		shadowRoot.appendChild(styleSheet);
 
-    // Attach the created elements to the shadow DOM
-    shadowRoot.appendChild(footerTemplate.content);
-  }
+		// Attach the created elements to the shadow DOM
+		shadowRoot.appendChild(footerTemplate.content);
+	}
 }
 
 customElements.define("footer-component", Footer);

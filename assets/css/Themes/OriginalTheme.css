@@ -4,21 +4,20 @@
 
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 :root {
-	
 	/* CSS variables - Add variables below like the given example. */
-	
+
 	/* Colours */
 
 	/* The below colour variables are specific to this theme only. */
-	--main-style-color: #FF3CAC;
-	--main-background-color: #FF3CAC;
-	--accent-color-1: #FF3CAC;
-	--accent-color-2: #784BA0;
-	--accent-color-3: #2B86C5;
+	--main-style-color: #ff3cac;
+	--main-background-color: #ff3cac;
+	--accent-color-1: #ff3cac;
+	--accent-color-2: #784ba0;
+	--accent-color-3: #2b86c5;
 	--accent-color-1-rgb: 255, 60, 172; /* Used for table highlighting. */
 	--accent-color-white: #ffffff;
 	--accent-color-black: #222222;
-	--accent-color-shadow: #784BA0; /* Used in the Shadow DOMs. */
+	--accent-color-shadow: #784ba0; /* Used in the Shadow DOMs. */
 	--accent-color-shadow-rgb: 255, 255, 255; /* Used in the Shadow DOMs. */
 	--snap-tabs-hue: 328deg;
 	--main-style-color-rgb: 255, 60, 172; /* Used for the snap tabs active a link tab. */
@@ -29,19 +28,43 @@
 /* HTML updates to cover the full webpage. */
 html {
 	/* background-image: linear-gradient(225deg, var(--accent-color-1) 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
-	background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%); /* https://www.grabient.com/ */
+	background-image: linear-gradient(
+		225deg,
+		blue 0%,
+		var(--accent-color-2) 50%,
+		var(--accent-color-3) 100%
+	); /* https://www.grabient.com/ */
 }
 
 /* Add a lighter opacity rounded edges container to split up the sections. */
 .page-section {
-	background: rgba(255, 255, 255, 0.10);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Text styling. */
 
-h1, h3, h4, h5, h6, p, th, tr, td, q, cite, section, article, span, ul, li, legend, select, option, button {
+h1,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+tr,
+td,
+q,
+cite,
+section,
+article,
+span,
+ul,
+li,
+legend,
+select,
+option,
+button {
 	color: var(--accent-color-white, white);
 }
 
@@ -52,12 +75,12 @@ h2 {
 
 /* Specifically style the a hyperlink text to be a different colour. */
 a {
-	color: var(--accent-color-1,white);
+	color: var(--accent-color-1, white);
 }
 
 /* Add a class that can be added to text to give it the theme colour. */
 .theme-colour-text {
-	color: var(--accent-color-1,white);
+	color: var(--accent-color-1, white);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -65,7 +88,8 @@ a {
 /* Component classes */
 
 /* Used for dropdown selection lists text across the site. */
-select, option {
+select,
+option {
 	background: var(--accent-color-white, white); /* Add a background colour to the dropdown. */
 	color: black; /* Select the colour of the font for the dropdown components. */
 }
@@ -85,19 +109,19 @@ table {
 }
 
 th {
-	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--accent-color-3,red);
+	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--accent-color-3, red);
 	box-shadow: inset 0rem 0rem 0rem red, inset 0rem -0.25rem 0rem var(--accent-color-1, red); /* Add a box-shadow as a bottom border so that it scrolls with the header. */
 }
 
 /* Add table borders. */
 .table-column-lines {
-	border-right-color: var(--accent-color-1,white);
+	border-right-color: var(--accent-color-1, white);
 }
 
 /* Cell highlighting. */
 td:hover {
-	border: 0.1rem solid var(--accent-color-white,white);
+	border: 0.1rem solid var(--accent-color-white, white);
 }
 
 /* Row highlighting. */
@@ -108,15 +132,16 @@ tr:hover {
 }
 
 /* Column highlighting. Only on tables with class "column-highlight". */
-.column-highlight td:hover::after, th:hover::after {
+.column-highlight td:hover::after,
+th:hover::after {
 	background-color: var(--accent-color-1, pink); /* Fallback colour - no opacity. */
 	background-color: rgba(var(--accent-color-1-rgb), 0.3); /* Same colour with opacity. */
 	color: var(--accent-color-white, white);
 }
 
 .sticky-col {
-	background-color: rgba( 255, 255, 255, 0.10);
-	background-color: var(--accent-color-3,red);
+	background-color: rgba(255, 255, 255, 0.1);
+	background-color: var(--accent-color-3, red);
 }
 
 /* Add 4th row underline for Titan status. */
@@ -125,12 +150,12 @@ tr:hover {
 } */
 
 /* Add 5th row underline for Titan status. */
-.titan5thRow tr:nth-child(5){
+.titan5thRow tr:nth-child(5) {
 	border-bottom: 0.25rem solid var(--accent-color-1, red);
 }
 
 /* Add 6th row underline for Titan status if a Tool Tip is being used on the table as two extra rows. */
-.titan6thRow tr:nth-child(6){
+.titan6thRow tr:nth-child(6) {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	border-bottom: 0.25rem solid var(--accent-color-1, red);
 }
@@ -146,7 +171,7 @@ tr:hover {
 
 /* Add a tool tip arrow. https://www.bitdegree.org/learn/css-tooltip. */
 .tooltip .tooltiptext::after {
-    border-color: transparent transparent var(--accent-color-2, black) transparent; /* This will make the top border black */
+	border-color: transparent transparent var(--accent-color-2, black) transparent; /* This will make the top border black */
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -154,50 +179,56 @@ tr:hover {
 /* Snap Tabs CSS */
 
 article {
-    color: var(--accent-color-white, white);
+	color: var(--accent-color-white, white);
 }
 
 snap-tabs {
-    --accent: var(--snap-tabs-hue) 100% 54%;
-    --accent-reduced: var(--snap-tabs-hue) 90% 90%;
+	--accent: var(--snap-tabs-hue) 100% 54%;
+	--accent-reduced: var(--snap-tabs-hue) 90% 90%;
 }
 
-snap-tabs a, snap-tabs article, snap-tabs snap-tabs-header, snap-tabs nav, snap-tabs section {
-    outline-color: hsl(var(--accent));
+snap-tabs a,
+snap-tabs article,
+snap-tabs snap-tabs-header,
+snap-tabs nav,
+snap-tabs section {
+	outline-color: hsl(var(--accent));
 }
 
-snap-tabs>snap-tabs-header {
-    --text-active-color: var(--accent-color-white, white);
+snap-tabs > snap-tabs-header {
+	--text-active-color: var(--accent-color-white, white);
 	background-color: var(--accent-color-shadow, black);
 	border-top: 0.125rem solid var(--accent-color-white, white);
 }
 
-snap-tabs>snap-tabs-header a {
-    --text-color: #BDBDBD; /* Need the variable --text-color as needed in the JavaScript. */
+snap-tabs > snap-tabs-header a {
+	--text-color: #bdbdbd; /* Need the variable --text-color as needed in the JavaScript. */
 	/*--text-color: var(--accent-color-3, white); /* Need the variable --text-color as needed in the JavaScript. */
 	color: var(--text-color, white); /* Change the colour of the non active snap tabs header links. */
 	color: var(--accent-color-3, white);
 }
 
-snap-tabs>snap-tabs-header a:hover {
-    background: hsl(var(--accent)/5%);
+snap-tabs > snap-tabs-header a:hover {
+	background: hsl(var(--accent) / 5%);
 }
 
-snap-tabs>snap-tabs-header>.snap-indicator {
-    background: hsl(var(--accent));
+snap-tabs > snap-tabs-header > .snap-indicator {
+	background: hsl(var(--accent));
 }
 
 /* Add snap-tab-header links styling for users with no reduced motion settings. */
-snap-tabs>snap-tabs-header a {
+snap-tabs > snap-tabs-header a {
 	/* Turn below two code blocks on for the indicator to be above the header text. */
-	border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
-	-webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
+	border-block-start: var(--indicator-size) solid hsl(var(--accent) / 0%);
+	-webkit-border-before: var(--indicator-size) solid hsl(var(--accent) / 0%);
 	/* Turn below two code blocks on for the indicator to be below the header text. */
-	-webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
-	border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
-	transition: color .7s ease, border-color .5s ease;
+	-webkit-border-after: var(--indicator-size) solid hsl(var(--accent) / 0%);
+	border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
+	transition: color 0.7s ease, border-color 0.5s ease;
 }
-snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-tabs>snap-tabs-header a[active] {
+snap-tabs > snap-tabs-header a:active,
+snap-tabs > snap-tabs-header a:target,
+snap-tabs > snap-tabs-header a[active] {
 	/* background-color: hsl(var(--accent-reduced)); */
 	background-color: rgba(var(--main-style-color-rgb), 0.2);
 	color: var(--text-active-color);
@@ -206,23 +237,25 @@ snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-t
 }
 
 /* Add snap-tab-header links styling for users with reduced motion settings. */
-@media (prefers-reduced-motion:reduce) {
-    snap-tabs>snap-tabs-header a {
-        /* Turn below two code blocks on for the indicator to be above the header text. */
-		border-block-start: var(--indicator-size) solid hsl(var(--accent)/0%);
-		-webkit-border-before: var(--indicator-size) solid hsl(var(--accent)/0%);
-        /* Turn below two code blocks on for the indicator to be below the header text. */
-		-webkit-border-after: var(--indicator-size) solid hsl(var(--accent)/0%);
-		border-block-end: var(--indicator-size) solid hsl(var(--accent)/0%);
-        transition: color .7s ease, border-color .5s ease;
-    }
-    snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-tabs>snap-tabs-header a[active] {
-        /* background-color: hsl(var(--accent-reduced)); */
-        background-color: rgba(var(--main-style-color-rgb), 0.2);
-        color: var(--text-active-color);
-        border-block-start-color: hsl(var(--accent));
-        border-block-end-color: hsl(var(--accent));
-    }
+@media (prefers-reduced-motion: reduce) {
+	snap-tabs > snap-tabs-header a {
+		/* Turn below two code blocks on for the indicator to be above the header text. */
+		border-block-start: var(--indicator-size) solid hsl(var(--accent) / 0%);
+		-webkit-border-before: var(--indicator-size) solid hsl(var(--accent) / 0%);
+		/* Turn below two code blocks on for the indicator to be below the header text. */
+		-webkit-border-after: var(--indicator-size) solid hsl(var(--accent) / 0%);
+		border-block-end: var(--indicator-size) solid hsl(var(--accent) / 0%);
+		transition: color 0.7s ease, border-color 0.5s ease;
+	}
+	snap-tabs > snap-tabs-header a:active,
+	snap-tabs > snap-tabs-header a:target,
+	snap-tabs > snap-tabs-header a[active] {
+		/* background-color: hsl(var(--accent-reduced)); */
+		background-color: rgba(var(--main-style-color-rgb), 0.2);
+		color: var(--text-active-color);
+		border-block-start-color: hsl(var(--accent));
+		border-block-end-color: hsl(var(--accent));
+	}
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -230,22 +263,22 @@ snap-tabs>snap-tabs-header a:active, snap-tabs>snap-tabs-header a:target, snap-t
 /* Footer Styling */
 
 footer {
-    background-color: rgba(var(--accent-color-shadow-rgb), 0.1);
-    color: var(--accent-color-white, white);
+	background-color: rgba(var(--accent-color-shadow-rgb), 0.1);
+	color: var(--accent-color-white, white);
 }
 
 footer li {
-    color: var(--accent-color-white, white);
+	color: var(--accent-color-white, white);
 }
 
 footer li a {
-    text-decoration: none;
-    color: var(--accent-color-white, white);
+	text-decoration: none;
+	color: var(--accent-color-white, white);
 }
 
 footer li a:hover {
-    color: var(--accent-color-1);
-    text-decoration: var(--accent-color-white, white);
+	color: var(--accent-color-1);
+	text-decoration: var(--accent-color-white, white);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -269,7 +302,7 @@ footer li a:hover {
 
 /* Middle Ticker Container */
 .ticker-wrap {
-	background: rgba(255, 255, 255, 0.10);
+	background: rgba(255, 255, 255, 0.1);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -277,23 +310,23 @@ footer li a:hover {
 /* Gallery Styling */
 
 .slider {
-    background-color: #ccc;
+	background-color: #ccc;
 }
 
 .slider:before {
-    background-color: var(--accent-color-white, white);
+	background-color: var(--accent-color-white, white);
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+	background-color: #2196f3;
 }
-  
+
 input:focus + .slider {
-    box-shadow: 0rem 0rem 0.06rem #2196F3;
+	box-shadow: 0rem 0rem 0.06rem #2196f3;
 }
 
 .gallery-cover-text {
-    color: var(--accent-color-white, white);
+	color: var(--accent-color-white, white);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -302,40 +335,42 @@ input:focus + .slider {
 
 /* The Modal (background) */
 .modal {
-    background-color: var(--accent-color-3, black);
+	background-color: var(--accent-color-3, black);
 }
 
 /* Number text (1/3 etc) */
 #numbertext {
-    color: var(--accent-color-white, white);
+	color: var(--accent-color-white, white);
 }
 
 /* The Close Button */
 .close {
-    color: var(--accent-color-white, white);
+	color: var(--accent-color-white, white);
 }
-.close:hover,.close:focus {
-    color: #999;
+.close:hover,
+.close:focus {
+	color: #999;
 }
 
 /* Next & previous buttons */
-.prev,.next {
-    color: var(--accent-color-white, white);
+.prev,
+.next {
+	color: var(--accent-color-white, white);
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .button-div:hover {
-    background-color: rgba(var(--accent-color-shadow-rgb), 0.2);
+	background-color: rgba(var(--accent-color-shadow-rgb), 0.2);
 }
 
 /* Caption text */
 .caption-container {
-    background-color: var(--accent-color-black, black);
-    color: var(--accent-color-white, white);
+	background-color: var(--accent-color-black, black);
+	color: var(--accent-color-white, white);
 }
 
 .hover-shadow:hover {
-    box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.2), 0rem 0.375rem 1.25rem 0rem rgba(0, 0, 0, 0.19);
+	box-shadow: 0rem 0.25rem 0.5rem 0rem rgba(0, 0, 0, 0.2), 0rem 0.375rem 1.25rem 0rem rgba(0, 0, 0, 0.19);
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
@@ -379,13 +414,12 @@ input:focus + .slider {
 /* Add styling for the Individual Stats table. */
 
 .first-col-individuals-stats {
-	background-color: rgba( 255, 255, 255, 0.0); /* Removes all background colour. */
+	background-color: rgba(255, 255, 255, 0); /* Removes all background colour. */
 }
 
 .data-col-individuals-stats {
-	color: var(--accent-color-1,red);
+	color: var(--accent-color-1, red);
 }
-
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -406,12 +440,12 @@ input:focus + .slider {
 /* User Styling */
 
 .glass-card {
-	background: rgba( 255, 255, 255, 0.20 );
-	border: 0.06rem solid rgba( 255, 255, 255, 0.18 );
+	background: rgba(255, 255, 255, 0.2);
+	border: 0.06rem solid rgba(255, 255, 255, 0.18);
 }
 
 .alias-container {
-	background-color: rgba( 255, 255, 255, 0.18 );
+	background-color: rgba(255, 255, 255, 0.18);
 }
 
 ul {
@@ -421,7 +455,6 @@ ul {
 li:hover {
 	background-color: var(--accent-color-1, pink);
 }
-
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------- */
 
@@ -442,44 +475,74 @@ li:hover {
 	812 pixels (iPhone X landscape)
 	1024 pixels (iPad landscape) */
 
-	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-		html {
-			background-image: linear-gradient(225deg, blue 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			blue 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
 	}
-	
-	@media only screen and (min-width: 480px) and (max-width: 768px) {
-		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		html {
-			background-image: linear-gradient(225deg, green 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
-	}
-	
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		/* Covers iPads and other tablets. */
-		html {
-			background-image: linear-gradient(225deg, orange 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
-	}
+}
 
-	@media only screen and (min-width: 1024px) and (max-width: 1224px) {
-		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		html {
-			background-image: linear-gradient(225deg, cyan 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			green 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
 	}
-	
-	@media only screen and (min-width: 1224px) {
-		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-		html {
-			background-image: linear-gradient(225deg, red 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			orange 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
 	}
-	
-	@media only screen and (min-width: 1824px) {
-		/* Desktops and Laptops - For larger monitors and displays. */
-		html {
-			background-image: linear-gradient(225deg, yellow 0%, var(--accent-color-2) 50%, var(--accent-color-3) 100%);
-		}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1224px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			cyan 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
 	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			red 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	html {
+		background-image: linear-gradient(
+			225deg,
+			yellow 0%,
+			var(--accent-color-2) 50%,
+			var(--accent-color-3) 100%
+		);
+	}
+}
