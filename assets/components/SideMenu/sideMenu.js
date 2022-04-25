@@ -1,4 +1,4 @@
-// sideMenu.js JavaScript
+// SideMenu.js JavaScript
 
 // Common SideMenu script
 // This sideMenu.js file creates a Side Menu template which is then used by the majority of pages on the website.
@@ -8,7 +8,7 @@
 
 // https://www.freecodecamp.org/news/reusable-html-components-how-to-reuse-a-header-and-footer-on-a-website/
 
-//console.log("Side Menu Component Added")
+//Console.log("Side Menu Component Added")
 
 const sideMenuTemplate = document.createElement("template");
 sideMenuTemplate.innerHTML = `
@@ -32,7 +32,7 @@ sideMenuTemplate.innerHTML = `
             <div class="sideMenu-Main-Container">
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="assets/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
+                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/assets/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
@@ -41,7 +41,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Users.html"><img src="assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
+                        <a href="Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Users.html">Users</a>
@@ -50,7 +50,7 @@ sideMenuTemplate.innerHTML = `
                 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Events.html"><img src="assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
+                        <a href="Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Events.html">Events</a>
@@ -59,7 +59,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Stats.html"><img src="assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                        <a href="Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Stats.html">Stats</a>
@@ -68,7 +68,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Titans.html"><img src="assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                        <a href="Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Titans.html">Titans</a>
@@ -77,7 +77,7 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Gallery.html"><img src="assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
+                        <a href="Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Gallery.html">Gallery</a>
@@ -108,7 +108,7 @@ sideMenuTemplate.innerHTML = `
 
                 <!-- <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Ideas.html"><img src="assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
+                        <a href="Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="Sub-Pages/Ideas.html">Ideas</a>
@@ -137,7 +137,7 @@ class sideMenu extends HTMLElement {
 		// Apply external styles to the shadow DOM
 		const styleSheet = document.createElement("link");
 		styleSheet.setAttribute("rel", "stylesheet");
-		styleSheet.setAttribute("href", "assets/components/SideMenu/SideMenuComponent.css");
+		styleSheet.setAttribute("href", "/assets/components/SideMenu/SideMenuComponent.css");
 		shadowRoot.appendChild(styleSheet);
 
 		// Attach the created elements to the shadow DOM
@@ -147,7 +147,7 @@ class sideMenu extends HTMLElement {
 
 customElements.define("side-menu-component", sideMenu);
 
-// jSideBar.js JavaScript Functions
+// JSideBar.js JavaScript Functions
 
 // Side bar scripts
 // https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
@@ -167,10 +167,10 @@ function openNav() {
 			.getElementsByTagName("header-component")[0]
 			.shadowRoot.getElementById("burgericon").style.display = "none"; // Hide the burger icon.
 	} else {
-		//console.log("not doing anything");
+		//Console.log("not doing anything");
 	}
 
-	// document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
+	// Document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
 }
 
 function closeNav() {
@@ -188,8 +188,8 @@ function closeNav() {
 			.getElementsByTagName("header-component")[0]
 			.shadowRoot.getElementById("burgericon").style.display = "inline"; // Show the burger icon.
 	} else {
-		//console.log("not doing anything");
+		//Console.log("not doing anything");
 	}
 
-	// document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
+	// Document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
 }

@@ -39,7 +39,7 @@ function changeSiteTheme(siteThemeName) {
 			siteThemeMainStyleHexColour +
 			"; padding: 0.5em 0em; font-weight: bold;"
 	); // Log the selected site name and href.
-	siteThemeHref = "assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
+	siteThemeHref = "/assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
 	sessionStorage.setItem("siteThemeHref", siteThemeHref); // Save the variable to session storage.
 	sessionStorage.setItem("siteThemeMainStyleHexColour", siteThemeMainStyleHexColour); // Save the variable to session storage.
 	sessionStorage.setItem("siteThemeBackgroundHexColour", siteThemeBackgroundHexColour); // Save the variable to session storage.
@@ -58,7 +58,7 @@ function getSiteTheme() {
 	if (siteThemeName == null) {
 		siteThemeName = 2;
 		siteThemeHref = "DarkGreyOrange.css";
-		siteThemeHref = "assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
+		siteThemeHref = "/assets/css/Themes/" + siteThemeHref; // Create the full siteThemeHref link.
 		siteThemeMainStyleHexColour = "#F7573A";
 		siteThemeBackgroundHexColour = "#222129";
 	}

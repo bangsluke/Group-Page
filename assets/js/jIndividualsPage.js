@@ -80,7 +80,7 @@ function getData(data, selectedUserName) {
 			var foundRow = x; // The found row containing the correct user object.
 		}
 	}
-	// Console.log("Found Row = " + foundRow);
+	console.log("Found Row = " + foundRow);
 
 	// Modify HTML elements with the found data.
 

@@ -57,10 +57,10 @@ function togglePeaMode() {
 			"assets/images/GalleryImages/Covers/Big Nights Out Pea Cover.jpg"; // Modify the source of the image.
 		document.getElementById("lockdownCover").src =
 			"assets/images/GalleryImages/Covers/Lockdown Pea Cover.jpg"; // Modify the source of the image.
-		document.getElementById("paghamCover").src = "assets/images/GalleryImages/Covers/Pagham Pea Cover.jpg"; // Modify the source of the image.
+		document.getElementById("paghamCover").src = "/assets/images/GalleryImages/Covers/Pagham Pea Cover.jpg"; // Modify the source of the image.
 		document.getElementById("generalCover").src =
 			"assets/images/GalleryImages/Covers/General Pea Cover.jpg"; // Modify the source of the image.
-		document.getElementById("skiingCover").src = "assets/images/GalleryImages/Covers/Skiing Pea Cover.jpg"; // Modify the source of the image.
+		document.getElementById("skiingCover").src = "/assets/images/GalleryImages/Covers/Skiing Pea Cover.jpg"; // Modify the source of the image.
 		document.getElementById("footballCover").src =
 			"assets/images/GalleryImages/Covers/Football Pea Cover.jpg"; // Modify the source of the image.
 		document.getElementById("edinburghCover").src =
@@ -70,19 +70,19 @@ function togglePeaMode() {
 	} else {
 		console.log("Pea mode toggle has just been turned off.");
 		// Change the sources of the images to show non-Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
-		document.getElementById("croatiaCover").src = "assets/images/GalleryImages/Covers/Croatia Cover.jpg"; // Modify the source of the image.
+		document.getElementById("croatiaCover").src = "/assets/images/GalleryImages/Covers/Croatia Cover.jpg"; // Modify the source of the image.
 		document.getElementById("glastonburyCover").src =
 			"assets/images/GalleryImages/Covers/Glastonbury Cover.jpg"; // Modify the source of the image.
 		document.getElementById("bigNightsOutCover").src =
 			"assets/images/GalleryImages/Covers/Big Nights Out Cover.jpg"; // Modify the source of the image.
-		document.getElementById("lockdownCover").src = "assets/images/GalleryImages/Covers/Lockdown Cover.jpg"; // Modify the source of the image.
-		document.getElementById("paghamCover").src = "assets/images/GalleryImages/Covers/Pagham Cover.jpg"; // Modify the source of the image.
-		document.getElementById("generalCover").src = "assets/images/GalleryImages/Covers/General Cover.jpg"; // Modify the source of the image.
-		document.getElementById("skiingCover").src = "assets/images/GalleryImages/Covers/Skiing Cover.jpg"; // Modify the source of the image.
-		document.getElementById("footballCover").src = "assets/images/GalleryImages/Covers/Football Cover.jpg"; // Modify the source of the image.
+		document.getElementById("lockdownCover").src = "/assets/images/GalleryImages/Covers/Lockdown Cover.jpg"; // Modify the source of the image.
+		document.getElementById("paghamCover").src = "/assets/images/GalleryImages/Covers/Pagham Cover.jpg"; // Modify the source of the image.
+		document.getElementById("generalCover").src = "/assets/images/GalleryImages/Covers/General Cover.jpg"; // Modify the source of the image.
+		document.getElementById("skiingCover").src = "/assets/images/GalleryImages/Covers/Skiing Cover.jpg"; // Modify the source of the image.
+		document.getElementById("footballCover").src = "/assets/images/GalleryImages/Covers/Football Cover.jpg"; // Modify the source of the image.
 		document.getElementById("edinburghCover").src =
 			"assets/images/GalleryImages/Covers/Edinburgh Cover.jpg"; // Modify the source of the image.
-		document.getElementById("portugalCover").src = "assets/images/GalleryImages/Covers/Portugal Cover.jpg"; // Modify the source of the image.
+		document.getElementById("portugalCover").src = "/assets/images/GalleryImages/Covers/Portugal Cover.jpg"; // Modify the source of the image.
 	}
 	sessionStorage.setItem("peaMode", peaMode); // Save the variable to session storage.
 }

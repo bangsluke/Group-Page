@@ -35,29 +35,29 @@
 /* sideMenu-Main-Container holds all of the smaller icon and text containers. */
 .sideMenu-Main-Container {
 	/* background-color: lightpink; */
-	padding: 0rem 1.25rem;/* Add padding to the left and right of the links to offset them from the far left and right. */
-    display: flex; /* Add flex to the top level container. */
-    flex-direction: column;
-    align-items: center; /* Vertically center the div's inside the container. */
-    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+	padding: 0rem 1.25rem; /* Add padding to the left and right of the links to offset them from the far left and right. */
+	display: flex; /* Add flex to the top level container. */
+	flex-direction: column;
+	align-items: center; /* Vertically center the div's inside the container. */
+	justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
 }
 
 /* sideMenu-Container exist for each menu option and holds the two smaller individual icon and text containers. */
 .sideMenu-Container {
-    /* background-color: lightseagreen; */
+	/* background-color: lightseagreen; */
 	padding: 0rem 1.25rem; /* Add padding to the left and right of the links to offset them from the far left and right. */
-    margin-bottom: 0.2rem; /* Add vertical spacing between each link. */
+	margin-bottom: 0.2rem; /* Add vertical spacing between each link. */
 	display: flex; /* Add flex to the top level container. */
-    flex-direction: row;
-    align-items: center; /* Vertically center the div's inside the container. */
-    justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
+	flex-direction: row;
+	align-items: center; /* Vertically center the div's inside the container. */
+	justify-content: flex-start; /* Horizontally start the links at the far left of the menu. */
 }
 
 /* sideMenu-Icon-Container holds just the sideMenu-Icon. */
 .sideMenu-Icon-Container {
-    /* background-color: lime; */
+	/* background-color: lime; */
 	width: 3.75rem;
-    height: max-content;
+	height: max-content;
 	height: 3rem; /* Controls the vertical height between each set of icons and links. */
 }
 
@@ -68,11 +68,11 @@
 }
 
 .sideMenu-Text-Container {
-    /* background-color: maroon; */
+	/* background-color: maroon; */
 	width: 9.5rem;
 	height: 2rem;
-    text-align: left; /* Left align the text in the div. */
-    margin-left: 0rem; /* Add spacing between the icon and text. */
+	text-align: left; /* Left align the text in the div. */
+	margin-left: 0rem; /* Add spacing between the icon and text. */
 }
 
 /* Style the text in the side menu to be Montserrat. */
@@ -85,7 +85,7 @@
 	margin-bottom: 1.25rem;
 	text-transform: uppercase;
 	font-weight: 900;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 .sideMenu a i {
@@ -121,21 +121,21 @@
 }
 
 #button-theme-1 {
-	background-color: #FF3CAC;
+	background-color: #ff3cac;
 	color: white;
 }
 
 #button-theme-2 {
-	background-color: #32303E;
-	color: #F7573A;
+	background-color: #32303e;
+	color: #f7573a;
 }
 
 #button-theme-3 {
-	background-color: #2D3047;
+	background-color: #2d3047;
 	color: white;
-	box-shadow: 0rem 0rem 0.125rem 0.125rem var(--accent-color-white, white), 0rem 0rem 0.06rem 0.06rem var(--accent-color-white, white); /* Add the glowing white effect. */
+	box-shadow: 0rem 0rem 0.125rem 0.125rem var(--accent-color-white, white),
+		0rem 0rem 0.06rem 0.06rem var(--accent-color-white, white); /* Add the glowing white effect. */
 }
-
 
 /* Side menu media queries. */
 
@@ -180,8 +180,8 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
-    /* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-    /* background: cyan; */
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: cyan; */
 	.sideMenu {
 		display: none;
 		/* Hide the side menu for larger screens. */

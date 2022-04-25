@@ -6,58 +6,58 @@
 
 /* Remove horizontal scrolling.  */
 .main-content-area {
-    overflow-x: hidden; 
+	overflow-x: hidden;
 }
 
 #back-button-text {
-    margin-top: 0.5rem;
+	margin-top: 0.5rem;
 }
 
 /* Add a container to hold all images. */
 .images-container {
-    height: max-content;
-    min-height: 28rem; /* Make sure the gallery image container is at least a minimum size. */
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+	height: max-content;
+	min-height: 28rem; /* Make sure the gallery image container is at least a minimum size. */
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: space-around;
 }
 
 /* Format the images. */
 img {
-    height: 5rem; /* Define the heights of the images. */
-    width: auto; /* Auto size the width of the images. */
-    opacity: 0.9; /* Add some minor transparency to the images so they look clearer when clicked on. */
-    margin: 0.2rem; /* Add spacing between images. */
+	height: 5rem; /* Define the heights of the images. */
+	width: auto; /* Auto size the width of the images. */
+	opacity: 0.9; /* Add some minor transparency to the images so they look clearer when clicked on. */
+	margin: 0.2rem; /* Add spacing between images. */
 }
 
 /* LightBox - (https://www.w3schools.com/howto/howto_js_lightbox.asp) */
-  
+
 /* The Modal (background) */
 .modal {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    display: none; /* Initially on load, don't show the modal. */
-    position: fixed; /* Set the modal as fixed position. */
-    left: 0rem; /* Fix the modal to the left. */
-    top: 0rem; /* Fallback. */
-    top: var(--headerHeight, 2.8rem); /* Offset below the header height */
-    width: 100%; /* Set the modal to cover the full screen. */
-    height: 100%; /* Set the modal to cover the full screen. */
-    z-index: 5; /* Make the modal the highest level z-index item. */
-    overflow: auto;
-    padding-top: 3.2rem; /* Offset the height of the image from the top of the modal. */
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	display: none; /* Initially on load, don't show the modal. */
+	position: fixed; /* Set the modal as fixed position. */
+	left: 0rem; /* Fix the modal to the left. */
+	top: 0rem; /* Fallback. */
+	top: var(--headerHeight, 2.8rem); /* Offset below the header height */
+	width: 100%; /* Set the modal to cover the full screen. */
+	height: 100%; /* Set the modal to cover the full screen. */
+	z-index: 5; /* Make the modal the highest level z-index item. */
+	overflow: auto;
+	padding-top: 3.2rem; /* Offset the height of the image from the top of the modal. */
 }
-  
+
 /* Modal Content - not needed for now. */
 /*.modal-content {
     /* background-color: #fefefe; */
-    /*background-color: red;
+/*background-color: red;
     position: relative;
     margin: auto; /* Align the modal content box correctly in the window. */
-    /*margin-top: 20%;
+/*margin-top: 20%;
     padding: 0rem auto;
     width: 90%;
     max-width: 75rem;
@@ -65,139 +65,145 @@ img {
 
 /* Define a class for the image when its the main image in the modal. */
 .modal-image {
-    display: block;
-    margin: auto;
-    opacity: 1;
+	display: block;
+	margin: auto;
+	opacity: 1;
 }
 
 /* Define a portrait class to be dynamically added for when the image is taller than it is wide. */
 .portrait-image {
-    width: auto;
-    max-width: var(--pagewidth, 95%); /*Set a maximum width equal to the pagewidth variable. */
-    height: auto;
+	width: auto;
+	max-width: var(--pagewidth, 95%); /*Set a maximum width equal to the pagewidth variable. */
+	height: auto;
 }
 
 .portrait-image-reduced-width {
-    width: auto;
-    height: 16rem;
+	width: auto;
+	height: 16rem;
 }
 
 /* Define a landscape class to be dynamically added for when the image is wider than it is tall. */
 .landscape-image {
-    width: var(--pagewidth, 95%); /* Set the width equal to the pagewidth variable. */
-    max-width: var(--pagewidth, 95%); /* Set a maximum width equal to the pagewidth variable. */
-    height: auto;
+	width: var(--pagewidth, 95%); /* Set the width equal to the pagewidth variable. */
+	max-width: var(--pagewidth, 95%); /* Set a maximum width equal to the pagewidth variable. */
+	height: auto;
 }
 
 /* Number text (1/3 etc) */
 #numbertext {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    position: absolute; /* Set the position to be absolute to ignore its container div. */
-    z-index: 2;
-    top: 1.2rem;
-    left: 2.2rem;
-    font-size: 1rem;
-    font-weight: bold;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	position: absolute; /* Set the position to be absolute to ignore its container div. */
+	z-index: 2;
+	top: 1.2rem;
+	left: 2.2rem;
+	font-size: 1rem;
+	font-weight: bold;
 }
 
 /* The Close Button */
 .close {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    position: absolute; /* Set the position to be absolute to ignore its container div. */
-    z-index: 2;
-    top: 1.2rem;
-    right: 2.2rem;
-    font-size: 2rem;
-    font-weight: bold;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	position: absolute; /* Set the position to be absolute to ignore its container div. */
+	z-index: 2;
+	top: 1.2rem;
+	right: 2.2rem;
+	font-size: 2rem;
+	font-weight: bold;
 }
-.close:hover,.close:focus {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    text-decoration: none;
-    cursor: pointer;
-}
-  
-/* Hide the slides by default */
-.mySlides {
-    display: none;
-}
-  
-/* Next & previous buttons */
-.prev,.next {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 1rem;
-    margin-top: -2rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
-    transition: 0.6s ease;
-    user-select: none;
-    -webkit-user-select: none;   
+.close:hover,
+.close:focus {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	text-decoration: none;
+	cursor: pointer;
 }
 
-.button-div, .prev, .next {
-    height: 100vh;
-    line-height: 100vh; /* Make the line-height the same as the height of the div to vertically center the text. */
-    position: fixed;
-    left: 0rem;
-    top: 0rem;
-    cursor: pointer;
-    width: 2rem;
-    padding: 1rem;
-    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
-    transition: 0.6s ease;
-    user-select: none;
-    -webkit-user-select: none;
-    font-weight: bold;
-    font-size: 1.8rem;
-    text-align: center;
+/* Hide the slides by default */
+.mySlides {
+	display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 1rem;
+	margin-top: -2rem;
+	font-weight: bold;
+	font-size: 1.8rem;
+	border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
+	transition: 0.6s ease;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.button-div,
+.prev,
+.next {
+	height: 100vh;
+	line-height: 100vh; /* Make the line-height the same as the height of the div to vertically center the text. */
+	position: fixed;
+	left: 0rem;
+	top: 0rem;
+	cursor: pointer;
+	width: 2rem;
+	padding: 1rem;
+	border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
+	transition: 0.6s ease;
+	user-select: none;
+	-webkit-user-select: none;
+	font-weight: bold;
+	font-size: 1.8rem;
+	text-align: center;
 }
 
 /* On hover, add a black background color with a little bit see-through */
 .button-div:hover {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    font-size: inherit;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
 }
 
 /* Position the "next button" to the right */
-#nextButton, .next {
-    right: 0rem;
-    left: auto;
-    border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
+#nextButton,
+.next {
+	right: 0rem;
+	left: auto;
+	border-radius: var(--border-radius, 0.2rem) 0rem 0rem var(--border-radius, 0.2rem);
 }
 
 /* Caption text */
 .caption-container {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    text-align: center;
-    padding: 0.1rem 1rem;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	text-align: center;
+	padding: 0.1rem 1rem;
 }
 
 .thumbnail-container {
-    width: 100%;
+	width: 100%;
 }
 
 img.demo {
-    opacity: 0.6;
+	opacity: 0.6;
 }
-  
-.active,.demo:hover {
-    opacity: 1;
+
+.active,
+.demo:hover {
+	opacity: 1;
 }
-  
+
 img.hover-shadow {
-    transition: 0.3s;
+	transition: 0.3s;
 }
-  
+
 .hover-shadow:hover {
-    /* Note that color is controlled by theme, so look at the CSS theme sheets. */
-    font-size: inherit;
+	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
+	font-size: inherit;
 }
 
 /* Add styling to the div surrounding the bonus football video. */
 #football-video-div {
-    margin-top: -3rem; /* Remove the excess space above the football video. */
+	margin-top: -3rem; /* Remove the excess space above the football video. */
 }

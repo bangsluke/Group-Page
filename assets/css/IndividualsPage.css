@@ -103,22 +103,24 @@
 	line-height: 1.25rem;
 	border: none;
 	border-collapse: collapse;
-	background-color: var(--accent-color-white,white);
+	background-color: var(--accent-color-white, white);
 }
 
-.premierLeague td, .premierLeague th {
-	color: var(--proTeam-text-color,black);
+.premierLeague td,
+.premierLeague th {
+	color: var(--proTeam-text-color, black);
 }
 
-.championship td, .championship th {
-	color: var(--championship-text-color,black);
+.championship td,
+.championship th {
+	color: var(--championship-text-color, black);
 }
 
 /* premierLeague Styling. */
 
 /* Add the border below the header rows. */
-.premierLeague>thead>:nth-child(1) {
-	border-bottom: 0.25rem solid var(--proTeam-accent-color, #02F785);
+.premierLeague > thead > :nth-child(1) {
+	border-bottom: 0.25rem solid var(--proTeam-accent-color, #02f785);
 }
 
 /* Select the 4th row to highlight the selected team. */
@@ -129,26 +131,29 @@
 
 .premierLeague-highlight-row {
 	background-color: var(--proTeam-text-color, #37003d);
-	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
+	color: var(
+		--accent-color-white,
+		white
+	) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
 
 /* Ensure the header row is white and clear the normal header box-shadow. */
 .premierLeague th {
-	background-color: var(--accent-color-white,white);
+	background-color: var(--accent-color-white, white);
 	box-shadow: none;
 }
 
 /* Add a highlighting row effect on hover. */
 .premierLeague tr:hover {
-	background-color: var(--proTeam-accent-color, #02F785);
+	background-color: var(--proTeam-accent-color, #02f785);
 	color: var(--proTeam-text-color, #37003d);
 }
 
 /* championship Styling. */
 
 /* Add the border below the header rows. */
-.championship>thead>:nth-child(1) {
-	border-bottom: 0.25rem solid var(--championship-accent-color, #FA0F10);
+.championship > thead > :nth-child(1) {
+	border-bottom: 0.25rem solid var(--championship-accent-color, #fa0f10);
 }
 
 /* Select the 4th row to highlight the selected team. */
@@ -158,22 +163,24 @@
 } */
 
 .championship-highlight-row {
-	background-color: var(--championship-text-color, #2346A0);
-	color: var(--accent-color-white,white) !important; /* Need the !important to override the #pro-team-table td rule above. */
+	background-color: var(--championship-text-color, #2346a0);
+	color: var(
+		--accent-color-white,
+		white
+	) !important; /* Need the !important to override the #pro-team-table td rule above. */
 }
 
 /* Ensure the header row is white and clear the normal header box-shadow. */
 .championship th {
-	background-color: var(--accent-color-white,white);
+	background-color: var(--accent-color-white, white);
 	box-shadow: none;
 }
 
 /* Add a highlighting row effect on hover. */
 .championship tr:hover {
-	background-color: var(--championship-accent-color, #FA0F10);
+	background-color: var(--championship-accent-color, #fa0f10);
 	color: white;
 }
-
 
 /* Dorkinians Information */
 
@@ -182,13 +189,13 @@
 	display: grid;
 	grid-column-gap: 0.625rem;
 	grid-template-columns: 3.75rem 70%;
-  	grid-template-rows: 3.75rem;
-  	grid-template-areas: "logo-section text-section";
+	grid-template-rows: 3.75rem;
+	grid-template-areas: "logo-section text-section";
 	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 .dorkiniansLogoContainer {
-	grid-area: logo-section;	
+	grid-area: logo-section;
 }
 
 #dorkiniansLogo {
@@ -202,7 +209,7 @@
 	grid-area: text-section;
 	display: flex;
 	align-items: flex-start;
-    justify-content:flex-start;
+	justify-content: flex-start;
 }
 
 .dorkiniansHeaderText {
@@ -254,7 +261,6 @@
 	margin-top: 1rem;
 }
 
-
 /* ------------------------------------------------------------------------------------------------------- */
 
 /* History Tab */
@@ -299,13 +305,13 @@
 	display: grid;
 	grid-column-gap: 0.625rem;
 	grid-template-columns: 3.75rem 70%;
-  	grid-template-rows: 3.75rem;
-  	grid-template-areas: "logo-section text-section";
+	grid-template-rows: 3.75rem;
+	grid-template-areas: "logo-section text-section";
 	margin-bottom: 1rem; /* Add space below the logo. */
 }
 
 .brockhamBadgersLogoContainer {
-	grid-area: logo-section;	
+	grid-area: logo-section;
 }
 
 #brockhamBadgersLogo {
@@ -318,7 +324,7 @@
 	grid-area: text-section;
 	display: flex;
 	align-items: flex-start;
-    justify-content:flex-start;
+	justify-content: flex-start;
 }
 
 .brockhamBadgersHeaderText {

@@ -99,7 +99,12 @@ function populateImageSources() {
 		if (x <= albumSize) {
 			// If the image number falls within the album size, update the source of the image.
 			var sourcePath =
-				"assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
+				"/assets/images/GalleryImages/" +
+				clickedAlbumName +
+				"/" +
+				clickedAlbumName +
+				x +
+				".jpg"; // Define the source path used for both images.
 			document.getElementById("image" + x).src = sourcePath; // Set the source of the image dynamically.
 			//Document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
 		} else {
@@ -179,7 +184,7 @@ function showSlides(n) {
 	}
 	document.getElementById("numbertext").innerHTML = n + "/" + albumSize; // Update the image number text. Modify the text inside the element.
 	var img = new Image(); // Get the image height and width from making a new image. https://stackoverflow.com/a/5633302/14290169.
-	img.src = "assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
+	img.src = "/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Setting the source.
 	var width = img.width; // Getting the width.
 	var height = img.height; // Getting the height.
 	console.log("image width is " + width + "and height is = " + height); // Log the images height and width.
@@ -206,6 +211,6 @@ function showSlides(n) {
 	}
 	var slides = document.getElementsByClassName("mySlides"); // Get all images with class "mySlides".
 	slides[0].style.display = "block"; // Load the selected image.
-	var sourcePath = "assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Define the source path used for both images.
+	var sourcePath = "/assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + n + ".jpg"; // Define the source path used for both images.
 	document.getElementById("modalimage").src = sourcePath; // Set the source of the modal image dynamically.
 }

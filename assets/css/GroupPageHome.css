@@ -5,7 +5,8 @@
 /* Specific Homepage Header styling is in HeaderComponent.css. */
 
 /* Lock all scrolling just on the homepgae. */
-html, body {
+html,
+body {
 	overflow: hidden;
 }
 
@@ -14,7 +15,9 @@ html, body {
 .homepage-content-area {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	min-height: 20rem;
-	height: calc(100vh - var(--headerHeight) - var(--footerHeight)); /* The viewport height minus the header and footer heights. */
+	height: calc(
+		100vh - var(--headerHeight) - var(--footerHeight)
+	); /* The viewport height minus the header and footer heights. */
 	width: 100%; /* Note padding in all-content-area limiting width */
 	text-transform: uppercase; /* Convert both heading texts below to uppercase. */
 	text-align: center; /* Center align both heading texts below. */
@@ -73,10 +76,10 @@ html, body {
 	/* Note that color is controlled by theme, so look at the CSS theme sheets. */
 	position: fixed; /* Lock the position of the ticker container box. */
 	top: 0rem; /* Set the top position of the ticker container box from the top of the screen. */
-    left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
-    width: 100%; /* Set the width of the ticker container box. */
-    overflow: hidden; /* Hide scroll bar */
-    margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
+	left: 0rem; /* Set the left position of the ticker container box from the left of the screen. */
+	width: 100%; /* Set the width of the ticker container box. */
+	overflow: hidden; /* Hide scroll bar */
+	margin-top: 30rem; /* Offset the ticker bar from the top of the page. */
 	height: 2rem; /* Control the height of the ticker. */
 	box-sizing: content-box; /* Add box-sizing control. */
 }
@@ -95,8 +98,11 @@ html, body {
 	animation-timing-function: linear; /* Add a linear animation function. */
 	-webkit-animation-name: ticker; /* Link the div to the animation function. */
 	animation-name: ticker; /* Link the div to the animation function. */
-	-webkit-animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
-	animation-duration: var(--ticker-animation-duration, 10s);  /* Control the timing of the animation function. */
+	-webkit-animation-duration: var(
+		--ticker-animation-duration,
+		10s
+	); /* Control the timing of the animation function. */
+	animation-duration: var(--ticker-animation-duration, 10s); /* Control the timing of the animation function. */
 }
 
 /* Ticker item styling */
@@ -111,25 +117,25 @@ html, body {
 
 @-webkit-keyframes ticker {
 	0% {
-	  -webkit-transform: translate3d(0, 0, 0);
-	  transform: translate3d(0, 0, 0);
-	  visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
 	}
 	100% {
-	  -webkit-transform: translate3d(-100%, 0, 0);
-	  transform: translate3d(-100%, 0, 0);
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
 	}
 }
 
 @keyframes ticker {
 	0% {
-	  -webkit-transform: translate3d(0, 0, 0);
-	  transform: translate3d(0, 0, 0);
-	  visibility: visible;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
 	}
 	100% {
-	  -webkit-transform: translate3d(-100%, 0, 0);
-	  transform: translate3d(-100%, 0, 0);
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
 	}
 }
 
@@ -158,71 +164,77 @@ footer {
 	812 pixels (iPhone X landscape)
 	1024 pixels (iPad landscape) */
 
-	@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-		/* Smartphones - Covers most phones such as iPhone SE (my phone). */
-		/* background: blue; */
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 18s; /* Set up the animation duration. */
-		}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
+	/* background: blue; */
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 18s; /* Set up the animation duration. */
 	}
-	
-	@media only screen and (min-width: 480px) and (max-width: 768px) {
-		/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: green; */
-		.avatar {
-			height: 8rem;
-		}
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 16s; /* Set up the animation duration. */
-		}
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+	/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: green; */
+	.avatar {
+		height: 8rem;
 	}
-	
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		/* Covers iPads and other tablets. */
-		/* background: orange; */
-		.avatar {
-			height: 8rem;
-		}
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 18s; /* Set up the animation duration. */
-		}
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 16s; /* Set up the animation duration. */
 	}
-	
-	@media only screen and (min-width: 1024px) and (max-width: 1223px) {
-		/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
-		/* background: cyan; */
-		.avatar {
-			height: 8rem;
-		}
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 30s; /* Set up the animation duration. */
-		}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	/* Covers iPads and other tablets. */
+	/* background: orange; */
+	.avatar {
+		height: 8rem;
 	}
-	
-	@media only screen and (min-width: 1224px) {
-		/* Desktops and Laptops - For most normal size screen desktops and laptops. */
-		/* background: red; */
-		.avatar {
-			height: 8rem;
-		}
-		.content-text h1 {
-			padding: 15px 35px;
-		}
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 35s; /* Set up the animation duration. */
-		}
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 18s; /* Set up the animation duration. */
 	}
-	
-	@media only screen and (min-width: 1824px) {
-		/* Desktops and Laptops - For larger monitors and displays. */
-		/* background: yellow; */
-		.avatar {
-			height: 8rem;
-		}
-		.content-text h1 {
-			padding: 15px 35px;
-		}
-		.ticker-wrap .ticker { /* Ticker animation CSS */
-			--ticker-animation-duration: 40s; /* Set up the animation duration. */
-		}
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1223px) {
+	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
+	/* background: cyan; */
+	.avatar {
+		height: 8rem;
 	}
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 30s; /* Set up the animation duration. */
+	}
+}
+
+@media only screen and (min-width: 1224px) {
+	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
+	/* background: red; */
+	.avatar {
+		height: 8rem;
+	}
+	.content-text h1 {
+		padding: 15px 35px;
+	}
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 35s; /* Set up the animation duration. */
+	}
+}
+
+@media only screen and (min-width: 1824px) {
+	/* Desktops and Laptops - For larger monitors and displays. */
+	/* background: yellow; */
+	.avatar {
+		height: 8rem;
+	}
+	.content-text h1 {
+		padding: 15px 35px;
+	}
+	.ticker-wrap .ticker {
+		/* Ticker animation CSS */
+		--ticker-animation-duration: 40s; /* Set up the animation duration. */
+	}
+}

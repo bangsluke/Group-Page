@@ -33,7 +33,7 @@
 }
 
 /* Change font size of dropdown so that mobile doesn't zoom. (https://github.com/jquery/jquery-mobile/issues/2069). */
-.stats-dropdown select{
+.stats-dropdown select {
 	font-size: 2rem;
 }
 

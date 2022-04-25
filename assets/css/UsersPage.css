@@ -10,9 +10,9 @@
 	width: var(--pagewidth, 90%);
 	height: max-content;
 	padding: 0.5rem 0.5rem 0.5rem 0.5rem; /* Space the content inside the glass card. */
-	margin: 1rem 0rem 1rem 0rem; /* Add vertical spacing between the glass cards */	
-	backdrop-filter: blur( 0.75rem );
-	-webkit-backdrop-filter: blur( 0.75rem );
+	margin: 1rem 0rem 1rem 0rem; /* Add vertical spacing between the glass cards */
+	backdrop-filter: blur(0.75rem);
+	-webkit-backdrop-filter: blur(0.75rem);
 	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
 }
 
@@ -21,7 +21,10 @@
 	margin: 0rem; /* Remove all margin. */
 	padding: 0rem; /* Remove all padding. */
 	width: 100%;
-	height: var(--user-card-height, 8rem); /* Make the container larger to increase the size of each user card to hold all content. */
+	height: var(
+		--user-card-height,
+		8rem
+	); /* Make the container larger to increase the size of each user card to hold all content. */
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -40,14 +43,14 @@
 	justify-content: center;
 	align-content: center;
 	height: var(--user-card-height, 8rem);
-	position:relative; /* Set as position relative to the IMG will move relative to this container */
+	position: relative; /* Set as position relative to the IMG will move relative to this container */
 }
 
 /* Add a helper span class. (https://stackoverflow.com/a/7310398/14290169). */
 .helper {
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 
 /* The user image. */
