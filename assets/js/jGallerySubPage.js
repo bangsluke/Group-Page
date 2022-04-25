@@ -1,6 +1,4 @@
-// jGallerySubPage.js JavaScript Functions
-
-"use strict";
+// JGallerySubPage.js JavaScript Functions
 
 // Gallery SubPage scripts
 
@@ -45,9 +43,9 @@ function setGalleryHeaderName() {
 		// Update clickedAlbumName to be General by deafult if error.
 		clickedAlbumName = "General";
 	}
-	//console.log(clickedAlbumName);
+	//Console.log(clickedAlbumName);
 	document.getElementById("pageMainHeader").innerHTML = clickedAlbumName; // Modify the text inside the header component element.
-	//document.getElementById("subpageHeader").innerHTML = clickedAlbumName + " Gallery."; // Modify the text inside the subpage header element.
+	//Document.getElementById("subpageHeader").innerHTML = clickedAlbumName + " Gallery."; // Modify the text inside the subpage header element.
 }
 
 // Loop through the images populating their sources correctly.
@@ -58,9 +56,7 @@ function populateImageSources() {
 		clickedAlbumName = "General";
 	}
 	var albumSize;
-	switch (
-		clickedAlbumName // Add a switch statement to define how many images are in the Gallery.
-	) {
+	switch (clickedAlbumName) {
 		case "Big Nights Out":
 			albumSize = 10;
 			break;
@@ -94,22 +90,22 @@ function populateImageSources() {
 		default: // Default statement or expression;
 			albumSize = 10;
 	}
-	//console.log(clickedAlbumName + ' album size is ' + albumSize); // Log the album size to be used.
+	//Console.log(clickedAlbumName + ' album size is ' + albumSize); // Log the album size to be used.
 	sessionStorage.setItem("albumSize", albumSize); // Save the variable to session storage.
 	var x; // Define the variable for looping.
 	for (x = 1; x <= maxImageCount; x++) {
 		// Loop through all images.
-		//console.log(x);
+		//Console.log(x);
 		if (x <= albumSize) {
 			// If the image number falls within the album size, update the source of the image.
 			var sourcePath =
 				"assets/images/GalleryImages/" + clickedAlbumName + "/" + clickedAlbumName + x + ".jpg"; // Define the source path used for both images.
 			document.getElementById("image" + x).src = sourcePath; // Set the source of the image dynamically.
-			//document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
+			//Document.getElementById("modalimage" + x).src = sourcePath; // Set the source of the modal image dynamically.
 		} else {
 			// If the image number is larger than the album size, hide the placeholder.
 			document.getElementById("image" + x).classList.add("hidden"); // Add the hidden class to the image.
-			//document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
+			//Document.getElementById("modalimage" + x).classList.add("hidden"); // Add the hidden class to the modal image.
 		}
 	}
 	document.getElementById("modalimage").src = sourcePath; // Set the source of the modal image dynamically.

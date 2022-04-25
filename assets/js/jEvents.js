@@ -1,6 +1,4 @@
-// jEvents.js JavaScript Functions
-
-"use strict";
+// JEvents.js JavaScript Functions
 
 // Events Page scripts
 

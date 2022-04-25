@@ -1,6 +1,4 @@
-// jGallery.js JavaScript Functions
-
-"use strict";
+// JGallery.js JavaScript Functions
 
 // Gallery scripts
 
@@ -34,20 +32,20 @@ function init() {
 	console.log("> On initial load, peaMode is = " + peaMode); // Check what the initial loaded state is.
 	if (peaMode == "true") {
 		// If Pea mode was true, turn the check box on and modify the images.
-		// console.log("Triggered");
+		// Console.log("Triggered");
 		document.getElementById("peaModeToggle").checked = true;
 		togglePeaMode();
 	} else {
 		// If Pea mode was false, do nothing.
-		// console.log("Not triggered");
+		// Console.log("Not triggered");
 	}
 }
 
 // Change the pea mode when the user has clicked on the toggle.
 function togglePeaMode() {
-	// console.log("Pea toggle clicked.");
+	// Console.log("Pea toggle clicked.");
 	var peaMode = document.getElementById("peaModeToggle").checked; // Get the value of the input from the toggle switch. Either true or false.
-	// console.log(peaMode);
+	// Console.log(peaMode);
 	if (peaMode == true) {
 		console.log("Pea mode toggle has just been turned on.");
 		// Change the sources of the images to show Pea specific covers. NOTE: the file extensions here are very important for loading the images. JPG or jpg makes a difference.
