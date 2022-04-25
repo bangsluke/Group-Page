@@ -1,249 +1,277 @@
+<!DOCTYPE html>
+
 <!-- GroupPageHome.html -->
 <!-- The home page for the best friendship group in the world. -->
 <!-- Initial basis started from https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html. -->
 
-<!DOCTYPE html>
-
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
+	<head>
+		<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+		<title>Home Page | Group Page</title>
 
-<head>
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="The single most awesome and offensive friends group website ever created." />
+		<meta name="author" content="bangsluke" />
+		<meta name="copyright" content="bangsluke" />
+		<meta name="robots" content="nofollow" />
 
-	<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-	<title>Home Page | Group Page</title>
+		<!-- Add Open Graph Meta Tags - https://ahrefs.com/blog/open-graph-meta-tags/ -->
+		<meta property="og:site_name" content="GroupPage" />
+		<meta property="og:url" content="https://bangsluke.github.io/GroupPageHome.html" />
+		<meta property="og:title" content="Group Page" />
+		<meta property="og:image" content="https://i.imgur.com/J4dxZpa.jpg" />
 
-	<!-- Initial Meta Data -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="description" content="The single most awesome and offensive friends group website ever created." />
-	<meta name="author" content="bangsluke" />
-	<meta name="copyright" content="bangsluke" />
-	<meta name="robots" content="nofollow" />
+		<!-- Link to fonts to be used on site. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+			rel="stylesheet" />
 
-	<!-- Add Open Graph Meta Tags - https://ahrefs.com/blog/open-graph-meta-tags/ -->
-	<meta property="og:site_name" content="GroupPage">
-	<meta property="og:url" content="https://bangsluke.github.io/GroupPageHome.html">
-	<meta property="og:title" content="Group Page">
-	<meta property="og:image" content="https://i.imgur.com/J4dxZpa.jpg">
+		<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<!-- Main CSS styling -->
+		<link href="assets/css/GroupPageMain.css" rel="stylesheet" />
+		<!-- Loader Dots styling -->
+		<link href="assets/components/LoaderDots/LoaderDots.css" rel="stylesheet" />
+		<!-- Header styling -->
+		<link href="assets/components/Header/HeaderComponent.css" rel="stylesheet" />
+		<!-- Home Page specific styling -->
+		<link href="assets/css/GroupPageHome.css" rel="stylesheet" />
+		<!-- CSS site theme -->
+		<link
+			href="assets/css/Themes/DarkGreyOrange.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+			id="css-theme" />
 
-	<!-- Link to fonts to be used on site. -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-		rel="stylesheet">
+		<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+		<!-- The Side Menu styling -->
+		<link rel="preload" href="assets/components/SideMenu/SideMenuComponent.css" as="style" />
+		<!-- The Footer styling -->
+		<link rel="preload" href="assets/components/Footer/FooterComponent.css" as="style" />
 
-	<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-	<!-- Main CSS styling -->
-	<link href="/assets/css/GroupPageMain.css" rel="stylesheet">
-	<!-- Loader Dots styling -->
-	<link href="/assets/components/LoaderDots/LoaderDots.css" rel="stylesheet">
-	<!-- Header styling -->
-	<link href="/assets/components/Header/HeaderComponent.css" rel="stylesheet">
-	<!-- Home Page specific styling -->
-	<link href="/assets/css/GroupPageHome.css" rel="stylesheet">
-	<!-- CSS site theme -->
-	<link href="/assets/css/Themes/DarkGreyOrange.css" rel="stylesheet" type="text/css" media="all"
-		id="css-theme" />
+		<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/Page Icon Circle.png" />
 
-	<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-	<!-- The Side Menu styling -->
-	<link rel="preload" href="/assets/components/SideMenu/SideMenuComponent.css" rel="stylesheet" as="style">
-	<!-- The Footer styling -->
-	<link rel="preload" href="/assets/components/Footer/FooterComponent.css" rel="stylesheet" as="style">
+		<!-- Add the loader dots JS -->
+		<script src="assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+	</head>
 
-	<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/assets/images/Page Icon Circle.png" />
-
-	<!-- Add the loader dots JS -->
-	<script src="/assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
-
-</head>
-
-<body>
-
-	<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-	<div class="loader" id="loader-div">
-		<div class="duo-loader">
-			<div class="duo duo1">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
-			</div>
-			<div class="duo duo2">
-				<div class="dot dot-a"></div>
-				<div class="dot dot-b"></div>
+	<body>
+		<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+		<div class="loader" id="loader-div">
+			<div class="duo-loader">
+				<div class="duo duo1">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
+				<div class="duo duo2">
+					<div class="dot dot-a"></div>
+					<div class="dot dot-b"></div>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<!-- Header -->
+		<!-- Header -->
 
-	<header>
+		<header>
+			<!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
+			<div class="header-area homepage">
+				<!-- Add a homepage link by adding a group icon image. Add it within a container. -->
+				<div class="avatar-container">
+					<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
+				</div>
 
-		<!-- Add a header area at the top of the subpage. Use flexbox to spread the items within it. -->
-		<div class="header-area homepage">
+				<!-- Add some heading text. Add it within a container. -->
+				<div class="heading-container">
+					<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
+				</div>
 
-			<!-- Add a homepage link by adding a group icon image. Add it within a container. -->
-			<div class="avatar-container">
+				<!-- Top Menu - not considered part of the "main-content-area" -->
 
-				<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
+				<!-- The main top nav bar options. -->
+				<nav class="topMenu" id="top-menu">
+					<div class="topMenu-Container">
+						<div class="topMenu-Icon-Container">
+							<a
+								href="a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"
+								><img
+									src="assets/images/Icons&Logos/HomeIcon.png"
+									class="topMenu-Icon"
+									alt="Email Logo"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a
+								href="a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"
+								>Home</a
+							>
+						</div>
 
-			</div>
+						<div class="topMenu-Icon-Container">
+							<a href="Sub-Pages/Users.html"
+								><img
+									src="assets/images/Icons&Logos/UsersIcon.png"
+									class="topMenu-Icon"
+									alt="Users Icon"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a href="Sub-Pages/Users.html">Users</a>
+						</div>
 
-			<!-- Add some heading text. Add it within a container. -->
-			<div class="heading-container">
+						<div class="topMenu-Icon-Container">
+							<a href="Sub-Pages/Events.html"
+								><img
+									src="assets/images/Icons&Logos/EventsIcon.png"
+									class="topMenu-Icon"
+									alt="Events Icon"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a href="Sub-Pages/Events.html">Events</a>
+						</div>
 
-				<!-- The container is blank but is left in for correctly positioning the burger menu icon. -->
+						<div class="topMenu-Icon-Container">
+							<a href="Sub-Pages/Titans.html"
+								><img
+									src="assets/images/Icons&Logos/TitansIcon.png"
+									class="topMenu-Icon"
+									alt="Titans Icon"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a href="Sub-Pages/Titans.html">Titans</a>
+						</div>
 
-			</div>
+						<div class="topMenu-Icon-Container">
+							<a href="Sub-Pages/Stats.html"
+								><img
+									src="assets/images/Icons&Logos/StatsIcon.png"
+									class="topMenu-Icon"
+									alt="Stats Icon"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a href="Sub-Pages/Stats.html">Stats</a>
+						</div>
 
-			<!-- Top Menu - not considered part of the "main-content-area" -->
+						<div class="topMenu-Icon-Container">
+							<a href="Sub-Pages/Gallery.html"
+								><img
+									src="assets/images/Icons&Logos/GalleryIcon.png"
+									class="topMenu-Icon"
+									alt="Gallery Icon"
+							/></a>
+						</div>
+						<div class="topMenu-Text-Container">
+							<a href="Sub-Pages/Gallery.html">Gallery</a>
+						</div>
 
-			<!-- The main top nav bar options. -->
-			<nav class="topMenu" id="top-menu">
-				<div class="topMenu-Container">
-					<div class="topMenu-Icon-Container">
-						<a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img
-								src="/assets/images/Icons&Logos/HomeIcon.png" class="topMenu-Icon" alt="Email Logo"></a>
+						<!-- <div class="topMenu-Icon-Container">
+						<a href="Sub-Pages/Ideas.html"><img src="assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon"></a>
 					</div>
 					<div class="topMenu-Text-Container">
-						<a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
-					</div>
-
-					<div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png"
-								class="topMenu-Icon" alt="Users Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Users.html">Users</a>
-					</div>
-
-					<div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png"
-								class="topMenu-Icon" alt="Events Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Events.html">Events</a>
-					</div>
-
-					<div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png"
-								class="topMenu-Icon" alt="Titans Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Titans.html">Titans</a>
-					</div>
-
-					<div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png"
-								class="topMenu-Icon" alt="Stats Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Stats.html">Stats</a>
-					</div>
-
-					<div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Gallery.html"><img
-								src="/assets/images/Icons&Logos/GalleryIcon.png" class="topMenu-Icon" alt="Gallery Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Gallery.html">Gallery</a>
-					</div>
-
-					<!-- <div class="topMenu-Icon-Container">
-						<a href="/Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon"></a>
-					</div>
-					<div class="topMenu-Text-Container">
-						<a href="/Sub-Pages/Ideas.html">Ideas</a>
+						<a href="Sub-Pages/Ideas.html">Ideas</a>
 					</div> -->
+					</div>
+				</nav>
+
+				<!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
+				<div class="burgericon-container">
+					<!-- Add burger icon with JavaScript functionality. -->
+					<!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
+					<img
+						class="center burgericon fadein"
+						src="assets/images/Burger Menu Icon.png"
+						alt="Burger Menu Icon"
+						width="50"
+						height="50"
+						onclick="openNav()" />
 				</div>
-			</nav>
-
-			<!-- Side Menu - Top burger menu clickable icon to open the menu. Add it within a container. -->
-			<div class="burgericon-container">
-
-				<!-- Add burger icon with JavaScript functionality. -->
-				<!-- <span class="burgericon center fadein" onclick="openNav()">☰</span> -->
-				<img class="center burgericon fadein" src="/assets/images/Burger Menu Icon.png"
-					alt="Burger Menu Icon" width="50" height="50" onclick="openNav()">
-
 			</div>
+		</header>
 
+		<!-- Side Menu -->
+
+		<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
+
+		<!-- Main Page Content -->
+
+		<!-- This is all the content between the header and footer. -->
+		<div class="main-content-area fadein">
+			<!-- Main content section. -->
+			<div class="homepage-content-area">
+				<!-- Add group icon image. -->
+				<a href="Sub-Pages/IndividualsPage.html">
+					<img
+						class="avatar center fadein"
+						src="assets/images/Page Icon.jpg"
+						alt="Group Page Logo"
+						width="100"
+						height="100" />
+				</a>
+
+				<!-- Add pink main header box. -->
+				<a href="Sub-Pages/IndividualsPage.html">
+					<div class="headercontainer">
+						<h1>Tits Group Page.</h1>
+					</div>
+				</a>
+
+				<!-- Add link below to enter the site. -->
+				<!-- Note that &gt; is the > (greater-than) character in HTML. https://www.lifewire.com/special-characters-in-html-3466714 -->
+				<a href="Sub-Pages/IndividualsPage.html">
+					<div class="subheadercontainer">
+						<h3>&gt; Click to enter</h3>
+					</div>
+				</a>
+
+				<!-- Add ticker quotes that move across the screen. -->
+				<div class="ticker-wrap">
+					<div class="ticker">
+						<!-- <div class="ticker-item" id="ticker-text">Add quotes.</div> -->
+						<div class="ticker-item" id="ticker-text">
+							"But city are comfortably better than chelsea"
+							<cite
+								>- Kieran, 05 May 2021 (3 days before Chelsea beat City
+								in the league and then in the Champions League
+								Final)</cite
+							>
+						</div>
+						<!-- <div class="ticker__item">Lorem ipsum.</div> -->
+					</div>
+				</div>
+			</div>
 		</div>
 
-	</header>
+		<!-- Footer -->
 
-	<!-- Side Menu -->
+		<footer>
+			<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
+			<footer-component></footer-component>
+		</footer>
 
-	<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
-	<side-menu-component></side-menu-component>
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-	<!-- Main Page Content -->
-
-	<!-- This is all the content between the header and footer. -->
-	<div class="main-content-area fadein">
-
-		<!-- Main content section. -->
-		<div class="homepage-content-area">
-
-			<!-- Add group icon image. -->
-			<a href="/Sub-Pages/IndividualsPage.html">
-				<img class="avatar center fadein" src="/assets/images/Page Icon.jpg"
-					alt="Group Page Logo" width="100" height="100">
-			</a>
-
-			<!-- Add pink main header box. -->
-			<a href="/Sub-Pages/IndividualsPage.html"></a>
-			<div class="headercontainer">
-				<h1>Tits Group Page.</h1>
-			</div>
-			</a>
-
-			<!-- Add link below to enter the site. -->
-			<!-- Note that &gt; is the > (greater-than) character in HTML. https://www.lifewire.com/special-characters-in-html-3466714 -->
-			<a href="/Sub-Pages/IndividualsPage.html">
-				<div class="subheadercontainer">
-					<h3>&gt; Click to enter</h3>
-				</div>
-			</a>
-
-			<!-- Add ticker quotes that move across the screen. -->
-			<div class="ticker-wrap">
-				<div class="ticker">
-					<!-- <div class="ticker-item" id="ticker-text">Add quotes.</div> -->
-					<div class="ticker-item" id="ticker-text">"But city are comfortably better than chelsea" <cite>-
-							Kieran, 05 May 2021 (3 days before Chelsea beat City in the league and then in the Champions
-							League Final)</cite></div>
-					<!-- <div class="ticker__item">Lorem ipsum.</div> -->
-				</div>
-			</div>
-
-		</div>
-
-	</div>
-
-	<!-- Footer -->
-
-	<footer>
-
-		<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
-		<footer-component></footer-component>
-
-	</footer>
-
-	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-	<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-	
-	<!-- Add the common sideMenu JS -->
-	<script src="/assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
-	<!-- Add the common footer JS -->
-	<script src="/assets/components/Footer/footer.js" type="text/javascript" defer></script>
-	<!-- Get the first PapaParse JS -->
-	<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
-	<!-- Add the Group Home Page JS -->
-	<script src="/assets/js/jGroupHomePage.js" type="text/javascript" defer></script>
-	<!-- Add the Main Functions JS -->
-	<script src="/assets/js/jMainFunctions.js" type="text/javascript" defer></script>
-
-</body>
-
+		<!-- Add the common sideMenu JS -->
+		<script src="assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+		<!-- Add the common footer JS -->
+		<script src="assets/components/Footer/footer.js" type="text/javascript" defer></script>
+		<!-- Get the first PapaParse JS -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+		<!-- Add the Group Home Page JS -->
+		<script src="assets/js/jGroupHomePage.js" type="text/javascript" defer></script>
+		<!-- Add the Main Functions JS -->
+		<script src="assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	</body>
 </html>

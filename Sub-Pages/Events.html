@@ -1,183 +1,151 @@
+<!DOCTYPE html>
+
 <!-- Events.html -->
 <!-- A group calendar to jointly plan numerous events and activities. -->
 
-<!DOCTYPE html>
-
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
-  <head>
-    <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-    <title>Events | Group Page</title>
+	<head>
+		<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+		<title>Events | Group Page</title>
 
-    <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="The single most awesome and offensive friends group website ever created."
-    />
-    <meta name="author" content="bangsluke" />
-    <meta name="copyright" content="bangsluke" />
-    <meta name="robots" content="nofollow" />
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="The single most awesome and offensive friends group website ever created." />
+		<meta name="author" content="bangsluke" />
+		<meta name="copyright" content="bangsluke" />
+		<meta name="robots" content="nofollow" />
 
-    <!-- Link to fonts to be used on site. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Link to fonts to be used on site. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+			rel="stylesheet" />
 
-    <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-    <!-- Main CSS styling -->
-    <link href="/assets/css/GroupPageMain.css" rel="stylesheet" />
-    <!-- Loader Dots styling -->
-    <link
-      href="/assets/components/LoaderDots/LoaderDots.css"
-      rel="stylesheet"
-    />
-    <!-- CSS site theme -->
-    <link
-      href="/assets/css/Themes/DarkGreyOrange.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      id="css-theme"
-    />
-    <!-- Events Page styling -->
-    <link href="/assets/css/EventsPage.css" rel="stylesheet" />
+		<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<!-- Main CSS styling -->
+		<link href="assets/css/GroupPageMain.css" rel="stylesheet" />
+		<!-- Loader Dots styling -->
+		<link href="assets/components/LoaderDots/LoaderDots.css" rel="stylesheet" />
+		<!-- CSS site theme -->
+		<link
+			href="assets/css/Themes/DarkGreyOrange.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+			id="css-theme" />
+		<!-- Events Page styling -->
+		<link href="assets/css/EventsPage.css" rel="stylesheet" />
 
-    <!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-    <!-- The Header styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Header/HeaderComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Side Menu styling -->
-    <link
-      rel="preload"
-      href="/assets/components/SideMenu/SideMenuComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Footer styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Footer/FooterComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
+		<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+		<!-- The Header styling -->
+		<link rel="preload" href="assets/components/Header/HeaderComponent.css" as="style" />
+		<!-- The Side Menu styling -->
+		<link rel="preload" href="assets/components/SideMenu/SideMenuComponent.css" as="style" />
+		<!-- The Footer styling -->
+		<link rel="preload" href="assets/components/Footer/FooterComponent.css" as="style" />
 
-    <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/Page Icon Circle.png"
-    />
+		<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/Page Icon Circle.png" />
 
-    <!-- Add the loader dots JS -->
-    <script
-      src="/assets/components/LoaderDots/LoaderDots.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </head>
+		<!-- Add the loader dots JS -->
+		<script src="assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+	</head>
 
-  <body>
-    <!-- Header -->
+	<body>
+		<!-- Header -->
 
-    <header>
-      <!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
-      <header-component>
-        <span slot="pageMainHeader" id="pageMainHeader">Events</span>
-        <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
-      </header-component>
-    </header>
+		<header>
+			<!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
+			<header-component>
+				<span slot="pageMainHeader" id="pageMainHeader">Events</span>
+				<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+			</header-component>
+		</header>
 
-    <!-- Side Menu -->
+		<!-- Side Menu -->
 
-    <!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
-    <side-menu-component></side-menu-component>
+		<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
 
-    <!-- Main Page Content -->
+		<!-- Main Page Content -->
 
-    <!-- This is all the content between the header and footer. -->
-    <div class="main-content-area fadein">
-      <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-      <div class="loader" id="loader-div">
-        <div class="duo-loader">
-          <div class="duo duo1">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-          <div class="duo duo2">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-        </div>
-      </div>
+		<!-- This is all the content between the header and footer. -->
+		<div class="main-content-area fadein">
+			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+			<div class="loader" id="loader-div">
+				<div class="duo-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+				</div>
+			</div>
 
-      <!-- <button class="reporting-link center" onclick="toggleFullScreen()" id="peterAlertButton">Click me</button> -->
+			<!-- <button class="reporting-link center" onclick="toggleFullScreen()" id="peterAlertButton">Click me</button> -->
 
-      <!-- Calendar Section -->
-      <section class="page-section" id="main-events-section">
-        <h2 class="center">Calendar.</h2>
+			<!-- Calendar Section -->
+			<section class="page-section" id="main-events-section">
+				<h2 class="center">Calendar.</h2>
 
-        <!-- Create a container div to house the embedded Google Calendar. -->
-        <div class="shared-calendar-area">
-          <!-- Add an embedded Google Calendar. https://support.google.com/calendar/answer/41207?hl=en -->
-          <!-- [Add a Google calendar to your website](https://support.google.com/calendar/answer/41207?hl=en) -->
-          <!-- [Create & manage a public Google calendar](https://support.google.com/calendar/answer/37083?hl=en) -->
-          <!-- Premier League fixtures from fixtur - https://fixtur.es/en/premier-league -->
-          <iframe
-            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=dGl0cy5ncm91cC5wYWdlQGdtYWlsLmNvbQ&amp;src=ZWthMnVvbWtkcWZodTViazZoYmRjN2E0ZDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bTNqZmgwcG4wYmN0cDZyamJtaWc5djczbjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dXAxMGdscTQ4YjF1Zm9uaTVoZ200N3NjMDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXNsczE2ODVmMTNtcmZlcm4zaTY0a2o1djhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udWsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=ZHBxajBmNDEzN201YnJjcmFyMWpuMXZzNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dThzb2sxc2FhNWVubWJhcXMwdDN0cDg2MHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23cc0176&amp;color=%23D50000&amp;color=%23039BE5&amp;color=%234285F4&amp;color=%23000000&amp;color=%230B8043&amp;color=%23D50000&amp;color=%23D50000&amp;showTitle=0&amp;showPrint=0"
-            style="border-width: 0"
-            width="800"
-            height="600"
-            frameborder="0"
-            scrolling="no"
-            class="shared-calendar"
-          >
-          </iframe>
-        </div>
+				<!-- Create a container div to house the embedded Google Calendar. -->
+				<div class="shared-calendar-area">
+					<!-- Add an embedded Google Calendar. https://support.google.com/calendar/answer/41207?hl=en -->
+					<!-- [Add a Google calendar to your website](https://support.google.com/calendar/answer/41207?hl=en) -->
+					<!-- [Create & manage a public Google calendar](https://support.google.com/calendar/answer/37083?hl=en) -->
+					<!-- Premier League fixtures from fixtur - https://fixtur.es/en/premier-league -->
+					<iframe
+						src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FLondon&amp;src=dGl0cy5ncm91cC5wYWdlQGdtYWlsLmNvbQ&amp;src=ZWthMnVvbWtkcWZodTViazZoYmRjN2E0ZDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=bTNqZmgwcG4wYmN0cDZyamJtaWc5djczbjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dXAxMGdscTQ4YjF1Zm9uaTVoZ200N3NjMDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZXNsczE2ODVmMTNtcmZlcm4zaTY0a2o1djhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udWsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&amp;src=ZHBxajBmNDEzN201YnJjcmFyMWpuMXZzNjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=dThzb2sxc2FhNWVubWJhcXMwdDN0cDg2MHNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23cc0176&amp;color=%23D50000&amp;color=%23039BE5&amp;color=%234285F4&amp;color=%23000000&amp;color=%230B8043&amp;color=%23D50000&amp;color=%23D50000&amp;showTitle=0&amp;showPrint=0"
+						style="border-width: 0"
+						width="800"
+						height="600"
+						frameborder="0"
+						scrolling="no"
+						class="shared-calendar">
+					</iframe>
+				</div>
 
-        <!-- Add a container div to house the text explaining how to use the page. -->
-        <div class="calendar-text-area">
-          <p>
-            To add an event, create an event and invite
-            <a href="mailto:tits.group.page@gmail.com"
-              >tits.group.page@gmail.com</a
-            >
-            to the event for it to show up in the calendar above.
-          </p>
+				<!-- Add a container div to house the text explaining how to use the page. -->
+				<div class="calendar-text-area">
+					<p>
+						To add an event, create an event and invite
+						<a href="mailto:tits.group.page@gmail.com">tits.group.page@gmail.com</a>
+						to the event for it to show up in the calendar above.
+					</p>
 
-          <br />
+					<br />
 
-          <p>
-            You can also view the calendar in more detail by clicking
-            <a
-              href="https://calendar.google.com/calendar/embed?src=tits.group.page%40gmail.com&ctz=Europe%2FLondon"
-              >here</a
-            >
-            (and being able to see more events).
-          </p>
-          <!-- or subscribe to the calendar using this <a
+					<p>
+						You can also view the calendar in more detail by clicking
+						<a
+							href="https://calendar.google.com/calendar/embed?src=tits.group.page%40gmail.com&ctz=Europe%2FLondon"
+							>here</a
+						>
+						(and being able to see more events).
+					</p>
+					<!-- or subscribe to the calendar using this <a
 						href="https://calendar.google.com/calendar/u/0?cid=dGl0cy5ncm91cC5wYWdlQGdtYWlsLmNvbQ">link</a>.
 				</p> -->
-        </div>
+				</div>
 
-        <!-- Archive Code -->
-        <div>
-          <!-- Add a fieldset divider area where the user can add a new event to the group calendar. https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified -->
-          <!-- <fieldset> -->
+				<!-- Archive Code -->
+				<div>
+					<!-- Add a fieldset divider area where the user can add a new event to the group calendar. https://www.youtube.com/watch?v=iX_QyjdctsQ&feature=youtu.be&ab_channel=WebDevSimplified -->
+					<!-- <fieldset> -->
 
-          <!-- Add a legend title into the fieldset. -->
-          <!-- <legend>Add Event</legend> -->
+					<!-- Add a legend title into the fieldset. -->
+					<!-- <legend>Add Event</legend> -->
 
-          <!-- Provide inputs for the user to select. -->
+					<!-- Provide inputs for the user to select. -->
 
-          <!-- <div class="fieldset-row">
+					<!-- <div class="fieldset-row">
 							<p>Event Name:</p><input type="text">
 						</div>
 						<div class="fieldset-row">
@@ -194,67 +162,53 @@
 							<input type="submit">
 						</div> -->
 
-          <!-- </fieldset> -->
-        </div>
-      </section>
+					<!-- </fieldset> -->
+				</div>
+			</section>
 
-      <!-- Add a div to house the Peter Griffin Easter Egg. -->
+			<!-- Add a div to house the Peter Griffin Easter Egg. -->
 
-      <div class="subpage-content-area fadein">
-        <button
-          class="reporting-link center"
-          onclick="peterButtonClick()"
-          id="peterAlertButton"
-        >
-          Click me
-        </button>
+			<div class="subpage-content-area fadein">
+				<button
+					class="reporting-link center"
+					onclick="peterButtonClick()"
+					id="peterAlertButton">
+					Click me
+				</button>
 
-        <img
-          src="/assets/images/PeterAlert.jpg"
-          class="center fadein hidden"
-          alt="Peter Alert"
-          id="peterAlertImage"
-        />
-      </div>
-    </div>
+				<img
+					src="assets/images/PeterAlert.jpg"
+					class="center fadein hidden"
+					alt="Peter Alert"
+					id="peterAlertImage" />
+			</div>
+		</div>
 
-    <!-- Footer -->
+		<!-- Footer -->
 
-    <footer>
-      <!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
-      <footer-component></footer-component>
-    </footer>
+		<footer>
+			<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
+			<footer-component></footer-component>
+		</footer>
 
-    <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- Add the common header JS -->
-    <script
-      src="/assets/components/Header/header.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common sideMenu JS -->
-    <script
-      src="/assets/components/SideMenu/sideMenu.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common footer JS -->
-    <script
-      src="/assets/components/Footer/footer.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Get Events Page JS -->
-    <script src="/assets/js/jEvents.js"></script>
-    <!-- Get the Calendar JS -->
-    <!-- <script src="/assets/components/Calendar/calendar.js"></script> -->
+		<!-- Add the common header JS -->
+		<script src="assets/components/Header/header.js" type="text/javascript" defer></script>
+		<!-- Add the common sideMenu JS -->
+		<script src="assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+		<!-- Add the common footer JS -->
+		<script src="assets/components/Footer/footer.js" type="text/javascript" defer></script>
+		<!-- Get Events Page JS -->
+		<script src="assets/js/jEvents.js"></script>
+		<!-- Get the Calendar JS -->
+		<!-- <script src="assets/components/Calendar/calendar.js"></script> -->
 
-    <!-- Add the Calendar next event JS -->
-    <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+		<!-- Add the Calendar next event JS -->
+		<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
 
-    <!-- Get Main Functions JS -->
-    <script src="/assets/js/jMainFunctions.js"></script>
-  </body>
+		<!-- Get Main Functions JS -->
+		<script src="assets/js/jMainFunctions.js"></script>
+	</body>
 </html>

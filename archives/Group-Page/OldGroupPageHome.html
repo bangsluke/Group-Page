@@ -1,85 +1,86 @@
+<!DOCTYPE html>
+
 <!-- GroupPageHome.html -->
 <!-- The home page for the best friendship group in the world. -->
 
-<!DOCTYPE HTML>
-
 <html>
+	<head>
+		<!-- Website Title - shows up in tab at top of page. -->
+		<title>GroupPageHome</title>
 
-<head>
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- Website Title - shows up in tab at top of page. -->
-	<title>GroupPageHome</title>
+		<!-- Link to CSS styling -->
+		<!-- Starting with "/" moves back to root directory. -->
+		<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<link rel="stylesheet" href="assets/css/GroupPage.css" />
 
-	<!-- Initial Meta Data -->
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Favicon Image -->
+		<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="/images/Favicon.png" />
+	</head>
 
-	<!-- Link to CSS styling -->
-	<!-- Starting with "/" moves back to root directory. -->
-	<!-- https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-	<link rel="stylesheet" href="/assets/css/GroupPage.css" />
+	<body class="body-homepage">
+		<!-- Header -->
 
-	<!-- Favicon Image -->
-	<!-- https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/images/Favicon.png" />
+		<header class="header">
+			<!-- Add a button back to the Homepage for now. -->
+			<a href="/Homepage.html"
+				><img
+					src="/images/OnlineProfilePicture.png"
+					class="avatar"
+					id="fadein"
+					alt="bangsluke Online Profile Photo"
+			/></a>
 
-</head>
+			Test - should be visible on mobile and webpage.
 
-<body class="body-homepage">
+			<!-- Add links to each area of the site. -->
+			<ul>
+				<a href="#">
+					<p>Home</p>
+				</a>
+			</ul>
+			<ul>
+				<a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html">
+					<p>Individuals</p>
+				</a>
+			</ul>
+			<ul>
+				<a href="#">
+					<p>Events</p>
+				</a>
+			</ul>
+			<ul>
+				<a href="#">
+					<p>Titans</p>
+				</a>
+			</ul>
+			<ul>
+				<a href="/pages/Group-Page/Sub-Pages/Stats.html">
+					<p>Stats</p>
+				</a>
+			</ul>
+		</header>
 
-	<!-- Header -->
+		<!-- Content Section -->
 
-	<header class="header">
+		<div class="content">Test - should be hidden on mobile. Only visible on wepage.</div>
 
-		<!-- Add a button back to the Homepage for now. -->
-		<a href="/Homepage.html"><img src="/images/OnlineProfilePicture.png" class="avatar" id="fadein"
-				alt="bangsluke Online Profile Photo"></a>
+		<!-- Footer -->
 
-		Test - should be visible on mobile and webpage.
+		<footer class="footer">
+			Test - should be visible on mobile and webpage.
 
-		<!-- Add links to each area of the site. -->
-		<ul><a href="#">
-				<p>Home</p>
-			</a></ul>
-		<ul><a href="/pages/Group-Page/Sub-Pages/IndividualsPage.html">
-				<p>Individuals</p>
-			</a></ul>
-		<ul><a href="#">
-				<p>Events</p>
-			</a></ul>
-		<ul><a href="#">
-				<p>Titans</p>
-			</a></ul>
-		<ul><a href="/pages/Group-Page/Sub-Pages/Stats.html">
-				<p>Stats</p>
-			</a></ul>
+			<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
+			<a href="https://github.com/bangsluke/bangsluke">&copy; 2020-2021 bangsluke designs.</a>
+			<a href="#">&nbsp</a>
+			<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
+		</footer>
 
-	</header>
-
-	<!-- Content Section -->
-
-	<div class="content">
-
-		Test - should be hidden on mobile. Only visible on wepage.
-
-	</div>
-
-	<!-- Footer -->
-
-	<footer class="footer">
-
-		Test - should be visible on mobile and webpage.
-
-		<!-- <p>&copy; Untitled. All rights reserved. Design: <a href="http://templated.co">TEMPLATED</a>. Demo Images: <a href="http://unsplash.com">Unsplash</a>.</p> -->
-		<a href="https://github.com/bangsluke/bangsluke">&copy; 2020-2021 bangsluke designs.</a>
-		<a href="#">&nbsp</a>
-		<a href="mailto:bangsluke@gmail.com" class="icon fa-envelope-o">&nbsp</a>
-
-	</footer>
-
-	<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
-
-</body>
-
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+	</body>
 </html>

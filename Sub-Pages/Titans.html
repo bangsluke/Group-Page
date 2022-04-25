@@ -1,283 +1,231 @@
+<!DOCTYPE html>
+
 <!-- Titans.html -->
 <!-- The definitive collection of Titans status' of the group. -->
 
-<!DOCTYPE html>
-
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
-  <head>
-    <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-    <title>Titans | Group Page</title>
+	<head>
+		<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+		<title>Titans | Group Page</title>
 
-    <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="The single most awesome and offensive friends group website ever created."
-    />
-    <meta name="author" content="bangsluke" />
-    <meta name="copyright" content="bangsluke" />
-    <meta name="robots" content="nofollow" />
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="The single most awesome and offensive friends group website ever created." />
+		<meta name="author" content="bangsluke" />
+		<meta name="copyright" content="bangsluke" />
+		<meta name="robots" content="nofollow" />
 
-    <!-- Link to fonts to be used on site. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Link to fonts to be used on site. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+			rel="stylesheet" />
 
-    <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-    <!-- Main CSS styling -->
-    <link href="/assets/css/GroupPageMain.css" rel="stylesheet" />
-    <!-- Loader Dots styling -->
-    <link
-      href="/assets/components/LoaderDots/LoaderDots.css"
-      rel="stylesheet"
-    />
-    <!-- CSS site theme -->
-    <link
-      href="/assets/css/Themes/DarkGreyOrange.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      id="css-theme"
-    />
-    <!-- Titans Page styling -->
-    <link href="/assets/css/TitansPage.css" rel="stylesheet" />
+		<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<!-- Main CSS styling -->
+		<link href="assets/css/GroupPageMain.css" rel="stylesheet" />
+		<!-- Loader Dots styling -->
+		<link href="assets/components/LoaderDots/LoaderDots.css" rel="stylesheet" />
+		<!-- CSS site theme -->
+		<link
+			href="assets/css/Themes/DarkGreyOrange.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+			id="css-theme" />
+		<!-- Titans Page styling -->
+		<link href="assets/css/TitansPage.css" rel="stylesheet" />
 
-    <!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-    <!-- The Header styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Header/HeaderComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Side Menu styling -->
-    <link
-      rel="preload"
-      href="/assets/components/SideMenu/SideMenuComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Footer styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Footer/FooterComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
+		<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+		<!-- The Header styling -->
+		<link rel="preload" href="assets/components/Header/HeaderComponent.css" as="style" />
+		<!-- The Side Menu styling -->
+		<link rel="preload" href="assets/components/SideMenu/SideMenuComponent.css" as="style" />
+		<!-- The Footer styling -->
+		<link rel="preload" href="assets/components/Footer/FooterComponent.css" as="style" />
 
-    <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/Page Icon Circle.png"
-    />
+		<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/Page Icon Circle.png" />
 
-    <!-- Add the loader dots JS -->
-    <script
-      src="/assets/components/LoaderDots/LoaderDots.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </head>
+		<!-- Add the loader dots JS -->
+		<script src="assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+	</head>
 
-  <body>
-    <!-- Header -->
+	<body>
+		<!-- Header -->
 
-    <header>
-      <!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
-      <header-component>
-        <span slot="pageMainHeader" id="pageMainHeader">Titans</span>
-        <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
-      </header-component>
-    </header>
+		<header>
+			<!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
+			<header-component>
+				<span slot="pageMainHeader" id="pageMainHeader">Titans</span>
+				<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+			</header-component>
+		</header>
 
-    <!-- Side Menu -->
+		<!-- Side Menu -->
 
-    <!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
-    <side-menu-component></side-menu-component>
+		<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
 
-    <!-- Main Page Content -->
+		<!-- Main Page Content -->
 
-    <!-- This is all the content between the header and footer. -->
-    <div class="main-content-area fadein">
-      <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-      <div class="loader" id="loader-div">
-        <div class="duo-loader">
-          <div class="duo duo1">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-          <div class="duo duo2">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-        </div>
-      </div>
+		<!-- This is all the content between the header and footer. -->
+		<div class="main-content-area fadein">
+			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+			<div class="loader" id="loader-div">
+				<div class="duo-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+				</div>
+			</div>
 
-      <!-- Titans Section -->
-      <section class="page-section">
-        <h2 class="center">Titans Table.</h2>
+			<!-- Titans Section -->
+			<section class="page-section">
+				<h2 class="center">Titans Table.</h2>
 
-        <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-        <!-- Start these dots as hidden as they get shown as part of the JavaScript. -->
-        <div class="loader-small hidden" id="titan-loader">
-          <div class="duo-loader">
-            <div class="duo duo1">
-              <div class="dot dot-a"></div>
-              <div class="dot dot-b"></div>
-            </div>
-            <div class="duo duo2">
-              <div class="dot dot-a"></div>
-              <div class="dot dot-b"></div>
-            </div>
-          </div>
-        </div>
+				<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+				<!-- Start these dots as hidden as they get shown as part of the JavaScript. -->
+				<div class="loader-small hidden" id="titan-loader">
+					<div class="duo-loader">
+						<div class="duo duo1">
+							<div class="dot dot-a"></div>
+							<div class="dot dot-b"></div>
+						</div>
+						<div class="duo duo2">
+							<div class="dot dot-a"></div>
+							<div class="dot dot-b"></div>
+						</div>
+					</div>
+				</div>
 
-        <!-- Add a div to house the Titan table. -->
-        <div class="subpage-content-area fadein">
-          <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-          <div class="table-wrapper">
-            <table id="titans-table" class="column-highlight">
-              <!-- Data loaded into here by jTitanPage.js -->
-            </table>
-          </div>
-        </div>
+				<!-- Add a div to house the Titan table. -->
+				<div class="subpage-content-area fadein">
+					<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+					<div class="table-wrapper">
+						<table id="titans-table" class="column-highlight">
+							<!-- Data loaded into here by jTitanPage.js -->
+						</table>
+					</div>
+				</div>
 
-        <!-- Add the last updated date and stats source. -->
-        <div
-          class="subpage-content-area fadein date-and-source-area hidden"
-          id="date-and-source-area"
-        >
-          <p id="data-last-updated" class="textright">Last Updated:</p>
+				<!-- Add the last updated date and stats source. -->
+				<div
+					class="subpage-content-area fadein date-and-source-area hidden"
+					id="date-and-source-area">
+					<p id="data-last-updated" class="textright">Last Updated:</p>
 
-          <p id="data-source" class="textleft italic">Source:</p>
-        </div>
-      </section>
+					<p id="data-source" class="textleft italic">Source:</p>
+				</div>
+			</section>
 
-      <!-- Titans Explained -->
-      <section class="page-section">
-        <!-- Add a summary statement about the titan stats below the data. -->
-        <div class="subpage-content-area fadein titan-summary-statement-area">
-          <h3>Details</h3>
+			<!-- Titans Explained -->
+			<section class="page-section">
+				<!-- Add a summary statement about the titan stats below the data. -->
+				<div class="subpage-content-area fadein titan-summary-statement-area">
+					<h3>Details</h3>
 
-          <p>The above data is calculated from</p>
-          <p class="theme-colour-text bold" id="data-source-count">X</p>
-          <p>different sources of data, across</p>
-          <p class="theme-colour-text bold" id="unique-skill-count">X</p>
-          <p>
-            criteria of skill. Each data source is then used to calculate a
-            Titan Rank Factor, combined together, normalised and then presented
-            to you as pure hard fact.
-          </p>
-          <br />
-          <p>
-            All data used to show Titan positions is 100% ratified and agreed
-            via the Tits Data Convention 2021, bylaw 16.2.5.
-          </p>
-          <p>
-            All challenges should be considered before being put forward. If you
-            have problems with your position, consider being less shit.
-          </p>
-        </div>
+					<p>The above data is calculated from</p>
+					<p class="theme-colour-text bold" id="data-source-count">X</p>
+					<p>different sources of data, across</p>
+					<p class="theme-colour-text bold" id="unique-skill-count">X</p>
+					<p>
+						criteria of skill. Each data source is then used to calculate a Titan
+						Rank Factor, combined together, normalised and then presented to you as
+						pure hard fact.
+					</p>
+					<br />
+					<p>
+						All data used to show Titan positions is 100% ratified and agreed via
+						the Tits Data Convention 2021, bylaw 16.2.5.
+					</p>
+					<p>
+						All challenges should be considered before being put forward. If you
+						have problems with your position, consider being less shit.
+					</p>
+				</div>
 
-        <!-- Add a section for two buttons to be placed under all Titan data to show additional information. -->
-        <div class="subpage-content-area fadein additional-titan-detail-area">
-          <button
-            class="titanButtons"
-            id="toggleDataExplanationButton"
-            onclick="toggleDataExplanationSection()"
-          >
-            Show data details
-          </button>
+				<!-- Add a section for two buttons to be placed under all Titan data to show additional information. -->
+				<div class="subpage-content-area fadein additional-titan-detail-area">
+					<button
+						class="titanButtons"
+						id="toggleDataExplanationButton"
+						onclick="toggleDataExplanationSection()">
+						Show data details
+					</button>
 
-          <button
-            class="titanButtons"
-            id="toggleTitanFactorsExplainedButton"
-            onclick="toggleTitanFactorsExplainedSection()"
-          >
-            Show factors explanation
-          </button>
-        </div>
-      </section>
+					<button
+						class="titanButtons"
+						id="toggleTitanFactorsExplainedButton"
+						onclick="toggleTitanFactorsExplainedSection()">
+						Show factors explanation
+					</button>
+				</div>
+			</section>
 
-      <!-- Titans Data Explanation Section -->
-      <section class="page-section fadein hidden" id="data-explanation-section">
-        <h3>Titans Data</h3>
+			<!-- Titans Data Explanation Section -->
+			<section class="page-section fadein hidden" id="data-explanation-section">
+				<h3>Titans Data</h3>
 
-        <!-- Add a div to house the Titan Factor Calculated table. -->
-        <div class="subpage-content-area fadein">
-          <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-          <div class="table-wrapper">
-            <table id="titanFactorCalculatedTable" class="column-highlight">
-              <!-- Data loaded into here by jTitanPage.js -->
-            </table>
-          </div>
-        </div>
-      </section>
+				<!-- Add a div to house the Titan Factor Calculated table. -->
+				<div class="subpage-content-area fadein">
+					<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+					<div class="table-wrapper">
+						<table id="titanFactorCalculatedTable" class="column-highlight">
+							<!-- Data loaded into here by jTitanPage.js -->
+						</table>
+					</div>
+				</div>
+			</section>
 
-      <!-- Titan Factors Explained Section -->
-      <section
-        class="page-section fadein hidden"
-        id="titan-factors-explained-section"
-      >
-        <h3>Titan Factor Explained</h3>
+			<!-- Titan Factors Explained Section -->
+			<section class="page-section fadein hidden" id="titan-factors-explained-section">
+				<h3>Titan Factor Explained</h3>
 
-        <!-- Add a div to house the Titan Factor Explained table. -->
-        <div class="subpage-content-area fadein">
-          <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-          <div class="table-wrapper">
-            <table id="titanFactorExplainedTable" class="column-highlight">
-              <!-- Data loaded into here by jTitanPage.js -->
-            </table>
-          </div>
-        </div>
-      </section>
-    </div>
+				<!-- Add a div to house the Titan Factor Explained table. -->
+				<div class="subpage-content-area fadein">
+					<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+					<div class="table-wrapper">
+						<table id="titanFactorExplainedTable" class="column-highlight">
+							<!-- Data loaded into here by jTitanPage.js -->
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
 
-    <!-- Footer -->
+		<!-- Footer -->
 
-    <footer>
-      <!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
-      <footer-component></footer-component>
-    </footer>
+		<footer>
+			<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
+			<footer-component></footer-component>
+		</footer>
 
-    <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- Add the common header JS -->
-    <script
-      src="/assets/components/Header/header.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common sideMenu JS -->
-    <script
-      src="/assets/components/SideMenu/sideMenu.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common footer JS -->
-    <script
-      src="/assets/components/Footer/footer.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Get the first PapaParse JS -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"
-    ></script>
-    <!-- Get Titan page JS -->
-    <script src="/assets/js/jTitanPage.js"></script>
-    <!-- Add the Main Functions JS -->
-    <script
-      src="/assets/js/jMainFunctions.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </body>
+		<!-- Add the common header JS -->
+		<script src="assets/components/Header/header.js" type="text/javascript" defer></script>
+		<!-- Add the common sideMenu JS -->
+		<script src="assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+		<!-- Add the common footer JS -->
+		<script src="assets/components/Footer/footer.js" type="text/javascript" defer></script>
+		<!-- Get the first PapaParse JS -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+		<!-- Get Titan page JS -->
+		<script src="assets/js/jTitanPage.js"></script>
+		<!-- Add the Main Functions JS -->
+		<script src="assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	</body>
 </html>

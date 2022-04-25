@@ -1,149 +1,118 @@
+<!DOCTYPE html>
+
 <!-- Stats.html -->
 <!-- The stats of the group measuring their lives and limitations. -->
 
-<!DOCTYPE html>
-
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
-  <head>
-    <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-    <title>Stats | Group Page</title>
+	<head>
+		<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+		<title>Stats | Group Page</title>
 
-    <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" /> -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=.25, user-scalable=yes"
-    />
-    <meta
-      name="description"
-      content="The single most awesome and offensive friends group website ever created."
-    />
-    <meta name="author" content="bangsluke" />
-    <meta name="copyright" content="bangsluke" />
-    <meta name="robots" content="nofollow" />
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" /> -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=.25, user-scalable=yes" />
+		<meta
+			name="description"
+			content="The single most awesome and offensive friends group website ever created." />
+		<meta name="author" content="bangsluke" />
+		<meta name="copyright" content="bangsluke" />
+		<meta name="robots" content="nofollow" />
 
-    <!-- Link to fonts to be used on site. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Link to fonts to be used on site. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+			rel="stylesheet" />
 
-    <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-    <!-- Main CSS styling -->
-    <link href="/assets/css/GroupPageMain.css" rel="stylesheet" />
-    <!-- Loader Dots styling -->
-    <link
-      href="/assets/components/LoaderDots/LoaderDots.css"
-      rel="stylesheet"
-    />
-    <!-- CSS site theme -->
-    <link
-      href="/assets/css/Themes/DarkGreyOrange.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      id="css-theme"
-    />
-    <!-- Stats Page styling -->
-    <link href="/assets/css/StatsPage.css" rel="stylesheet" />
-    <!-- Dropdown Menu styling -->
-    <!--<link href="/assets/css/DropdownOptions.css" rel="stylesheet">-->
+		<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<!-- Main CSS styling -->
+		<link href="assets/css/GroupPageMain.css" rel="stylesheet" />
+		<!-- Loader Dots styling -->
+		<link href="assets/components/LoaderDots/LoaderDots.css" rel="stylesheet" />
+		<!-- CSS site theme -->
+		<link
+			href="assets/css/Themes/DarkGreyOrange.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+			id="css-theme" />
+		<!-- Stats Page styling -->
+		<link href="assets/css/StatsPage.css" rel="stylesheet" />
+		<!-- Dropdown Menu styling -->
+		<!--<link href="assets/css/DropdownOptions.css" rel="stylesheet">-->
 
-    <!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-    <!-- The Header styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Header/HeaderComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Side Menu styling -->
-    <link
-      rel="preload"
-      href="/assets/components/SideMenu/SideMenuComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Footer styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Footer/FooterComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
+		<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+		<!-- The Header styling -->
+		<link rel="preload" href="assets/components/Header/HeaderComponent.css" as="style" />
+		<!-- The Side Menu styling -->
+		<link rel="preload" href="assets/components/SideMenu/SideMenuComponent.css" as="style" />
+		<!-- The Footer styling -->
+		<link rel="preload" href="assets/components/Footer/FooterComponent.css" as="style" />
 
-    <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/Page Icon Circle.png"
-    />
+		<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/Page Icon Circle.png" />
 
-    <!-- Add the loader dots JS -->
-    <script
-      src="/assets/components/LoaderDots/LoaderDots.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </head>
+		<!-- Add the loader dots JS -->
+		<script src="assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+	</head>
 
-  <body>
-    <!-- Header -->
+	<body>
+		<!-- Header -->
 
-    <header>
-      <!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
-      <header-component>
-        <span slot="pageMainHeader" id="pageMainHeader">Stats</span>
-        <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
-      </header-component>
-    </header>
+		<header>
+			<!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
+			<header-component>
+				<span slot="pageMainHeader" id="pageMainHeader">Stats</span>
+				<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+			</header-component>
+		</header>
 
-    <!-- Side Menu -->
+		<!-- Side Menu -->
 
-    <!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
-    <side-menu-component></side-menu-component>
+		<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
 
-    <!-- Main Page Content -->
+		<!-- Main Page Content -->
 
-    <!-- This is all the content between the header and footer. -->
-    <div class="main-content-area fadein">
-      <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-      <div class="loader" id="loader-div">
-        <div class="duo-loader">
-          <div class="duo duo1">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-          <div class="duo duo2">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-        </div>
-      </div>
+		<!-- This is all the content between the header and footer. -->
+		<div class="main-content-area fadein">
+			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+			<div class="loader" id="loader-div">
+				<div class="duo-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+				</div>
+			</div>
 
-      <!-- New Stats Selection Section -->
-      <section class="page-section">
-        <!-- Add a div to house the stats selection. -->
+			<!-- New Stats Selection Section -->
+			<section class="page-section">
+				<!-- Add a div to house the stats selection. -->
 
-        <div class="stats-selection-area">
-          <h2 class="center">Stat Selection.</h2>
+				<div class="stats-selection-area">
+					<h2 class="center">Stat Selection.</h2>
 
-          <!-- Add a drop down select box for the user to change the statistic category. -->
-          <div class="dropdown-div">
-            <p>Select a statistic category:</p>
-            <select
-              name="StatCategory"
-              class="stats-dropdown"
-              id="stats-category-option"
-            >
-              <option value="" selected="selected">Select category</option>
-            </select>
-          </div>
+					<!-- Add a drop down select box for the user to change the statistic category. -->
+					<div class="dropdown-div">
+						<p>Select a statistic category:</p>
+						<select
+							name="StatCategory"
+							class="stats-dropdown"
+							id="stats-category-option">
+							<option value="" selected="selected">Select category</option>
+						</select>
+					</div>
 
-          <!-- <form>
+					<!-- <form>
 					<input class="chosen-value" type="text" value="" placeholder="Type to filter">
 					<ul class="value-list">
 					  <li>Alabama</li>
@@ -168,135 +137,118 @@
 					</ul>
 				  </form> -->
 
-          <!-- Add a second drop down select box for the user to select which stat they wish to display. -->
-          <div class="dropdown-div no-bottom-margin">
-            <p>Select a statistic:</p>
-            <select
-              name="StatSelected"
-              class="stats-dropdown deactivated"
-              id="stat-selection-option"
-            >
-              <option value="" selected="selected">Select stat</option>
-            </select>
-          </div>
+					<!-- Add a second drop down select box for the user to select which stat they wish to display. -->
+					<div class="dropdown-div no-bottom-margin">
+						<p>Select a statistic:</p>
+						<select
+							name="StatSelected"
+							class="stats-dropdown deactivated"
+							id="stat-selection-option">
+							<option value="" selected="selected">Select stat</option>
+						</select>
+					</div>
 
-          <!-- Add a third drop down select box for the user to further filter down the selected stats. -->
-          <div class="dropdown-div hidden">
-            <!-- Hidden whilst in development. -->
-            <h3>Filter the results by header:</h3>
-            <select name="StatsFilter" class="stats-dropdown" id="stats-filter">
-              <option value="" selected="selected">Select header</option>
-            </select>
-          </div>
+					<!-- Add a third drop down select box for the user to further filter down the selected stats. -->
+					<div class="dropdown-div hidden">
+						<!-- Hidden whilst in development. -->
+						<h3>Filter the results by header:</h3>
+						<select name="StatsFilter" class="stats-dropdown" id="stats-filter">
+							<option value="" selected="selected">Select header</option>
+						</select>
+					</div>
 
-          <!-- Add a fourth drop down select box for the user to add a value by which to filter by. -->
-          <div class="dropdown-div hidden">
-            <!-- Hidden whilst in development. -->
-            <h3>Filter the results value:</h3>
-            <select
-              name="StatsFilter"
-              class="stats-dropdown"
-              id="stats-filter-value"
-            >
-              <option value="" selected="selected">Select value</option>
-            </select>
-          </div>
-        </div>
-      </section>
+					<!-- Add a fourth drop down select box for the user to add a value by which to filter by. -->
+					<div class="dropdown-div hidden">
+						<!-- Hidden whilst in development. -->
+						<h3>Filter the results value:</h3>
+						<select
+							name="StatsFilter"
+							class="stats-dropdown"
+							id="stats-filter-value">
+							<option value="" selected="selected">Select value</option>
+						</select>
+					</div>
+				</div>
+			</section>
 
-      <!-- New Stats Display Section -->
-      <section class="page-section stats-page-section">
-        <!-- Add a div to house the stats tables. -->
+			<!-- New Stats Display Section -->
+			<section class="page-section stats-page-section">
+				<!-- Add a div to house the stats tables. -->
 
-        <div class="subpage-content-area fadein">
-          <h3 id="stats-title">New Stats Selected</h3>
+				<div class="subpage-content-area fadein">
+					<h3 id="stats-title">New Stats Selected</h3>
 
-          <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-          <div class="loader-small" id="stats-loader">
-            <div class="duo-loader">
-              <div class="duo duo1">
-                <div class="dot dot-a"></div>
-                <div class="dot dot-b"></div>
-              </div>
-              <div class="duo duo2">
-                <div class="dot dot-a"></div>
-                <div class="dot dot-b"></div>
-              </div>
-            </div>
-          </div>
+					<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+					<div class="loader-small" id="stats-loader">
+						<div class="duo-loader">
+							<div class="duo duo1">
+								<div class="dot dot-a"></div>
+								<div class="dot dot-b"></div>
+							</div>
+							<div class="duo duo2">
+								<div class="dot dot-a"></div>
+								<div class="dot dot-b"></div>
+							</div>
+						</div>
+					</div>
 
-          <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-          <div class="table-wrapper">
-            <table id="stats-table" class="column-highlight">
-              <!-- Data loaded into here by jStatsPage.js -->
-            </table>
-          </div>
-        </div>
+					<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+					<div class="table-wrapper">
+						<table id="stats-table" class="column-highlight">
+							<!-- Data loaded into here by jStatsPage.js -->
+						</table>
+					</div>
+				</div>
 
-        <!-- Add the last updated date and stats source. -->
+				<!-- Add the last updated date and stats source. -->
 
-        <div class="subpage-content-area fadein date-and-source-area">
-          <p id="stats-last-updated" class="textright">Last Updated:</p>
+				<div class="subpage-content-area fadein date-and-source-area">
+					<p id="stats-last-updated" class="textright">Last Updated:</p>
 
-          <p id="stats-source" class="textleft italic">Source:</p>
-        </div>
-      </section>
+					<p id="stats-source" class="textleft italic">Source:</p>
+				</div>
+			</section>
 
-      <!-- Stats Sources and Reporting Section -->
-      <section class="page-section">
-        <!-- Add a div to house the stats sources and reporting links. -->
+			<!-- Stats Sources and Reporting Section -->
+			<section class="page-section">
+				<!-- Add a div to house the stats sources and reporting links. -->
 
-        <div class="subpage-content-area fadein">
-          <a
-            href="https://www.youtube.com/watch?v=xvFZjo5PgG0"
-            class="reporting-link"
-          >
-            <p class="theme-colour-text underline">
-              Click here to report an inaccuracy in the stats shown on this page
-            </p>
-          </a>
-        </div>
-      </section>
-    </div>
+				<div class="subpage-content-area fadein">
+					<a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" class="reporting-link">
+						<p class="theme-colour-text underline">
+							Click here to report an inaccuracy in the stats shown on this
+							page
+						</p>
+					</a>
+				</div>
+			</section>
+		</div>
 
-    <!-- Footer -->
+		<!-- Footer -->
 
-    <footer>
-      <!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
-      <footer-component></footer-component>
-    </footer>
+		<footer>
+			<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
+			<footer-component></footer-component>
+		</footer>
 
-    <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- Add the common header JS -->
-    <script
-      src="/assets/components/Header/header.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common sideMenu JS -->
-    <script
-      src="/assets/components/SideMenu/sideMenu.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common footer JS -->
-    <script
-      src="/assets/components/Footer/footer.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Get the first PapaParse JS -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"
-    ></script>
-    <!-- Get Stats page JS -->
-    <script src="/assets/js/jStatsPage.js"></script>
-    <!-- Get Dropdown Menu JS -->
-    <!-- <script src="/assets/js/jDropdownOptions.js"></script> -->
-    <!-- Get Main Functions JS -->
-    <script src="/assets/js/jMainFunctions.js"></script>
-  </body>
+		<!-- Add the common header JS -->
+		<script src="assets/components/Header/header.js" type="text/javascript" defer></script>
+		<!-- Add the common sideMenu JS -->
+		<script src="assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+		<!-- Add the common footer JS -->
+		<script src="assets/components/Footer/footer.js" type="text/javascript" defer></script>
+		<!-- Get the first PapaParse JS -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+		<!-- Get Stats page JS -->
+		<script src="assets/js/jStatsPage.js"></script>
+		<!-- Get Dropdown Menu JS -->
+		<!-- <script src="assets/js/jDropdownOptions.js"></script> -->
+		<!-- Get Main Functions JS -->
+		<script src="assets/js/jMainFunctions.js"></script>
+	</body>
 </html>

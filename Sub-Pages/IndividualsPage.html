@@ -1,1077 +1,1135 @@
+<!DOCTYPE html>
+
 <!-- IndividualsPage.html -->
 <!-- The personalised individuals page for each member of the group. -->
 
-<!DOCTYPE html>
-
 <!-- Declare the language of the Web Page. -->
 <html lang="en-uk">
-  <head>
-    <!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
-    <title>Individuals Page | Group Page</title>
+	<head>
+		<!-- Website Title - shows up in tab at top of page. Try to include as much accurate and meaningful detail as possible -->
+		<title>Individuals Page | Group Page</title>
 
-    <!-- Initial Meta Data -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="The single most awesome and offensive friends group website ever created."
-    />
-    <meta name="author" content="bangsluke" />
-    <meta name="copyright" content="bangsluke" />
-    <meta name="robots" content="nofollow" />
+		<!-- Initial Meta Data -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="The single most awesome and offensive friends group website ever created." />
+		<meta name="author" content="bangsluke" />
+		<meta name="copyright" content="bangsluke" />
+		<meta name="robots" content="nofollow" />
 
-    <!-- Link to fonts to be used on site. -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+		<!-- Link to fonts to be used on site. -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@500&display=swap"
+			rel="stylesheet" />
 
-    <!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
-    <!-- Main CSS styling -->
-    <link href="/assets/css/GroupPageMain.css" rel="stylesheet" />
-    <!-- SnapTabs styling -->
-    <link href="/assets/components/SnapTabs/SnapTabs.css" rel="stylesheet" />
-    <!-- Loader Dots styling -->
-    <link
-      href="/assets/components/LoaderDots/LoaderDots.css"
-      rel="stylesheet"
-    />
-    <!-- CSS site theme -->
-    <link
-      href="/assets/css/Themes/DarkGreyOrange.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-      id="css-theme"
-    />
-    <!-- Individuals Page styling -->
-    <link href="/assets/css/IndividualsPage.css" rel="stylesheet" />
+		<!-- Link to CSS styling - Starting with "/" moves back to root directory - https://stackoverflow.com/questions/27218879/link-a-css-on-another-folder -->
+		<!-- Main CSS styling -->
+		<link href="assets/css/GroupPageMain.css" rel="stylesheet" />
+		<!-- SnapTabs styling -->
+		<link href="assets/components/SnapTabs/SnapTabs.css" rel="stylesheet" />
+		<!-- Loader Dots styling -->
+		<link href="assets/components/LoaderDots/LoaderDots.css" rel="stylesheet" />
+		<!-- CSS site theme -->
+		<link
+			href="assets/css/Themes/DarkGreyOrange.css"
+			rel="stylesheet"
+			type="text/css"
+			media="all"
+			id="css-theme" />
+		<!-- Individuals Page styling -->
+		<link href="assets/css/IndividualsPage.css" rel="stylesheet" />
 
-    <!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
-    <!-- The Header styling -->
-    <link
-      rel="preload"
-      href="/assets/components/Header/HeaderComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
-    <!-- The Side Menu styling -->
-    <link
-      rel="preload"
-      href="/assets/components/SideMenu/SideMenuComponent.css"
-      rel="stylesheet"
-      as="style"
-    />
+		<!-- Pre-Load some style sheets called by the JavaScript to save time (as recommended by Lighthouse) -->
+		<!-- The Header styling -->
+		<link rel="preload" href="assets/components/Header/HeaderComponent.css" as="style" />
+		<!-- The Side Menu styling -->
+		<link rel="preload" href="assets/components/SideMenu/SideMenuComponent.css" as="style" />
 
-    <!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="/assets/images/Page Icon Circle.png"
-    />
+		<!-- Favicon Image - https://stackoverflow.com/questions/18301745/how-to-set-up-a-favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="assets/images/Page Icon Circle.png" />
 
-    <!-- Add the loader dots JS -->
-    <script
-      src="/assets/components/LoaderDots/LoaderDots.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </head>
+		<!-- Add the loader dots JS -->
+		<script src="assets/components/LoaderDots/LoaderDots.js" type="text/javascript" defer></script>
+	</head>
 
-  <body>
-    <!-- Header -->
+	<body>
+		<!-- Header -->
 
-    <header>
-      <!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
-      <header-component>
-        <span slot="pageMainHeader" id="pageMainHeader">Individuals Page</span>
-        <!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
-      </header-component>
-    </header>
+		<header>
+			<!-- Add the common website header using shadow DOMs. See /assets/components/Header/header.js for the header code. -->
+			<header-component>
+				<span slot="pageMainHeader" id="pageMainHeader">Individuals Page</span>
+				<!-- Add a slot in the shadow DOM and change the text within it using slot. https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots. -->
+			</header-component>
+		</header>
 
-    <!-- Side Menu -->
+		<!-- Side Menu -->
 
-    <!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
-    <side-menu-component></side-menu-component>
+		<!-- Add the common website side menu using shadow DOMs. See /assets/components/SideMenu/sideMenu.js for the side menu code. -->
+		<side-menu-component></side-menu-component>
 
-    <!-- Main Page Content -->
+		<!-- Main Page Content -->
 
-    <!-- This is all the content between the header and footer. -->
-    <div
-      class="main-content-area fadein"
-      id="IndividualsPage-main-content-area"
-    >
-      <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-      <div class="loader" id="loader-div">
-        <div class="duo-loader">
-          <div class="duo duo1">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-          <div class="duo duo2">
-            <div class="dot dot-a"></div>
-            <div class="dot dot-b"></div>
-          </div>
-        </div>
-      </div>
+		<!-- This is all the content between the header and footer. -->
+		<div class="main-content-area fadein" id="IndividualsPage-main-content-area">
+			<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+			<div class="loader" id="loader-div">
+				<div class="duo-loader">
+					<div class="duo duo1">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+					<div class="duo duo2">
+						<div class="dot dot-a"></div>
+						<div class="dot dot-b"></div>
+					</div>
+				</div>
+			</div>
 
-      <!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
+			<!-- Add a tabs component. https://web.dev/building-a-tabs-component/ -->
 
-      <!-- Add an initial div to hold the snap tabs. -->
+			<!-- Add an initial div to hold the snap tabs. -->
 
-      <div class="snap-tabs-container">
-        <snap-tabs>
-          <section class="scroll-snap-x">
-            <article class="nav-targets" id="profile">
-              <!--<details>An individual page for each member providing them details pertinent to them (their
+			<div class="snap-tabs-container">
+				<snap-tabs>
+					<section class="scroll-snap-x">
+						<article class="nav-targets" id="profile">
+							<!--<details>An individual page for each member providing them details pertinent to them (their
                             address, their favourite teams league position and upcoming fixtures).</details> -->
 
-              <!-- Profile Image Section -->
-              <!-- <section class="page-section"> -->
+							<!-- Profile Image Section -->
+							<!-- <section class="page-section"> -->
 
-              <img
-                src="/assets/images/PersonPlaceholder.png"
-                class="center fadein"
-                alt="Individuals Profile Photo"
-                id="profilePicture"
-                width="50"
-                height="50"
-              />
+							<img
+								src="assets/images/PersonPlaceholder.png"
+								class="center fadein"
+								alt="Individuals Profile Photo"
+								id="profilePicture"
+								width="50"
+								height="50" />
 
-              <!-- </section> -->
+							<!-- </section> -->
 
-              <!-- Profile Detail Section -->
-              <section class="page-section">
-                <h2 class="textcenter" id="fullName">Name</h2>
+							<!-- Profile Detail Section -->
+							<section class="page-section">
+								<h2 class="textcenter" id="fullName">Name</h2>
 
-                <h4 class="textcenter theme-colour-text hidden" id="andyTitles">
-                  (MEng CEng MICE)
-                </h4>
+								<h4
+									class="textcenter theme-colour-text hidden"
+									id="andyTitles">
+									(MEng CEng MICE)
+								</h4>
 
-                <!-- Add a table that stores all of the pieces of individuals information. -->
-                <table class="individualsTable">
-                  <!-- Column Groups -->
-                  <colgroup>
-                    <!-- Repeat as many cols as the number of headers - https://stackoverflow.com/a/43892470/14290169 -->
-                    <col class="iconColumn" />
-                    <col class="itemColumn" />
-                    <col class="infoColumn" />
-                  </colgroup>
-                  <!-- Header Row -->
-                  <!-- <tr>
+								<!-- Add a table that stores all of the pieces of individuals information. -->
+								<table class="individualsTable">
+									<!-- Column Groups -->
+									<colgroup>
+										<!-- Repeat as many cols as the number of headers - https://stackoverflow.com/a/43892470/14290169 -->
+										<col class="iconColumn" />
+										<col class="itemColumn" />
+										<col class="infoColumn" />
+									</colgroup>
+									<!-- Header Row -->
+									<!-- <tr>
                                 <th class="thIndividualsHeader itemColumn">Item</th>
                                 <th class="thIndividualsHeader infoColumn">Info</th>
                             </tr> -->
-                  <!-- All other rows -->
-                  <tr>
-                    <td>
-                      <img
-                        alt="Height Icon"
-                        class="individualsPageIcon"
-                        src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Height:</td>
-                    <td id="height">--</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Weight Icon"
-                        class="individualsPageIcon"
-                        src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Weight:</td>
-                    <td id="weight">--</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Phone Icon"
-                        class="individualsPageIcon"
-                        src="https://cdn.onlinewebfonts.com/svg/img_198352.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Phone:</td>
-                    <td id="phone">--</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Email Icon"
-                        class="individualsPageIcon"
-                        src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Email:</td>
-                    <td>
-                      <a class="underline" id="email" href="_blank" alt>--</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Facebook Logo"
-                        class="individualsPageIcon"
-                        src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Facebook:</td>
-                    <td>
-                      <a class="underline" id="facebook" href="_blank" alt
-                        >--</a
-                      >
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Twitter Logo"
-                        class="individualsPageIcon"
-                        src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Twitter:</td>
-                    <td>
-                      <a class="underline" id="twitter" href="_blank" alt>--</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <img
-                        alt="Instagram Logo"
-                        class="individualsPageIcon"
-                        src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png"
-                        width="20"
-                        height="20"
-                      />
-                    </td>
-                    <td>Instagram:</td>
-                    <td>
-                      <a class="underline" id="instagram" href="_blank" alt
-                        >--</a
-                      >
-                    </td>
-                  </tr>
-                </table>
-              </section>
-
-              <!-- Personal Data Complaint Section -->
-              <section class="page-section">
-                <!-- Add a div to house the personal complaint link. -->
-
-                <div class="subpage-content-area fadein">
-                  <p
-                    class="reporting-link center underline theme-colour-text"
-                    onclick="dataMessage()"
-                  >
-                    I'm not happy with how my personal data is being used
-                  </p>
-                </div>
-              </section>
-
-              <!-- Weather Widget Section -->
-              <section class="page-section page-section-added-bottom-margin">
-                <!-- https://weatherwidget.io/ -->
-                <section class="weather">
-                  <a
-                    class="weatherwidget-io"
-                    SameSite="None"
-                    href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
-                    data-label_1="SOUTH WOODHAM FERRERS"
-                    data-label_2="Weather"
-                    data-icons="Climacons Animated"
-                    data-theme="original"
-                    data-basecolor="rgba(0, 0, 0, 0.05)"
-                    data-accent="rgba(0, 0, 0, 0.05)"
-                    data-highcolor="#f54768"
-                    data-lowcolor="#99b998"
-                    data-suncolor="#ff9678"
-                    data-cloudfill="#494A66"
-                    data-raincolor="#99b998"
-                    >WOODHAM FERRERS Weather</a
-                  >
-                  <script>
-                    !(function (d, s, id) {
-                      var js,
-                        fjs = d.getElementsByTagName(s)[0];
-                      if (!d.getElementById(id)) {
-                        js = d.createElement(s);
-                        js.id = id;
-                        js.src = "https://weatherwidget.io/js/widget.min.js";
-                        fjs.parentNode.insertBefore(js, fjs);
-                      }
-                    })(document, "script", "weatherwidget-io-js");
-                  </script>
-                </section>
-              </section>
-            </article>
-
-            <article class="nav-targets" id="football">
-              <!-- Football Header Image Section -->
-              <!--<section class="page-section"> -->
-
-              <img
-                src="/assets/images/ImagePlaceholder.png"
-                class="center fadein"
-                alt="Football Header"
-                id="footballHeader"
-                width="50"
-                height="50"
-              />
-
-              <!--</section> -->
-
-              <!-- Pro Team Table Section -->
-              <section class="page-section">
-                <img
-                  src="/assets/images/ImagePlaceholder.png"
-                  class="center fadein"
-                  alt="League Logo"
-                  id="proTeamLeagueLogo"
-                  width="50"
-                  height="50"
-                />
-
-                <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                <div class="loader-small" id="football-loader">
-                  <div class="duo-loader">
-                    <div class="duo duo1">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                    <div class="duo duo2">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                <div class="pro-team-table-div">
-                  <table id="pro-team-table">
-                    <!-- Data loaded into here by jIndividualsPageProTeam.js -->
-                  </table>
-                </div>
-
-                <a
-                  target="_blank"
-                  href="#_"
-                  id="proTeamLeagueURL"
-                  class="center underline"
-                  >Click here for full table</a
-                >
-              </section>
-
-              <!-- Dorkinians Table Section -->
-              <section
-                class="page-section page-section-added-bottom-margin"
-                id="dorkinians-tables-section"
-              >
-                <!-- House the Dorkinians logo and header text in a grid container. -->
-
-                <div class="dorkiniansHeaderContainer">
-                  <div class="dorkiniansLogoContainer">
-                    <img
-                      src="/assets/images/IndividualsPage/Dorkinians.png"
-                      class="center fadein"
-                      alt="Dorkinians Logo"
-                      id="dorkiniansLogo"
-                      width="60"
-                      height="60"
-                    />
-                  </div>
-
-                  <div class="dorkiniansTextContainer">
-                    <h3
-                      class="dorkiniansHeaderText textleft"
-                      id="dorkiniansMainHeaderText"
-                    >
-                      Dorkinians
-                    </h3>
-                  </div>
-                </div>
-
-                <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
-
-                <!-- Add a div to hold the Dorkinians 1s code within. -->
-                <div id="dorkinians1sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Premier
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep118512309" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565"
-                      >click here for Premier Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "118512309";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 2s code within. -->
-                <div id="dorkinians2sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Senior Two
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep710535041" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528"
-                      >click here for Senior Two South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "710535041";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 3s code within. -->
-                <div id="dorkinians3sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC One South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep57161422" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=841231919"
-                      >click here for One South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "57161422";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 4s code within. -->
-                <div id="dorkinians4sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Four South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep778268394" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189"
-                      >click here for Four South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "778268394";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 5s code within. -->
-                <div id="dorkinians5sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Five South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep190854409" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009"
-                      >click here for Five South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "190854409";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 6s code within. -->
-                <div id="dorkinians6sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Six South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep311599615" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=626187179"
-                      >click here for Six South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "311599615";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 7s code within. -->
-                <div id="dorkinians7sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Seven South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep93079112" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351"
-                      >click here for Seven South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "93079112";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 8s code within. -->
-                <div id="dorkinians8sTable">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    AFC Eight South
-                  </h4>
-
-                  <!-- Add inner HTML into here. -->
-                  <div id="lrep812886273" class="AFCTable">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744"
-                      >click here for Eight South Division</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "812886273";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <p class="center">
-                  Click on the table for more details on the AFC site
-                </p>
-
-                <button
-                  class="center"
-                  id="toggleResultsAndFixtures"
-                  onclick="toggleResultsAndFixturesSection()"
-                >
-                  Show results and fixtures details
-                </button>
-              </section>
-
-              <!-- Dorkinians Results and Fixtures Section -->
-              <section
-                class="page-section page-section-added-bottom-margin hidden"
-                id="results-and-fixtures-section"
-              >
-                <!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
-
-                <!-- Add a div to hold the Dorkinians 1s code within. -->
-                <div id="dorkinians1sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 1s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep884356525" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565"
-                      >click here for Premier</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "884356525";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 2s code within. -->
-                <div id="dorkinians2sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 2s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep678186881" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528"
-                      >click here for Senior Two South</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "678186881";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 3s code within. -->
-                <div id="dorkinians3sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 3s Results and Fixtures
-                  </h4>
-
-                  <p>
-                    Dorkinians III ended season early and so there is no table
-                    data to show, as the team was removed from the league.
-                  </p>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 4s code within. -->
-                <div id="dorkinians4sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 4s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep355450147" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189"
-                      >click here for Four South</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "355450147";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 5s code within. -->
-                <div id="dorkinians5sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 5s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep318288599" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009"
-                      >click here for Five South</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "318288599";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 6s code within. -->
-                <div id="dorkinians6sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 6s Results and Fixtures
-                  </h4>
-
-                  <p>
-                    Dorkinians VI ended season early and so there is no table
-                    data to show, as the team was removed from the league.
-                  </p>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 7s code within. -->
-                <div id="dorkinians7sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 7s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep531227286" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351"
-                      >click here for Seven South</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "531227286";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-
-                <!-- Add a div to hold the Dorkinians 8s code within. -->
-                <div id="dorkinians8sResultsAndFixtures">
-                  <h4 class="dorkiniansTableHeaderText theme-colour-text">
-                    Dorkinians 8s Results and Fixtures
-                  </h4>
-
-                  <div id="lrep568890794" class="AFCResultsAndFixtures">
-                    Data loading....<a
-                      href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744"
-                      >click here for Eight South</a
-                    ><br /><br /><a href="http://www.thefa.com/FULL-TIME"
-                      >FULL-TIME Home</a
-                    >
-                  </div>
-                  <script language="javascript" type="text/javascript">
-                    var lrcode = "568890794";
-                  </script>
-                  <script
-                    language="Javascript"
-                    type="text/javascript"
-                    src="https://fulltime-league.thefa.com/client/api/cs1.js"
-                  ></script>
-                </div>
-              </section>
-            </article>
-
-            <article class="nav-targets" id="history">
-              <!-- Ashcombe Quote Section -->
-              <section class="page-section">
-                <div class="center fadein" id="ashcombeSchoolLogoContainer">
-                  <img
-                    src="/assets/images/IndividualsPage/Ashcombe School Logo - Logo.png"
-                    alt="Ashcombe School Logo"
-                    id="ashcombeLogo"
-                    width="54"
-                    height="48"
-                  />
-                  <img
-                    src="/assets/images/IndividualsPage/Ashcombe School Logo - Text.png"
-                    alt="Ashcombe School Logo Text"
-                    id="ashcombeLogoText"
-                    width="245"
-                    height="64"
-                  />
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Ashcombe Year 11 Yearbook Quote:
-                  </h4>
-                  <q id="ashcombeYear11YearBookQuote">Add quote</q>
-                </div>
-
-                <div class="quote-section fadein no-bottom-margin">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Ashcombe Sixth Form Yearbook Quote:
-                  </h4>
-                  <q id="ashcombeSixthFormYearBookQuote">Add quote</q>
-                </div>
-              </section>
-
-              <!-- Brockham Badgers Quote Section -->
-              <section class="page-section page-section-added-bottom-margin">
-                <!-- House the Brockham Badgers logo and header text in a grid container. -->
-
-                <div class="brockhamBadgersHeaderContainer">
-                  <div class="brockhamBadgersLogoContainer">
-                    <img
-                      src="/assets/images/IndividualsPage/Brockham Badgers.png"
-                      class="center fadein"
-                      alt="Brockham Badgers Logo"
-                      id="brockhamBadgersLogo"
-                      width="59"
-                      height="60"
-                    />
-                  </div>
-
-                  <div class="brockhamBadgersTextContainer">
-                    <h3 class="brockhamBadgersHeaderText">Brockham Badgers</h3>
-                  </div>
-                </div>
-
-                <img
-                  src="/assets/images/ImagePlaceholder.png"
-                  class="center fadein"
-                  alt="Brockham Badgers Photo"
-                  id="brockhamBadgersPicture"
-                  width="50"
-                  height="50"
-                />
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 11s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU11sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU11sCite"></cite>
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 12s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU12sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU12sCite"></cite>
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 13s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU13sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU13sCite"></cite>
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 14s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU14sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU14sCite"></cite>
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 15s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU15sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU15sCite"></cite>
-                </div>
-
-                <div class="quote-section fadein">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Under 16s End Of Year Quote:
-                  </h4>
-                  <q id="BBsU16sQuote">Add quote</q>
-                  <br />
-                  <cite id="BBsU16sCite"></cite>
-                </div>
-
-                <div class="quote-section center fadein no-bottom-margin">
-                  <h4 class="quote-section-header theme-colour-text">
-                    Brockham Badgers Awards:
-                  </h4>
-                  <p class="center" id="BBsAwards">Add awards</p>
-                </div>
-              </section>
-            </article>
-
-            <article class="nav-targets" id="statsAndTitan">
-              <!-- Stats Section -->
-              <section class="page-section" id="individuals-stats-section">
-                <h3>Individual Stats.</h3>
-
-                <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                <div class="loader-small" id="individuals-stats-table-loader">
-                  <div class="duo-loader">
-                    <div class="duo duo1">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                    <div class="duo duo2">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                <div class="table-wrapper noscroll">
-                  <table id="individuals-stats-table">
-                    <!-- Data loaded into here by jIndividualsPage.js -->
-                  </table>
-                </div>
-              </section>
-
-              <!-- Titan Section -->
-              <section class="page-section page-section-added-bottom-margin">
-                <h3>Titan Status.</h3>
-                <!-- <p>- Add biggest Titan lead?</p> -->
-
-                <!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
-                <div class="loader-small" id="individuals-titans-table-loader">
-                  <div class="duo-loader">
-                    <div class="duo duo1">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                    <div class="duo duo2">
-                      <div class="dot dot-a"></div>
-                      <div class="dot dot-b"></div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
-                <div class="table-wrapper noscroll">
-                  <table id="individuals-titan-table">
-                    <!-- Data loaded into here by jIndividualsPage.js -->
-                  </table>
-                </div>
-
-                <!-- Add a summary of the top titan positions held. -->
-                <div>
-                  <h3 class="theme-colour-text center">Top Titan Titles.</h3>
-                  <p class="center" id="top-titan-titles">
-                    Add Top Titan Titles
-                  </p>
-                </div>
-              </section>
-            </article>
-
-            <!-- <article class="nav-targets" id="widgets">
+									<!-- All other rows -->
+									<tr>
+										<td>
+											<img
+												alt="Height Icon"
+												class="individualsPageIcon"
+												src="https://d30y9cdsu7xlg0.cloudfront.net/png/142747-200.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Height:</td>
+										<td id="height">--</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Weight Icon"
+												class="individualsPageIcon"
+												src="https://maxcdn.icons8.com/Share/icon/Science/weight1600.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Weight:</td>
+										<td id="weight">--</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Phone Icon"
+												class="individualsPageIcon"
+												src="https://cdn.onlinewebfonts.com/svg/img_198352.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Phone:</td>
+										<td id="phone">--</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Email Icon"
+												class="individualsPageIcon"
+												src="https://pluspng.com/img-png/email-icon-png-download-icons-logos-emojis-email-icons-2400.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Email:</td>
+										<td>
+											<a
+												class="underline"
+												id="email"
+												href="_blank"
+												alt
+												>--</a
+											>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Facebook Logo"
+												class="individualsPageIcon"
+												src="https://www.ameswessex.com/wp-content/uploads/2017/05/facebook-logo-png-white-i6-300x300.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Facebook:</td>
+										<td>
+											<a
+												class="underline"
+												id="facebook"
+												href="_blank"
+												alt
+												>--</a
+											>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Twitter Logo"
+												class="individualsPageIcon"
+												src="https://www.pinclipart.com/picdir/big/138-1388876_2017-intertech-americas-corp-white-twitter-bird-transparent.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Twitter:</td>
+										<td>
+											<a
+												class="underline"
+												id="twitter"
+												href="_blank"
+												alt
+												>--</a
+											>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img
+												alt="Instagram Logo"
+												class="individualsPageIcon"
+												src="https://www.freepngimg.com/download/logo/62372-computer-neon-instagram-icons-hd-image-free-png.png"
+												width="20"
+												height="20" />
+										</td>
+										<td>Instagram:</td>
+										<td>
+											<a
+												class="underline"
+												id="instagram"
+												href="_blank"
+												alt
+												>--</a
+											>
+										</td>
+									</tr>
+								</table>
+							</section>
+
+							<!-- Personal Data Complaint Section -->
+							<section class="page-section">
+								<!-- Add a div to house the personal complaint link. -->
+
+								<div class="subpage-content-area fadein">
+									<p
+										class="reporting-link center underline theme-colour-text"
+										onclick="dataMessage()">
+										I'm not happy with how my personal data
+										is being used
+									</p>
+								</div>
+							</section>
+
+							<!-- Weather Widget Section -->
+							<section class="page-section page-section-added-bottom-margin">
+								<!-- https://weatherwidget.io/ -->
+								<section class="weather">
+									<a
+										class="weatherwidget-io"
+										samesite="None"
+										href="https://forecast7.com/en/51d650d61/south-woodham-ferrers/"
+										data-label_1="SOUTH WOODHAM FERRERS"
+										data-label_2="Weather"
+										data-icons="Climacons Animated"
+										data-theme="original"
+										data-basecolor="rgba(0, 0, 0, 0.05)"
+										data-accent="rgba(0, 0, 0, 0.05)"
+										data-highcolor="#f54768"
+										data-lowcolor="#99b998"
+										data-suncolor="#ff9678"
+										data-cloudfill="#494A66"
+										data-raincolor="#99b998"
+										>WOODHAM FERRERS Weather</a
+									>
+									<script>
+										!(function (d, s, id) {
+											var js,
+												fjs =
+													d.getElementsByTagName(
+														s
+													)[0];
+											if (!d.getElementById(id)) {
+												js = d.createElement(s);
+												js.id = id;
+												js.src =
+													"https://weatherwidget.io/js/widget.min.js";
+												fjs.parentNode.insertBefore(
+													js,
+													fjs
+												);
+											}
+										})(
+											document,
+											"script",
+											"weatherwidget-io-js"
+										);
+									</script>
+								</section>
+							</section>
+						</article>
+
+						<article class="nav-targets" id="football">
+							<!-- Football Header Image Section -->
+							<!--<section class="page-section"> -->
+
+							<img
+								src="assets/images/ImagePlaceholder.png"
+								class="center fadein"
+								alt="Football Header"
+								id="footballHeader"
+								width="50"
+								height="50" />
+
+							<!--</section> -->
+
+							<!-- Pro Team Table Section -->
+							<section class="page-section">
+								<img
+									src="assets/images/ImagePlaceholder.png"
+									class="center fadein"
+									alt="League Logo"
+									id="proTeamLeagueLogo"
+									width="50"
+									height="50" />
+
+								<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+								<div class="loader-small" id="football-loader">
+									<div class="duo-loader">
+										<div class="duo duo1">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+										<div class="duo duo2">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+								<div class="pro-team-table-div">
+									<table id="pro-team-table">
+										<!-- Data loaded into here by jIndividualsPageProTeam.js -->
+									</table>
+								</div>
+
+								<a
+									target="_blank"
+									href="#_"
+									id="proTeamLeagueURL"
+									class="center underline"
+									>Click here for full table</a
+								>
+							</section>
+
+							<!-- Dorkinians Table Section -->
+							<section
+								class="page-section page-section-added-bottom-margin"
+								id="dorkinians-tables-section">
+								<!-- House the Dorkinians logo and header text in a grid container. -->
+
+								<div class="dorkiniansHeaderContainer">
+									<div class="dorkiniansLogoContainer">
+										<img
+											src="assets/images/IndividualsPage/Dorkinians.png"
+											class="center fadein"
+											alt="Dorkinians Logo"
+											id="dorkiniansLogo"
+											width="60"
+											height="60" />
+									</div>
+
+									<div class="dorkiniansTextContainer">
+										<h3
+											class="dorkiniansHeaderText textleft"
+											id="dorkiniansMainHeaderText">
+											Dorkinians
+										</h3>
+									</div>
+								</div>
+
+								<!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
+
+								<!-- Add a div to hold the Dorkinians 1s code within. -->
+								<div id="dorkinians1sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Premier
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep118512309" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565"
+											>click here for Premier
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "118512309";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 2s code within. -->
+								<div id="dorkinians2sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Senior Two
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep710535041" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528"
+											>click here for Senior Two South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "710535041";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 3s code within. -->
+								<div id="dorkinians3sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC One South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep57161422" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=841231919"
+											>click here for One South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "57161422";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 4s code within. -->
+								<div id="dorkinians4sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Four South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep778268394" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189"
+											>click here for Four South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "778268394";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 5s code within. -->
+								<div id="dorkinians5sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Five South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep190854409" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009"
+											>click here for Five South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "190854409";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 6s code within. -->
+								<div id="dorkinians6sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Six South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep311599615" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=626187179"
+											>click here for Six South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "311599615";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 7s code within. -->
+								<div id="dorkinians7sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Seven South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep93079112" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351"
+											>click here for Seven South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "93079112";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 8s code within. -->
+								<div id="dorkinians8sTable">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										AFC Eight South
+									</h4>
+
+									<!-- Add inner HTML into here. -->
+									<div id="lrep812886273" class="AFCTable">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744"
+											>click here for Eight South
+											Division</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "812886273";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<p class="center">
+									Click on the table for more details on the AFC
+									site
+								</p>
+
+								<button
+									class="center"
+									id="toggleResultsAndFixtures"
+									onclick="toggleResultsAndFixturesSection()">
+									Show results and fixtures details
+								</button>
+							</section>
+
+							<!-- Dorkinians Results and Fixtures Section -->
+							<section
+								class="page-section page-section-added-bottom-margin hidden"
+								id="results-and-fixtures-section">
+								<!-- Note: for the below tables the options selected were "Look And Feel: white and light grey". -->
+
+								<!-- Add a div to hold the Dorkinians 1s code within. -->
+								<div id="dorkinians1sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 1s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep884356525"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=508667565"
+											>click here for Premier</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "884356525";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 2s code within. -->
+								<div id="dorkinians2sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 2s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep678186881"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=112673528"
+											>click here for Senior Two
+											South</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "678186881";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 3s code within. -->
+								<div id="dorkinians3sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 3s Results and Fixtures
+									</h4>
+
+									<p>
+										Dorkinians III ended season early and so
+										there is no table data to show, as the
+										team was removed from the league.
+									</p>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 4s code within. -->
+								<div id="dorkinians4sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 4s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep355450147"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=404598189"
+											>click here for Four South</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "355450147";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 5s code within. -->
+								<div id="dorkinians5sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 5s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep318288599"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=268391009"
+											>click here for Five South</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "318288599";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 6s code within. -->
+								<div id="dorkinians6sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 6s Results and Fixtures
+									</h4>
+
+									<p>
+										Dorkinians VI ended season early and so
+										there is no table data to show, as the
+										team was removed from the league.
+									</p>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 7s code within. -->
+								<div id="dorkinians7sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 7s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep531227286"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=104974351"
+											>click here for Seven South</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "531227286";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+
+								<!-- Add a div to hold the Dorkinians 8s code within. -->
+								<div id="dorkinians8sResultsAndFixtures">
+									<h4
+										class="dorkiniansTableHeaderText theme-colour-text">
+										Dorkinians 8s Results and Fixtures
+									</h4>
+
+									<div
+										id="lrep568890794"
+										class="AFCResultsAndFixtures">
+										Data loading....<a
+											href="https://fulltime-league.thefa.com/index.html?divisionseason=204791744"
+											>click here for Eight South</a
+										><br /><br /><a
+											href="http://www.thefa.com/FULL-TIME"
+											>FULL-TIME Home</a
+										>
+									</div>
+									<script
+										language="javascript"
+										type="text/javascript">
+										var lrcode = "568890794";
+									</script>
+									<script
+										language="Javascript"
+										type="text/javascript"
+										src="https://fulltime-league.thefa.com/client/api/cs1.js"></script>
+								</div>
+							</section>
+						</article>
+
+						<article class="nav-targets" id="history">
+							<!-- Ashcombe Quote Section -->
+							<section class="page-section">
+								<div
+									class="center fadein"
+									id="ashcombeSchoolLogoContainer">
+									<img
+										src="assets/images/IndividualsPage/Ashcombe School Logo - Logo.png"
+										alt="Ashcombe School Logo"
+										id="ashcombeLogo"
+										width="54"
+										height="48" />
+									<img
+										src="assets/images/IndividualsPage/Ashcombe School Logo - Text.png"
+										alt="Ashcombe School Logo Text"
+										id="ashcombeLogoText"
+										width="245"
+										height="64" />
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Ashcombe Year 11 Yearbook Quote:
+									</h4>
+									<q id="ashcombeYear11YearBookQuote"
+										>Add quote</q
+									>
+								</div>
+
+								<div class="quote-section fadein no-bottom-margin">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Ashcombe Sixth Form Yearbook Quote:
+									</h4>
+									<q id="ashcombeSixthFormYearBookQuote"
+										>Add quote</q
+									>
+								</div>
+							</section>
+
+							<!-- Brockham Badgers Quote Section -->
+							<section class="page-section page-section-added-bottom-margin">
+								<!-- House the Brockham Badgers logo and header text in a grid container. -->
+
+								<div class="brockhamBadgersHeaderContainer">
+									<div class="brockhamBadgersLogoContainer">
+										<img
+											src="assets/images/IndividualsPage/Brockham Badgers.png"
+											class="center fadein"
+											alt="Brockham Badgers Logo"
+											id="brockhamBadgersLogo"
+											width="59"
+											height="60" />
+									</div>
+
+									<div class="brockhamBadgersTextContainer">
+										<h3 class="brockhamBadgersHeaderText">
+											Brockham Badgers
+										</h3>
+									</div>
+								</div>
+
+								<img
+									src="assets/images/ImagePlaceholder.png"
+									class="center fadein"
+									alt="Brockham Badgers Photo"
+									id="brockhamBadgersPicture"
+									width="50"
+									height="50" />
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 11s End Of Year Quote:
+									</h4>
+									<q id="BBsU11sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU11sCite"></cite>
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 12s End Of Year Quote:
+									</h4>
+									<q id="BBsU12sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU12sCite"></cite>
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 13s End Of Year Quote:
+									</h4>
+									<q id="BBsU13sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU13sCite"></cite>
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 14s End Of Year Quote:
+									</h4>
+									<q id="BBsU14sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU14sCite"></cite>
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 15s End Of Year Quote:
+									</h4>
+									<q id="BBsU15sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU15sCite"></cite>
+								</div>
+
+								<div class="quote-section fadein">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Under 16s End Of Year Quote:
+									</h4>
+									<q id="BBsU16sQuote">Add quote</q>
+									<br />
+									<cite id="BBsU16sCite"></cite>
+								</div>
+
+								<div
+									class="quote-section center fadein no-bottom-margin">
+									<h4
+										class="quote-section-header theme-colour-text">
+										Brockham Badgers Awards:
+									</h4>
+									<p class="center" id="BBsAwards">Add awards</p>
+								</div>
+							</section>
+						</article>
+
+						<article class="nav-targets" id="statsAndTitan">
+							<!-- Stats Section -->
+							<section class="page-section" id="individuals-stats-section">
+								<h3>Individual Stats.</h3>
+
+								<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+								<div
+									class="loader-small"
+									id="individuals-stats-table-loader">
+									<div class="duo-loader">
+										<div class="duo duo1">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+										<div class="duo duo2">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+								<div class="table-wrapper noscroll">
+									<table id="individuals-stats-table">
+										<!-- Data loaded into here by jIndividualsPage.js -->
+									</table>
+								</div>
+							</section>
+
+							<!-- Titan Section -->
+							<section class="page-section page-section-added-bottom-margin">
+								<h3>Titan Status.</h3>
+								<!-- <p>- Add biggest Titan lead?</p> -->
+
+								<!-- Add some initial loader animation dots. (https://codepen.io/desandro/pen/HhdrA) -->
+								<div
+									class="loader-small"
+									id="individuals-titans-table-loader">
+									<div class="duo-loader">
+										<div class="duo duo1">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+										<div class="duo duo2">
+											<div class="dot dot-a"></div>
+											<div class="dot dot-b"></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Wrap the table in a div so that I can limit the overflow scrolling just to the table. -->
+								<div class="table-wrapper noscroll">
+									<table id="individuals-titan-table">
+										<!-- Data loaded into here by jIndividualsPage.js -->
+									</table>
+								</div>
+
+								<!-- Add a summary of the top titan positions held. -->
+								<div>
+									<h3 class="theme-colour-text center">
+										Top Titan Titles.
+									</h3>
+									<p class="center" id="top-titan-titles">
+										Add Top Titan Titles
+									</p>
+								</div>
+							</section>
+						</article>
+
+						<!-- <article class="nav-targets" id="widgets">
                     </article> -->
-          </section>
+					</section>
 
-          <!-- The horizontal scrollable section. -->
-          <snap-tabs-header class="scroll-snap-x">
-            <nav id="nav-bar">
-              <a href="#profile" active>Profile</a>
-              <!-- <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>  -->
-              <!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
-              <a href="#football">Football</a>
-              <a href="#history">History</a>
-              <a href="#statsAndTitan">Stats and Titan</a>
-              <!--<a href="#widgets">Widgets</a>-->
-            </nav>
+					<!-- The horizontal scrollable section. -->
+					<snap-tabs-header class="scroll-snap-x">
+						<nav id="nav-bar">
+							<a href="#profile" active>Profile</a>
+							<!-- <a class="anchor thing-with-anchor" href="#profile" onclick="scrollToLinkWithOffset('nav-bar')" active>Profile</a>  -->
+							<!-- <a href="#profile" onclick="navClick()" active>Profile</a> -->
+							<a href="#football">Football</a>
+							<a href="#history">History</a>
+							<a href="#statsAndTitan">Stats and Titan</a>
+							<!--<a href="#widgets">Widgets</a>-->
+						</nav>
 
-            <span class="snap-indicator"></span>
-          </snap-tabs-header>
-        </snap-tabs>
-      </div>
-    </div>
+						<span class="snap-indicator"></span>
+					</snap-tabs-header>
+				</snap-tabs>
+			</div>
+		</div>
 
-    <!-- Footer -->
+		<!-- Footer -->
 
-    <!-- <footer> -->
+		<!-- <footer> -->
 
-    <!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
-    <!-- <footer-component></footer-component> -->
+		<!-- Add the common website footer using shadow DOMs. See /assets/components/Footer/footer.js for the header code. -->
+		<!-- <footer-component></footer-component> -->
 
-    <!-- </footer> -->
+		<!-- </footer> -->
 
-    <!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
-    <!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
+		<!-- Link to JavaScript scripts - Starting with "/" moves back to root directory. -->
+		<!-- Always link to your JavaScript files at the bottom of your HTML file. HTML reads from top to bottom so calling the JavaScript file too early may mean the scripts don't run on HTML elements that sit below them in the HTML file. -->
 
-    <!-- Add the common header JS -->
-    <script
-      src="/assets/components/Header/header.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common sideMenu JS -->
-    <script
-      src="/assets/components/SideMenu/sideMenu.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- Add the common footer JS -->
-    <script
-      src="/assets/components/Footer/footer.js"
-      type="text/javascript"
-      defer
-    ></script>
-    <!-- New SnapTabs JavaScript -->
-    <script
-      src="/assets/components/SnapTabs/bundle.js"
-      type="module"
-      defer
-    ></script>
+		<!-- Add the common header JS -->
+		<script src="assets/components/Header/header.js" type="text/javascript" defer></script>
+		<!-- Add the common sideMenu JS -->
+		<script src="assets/components/SideMenu/sideMenu.js" type="text/javascript" defer></script>
+		<!-- Add the common footer JS -->
+		<script src="assets/components/Footer/footer.js" type="text/javascript" defer></script>
+		<!-- New SnapTabs JavaScript -->
+		<script src="assets/components/SnapTabs/bundle.js" type="module" defer></script>
 
-    <!-- Old SnapTabs JavaScript -->
-    <!--<script src="/assets/components/SnapTabs/scroll-timeline.js"></script> -->
-    <!-- Get Scroll-Timeline JS -->
-    <!-- <script src="/assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
-    <!-- <script src="/assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
-    <!-- <script src="/assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
+		<!-- Old SnapTabs JavaScript -->
+		<!--<script src="assets/components/SnapTabs/scroll-timeline.js"></script> -->
+		<!-- Get Scroll-Timeline JS -->
+		<!-- <script src="assets/components/SnapTabs/jSnapTabs1.js"></script> <!-- Get SnapTabs JS -->
+		<!-- <script src="assets/components/SnapTabs/jSnapTabs2.js"></script> <!-- Get SnapTabs JS -->
+		<!-- <script src="assets/js/jSnapTabsPageScroll.js"></script> <!-- Get SnapTabs Page Scroll JS -->
 
-    <!-- Get the first PapaParse JS which isn't called immediately -->
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"
-    ></script>
-    <!-- Get Individuals Page Pro Team JS -->
-    <script src="/assets/js/jIndividualsPageProTeam.js"></script>
-    <!-- Get Individuals Page Dorkinians JS -->
-    <script src="/assets/js/jIndividualsPageDorkinians.js"></script>
-    <!-- Get the second (and main) PapaParse JS -->
-    <script src="/assets/js/jIndividualsPage.js"></script>
-    <!-- Get Individuals Page JS -->
-    <!-- Add the Main Functions JS -->
-    <script
-      src="/assets/js/jMainFunctions.js"
-      type="text/javascript"
-      defer
-    ></script>
-  </body>
+		<!-- Get the first PapaParse JS which isn't called immediately -->
+		<script
+			type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+		<!-- Get Individuals Page Pro Team JS -->
+		<script src="assets/js/jIndividualsPageProTeam.js"></script>
+		<!-- Get Individuals Page Dorkinians JS -->
+		<script src="assets/js/jIndividualsPageDorkinians.js"></script>
+		<!-- Get the second (and main) PapaParse JS -->
+		<script src="assets/js/jIndividualsPage.js"></script>
+		<!-- Get Individuals Page JS -->
+		<!-- Add the Main Functions JS -->
+		<script src="assets/js/jMainFunctions.js" type="text/javascript" defer></script>
+	</body>
 </html>

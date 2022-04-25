@@ -26,10 +26,10 @@ footerTemplate.innerHTML = `
 
       <ul>
 
-        <li><a href="mailto:bangsluke@gmail.com"><img src="/assets/images/Icons&Logos/EmailLogo.png" class="footer-logo" alt="Email Logo"></a></li>
-        <li><a href="https://github.com/bangsluke/bangsluke"><img src="/assets/images/Icons&Logos/GitHubLogo.png" class="footer-logo" alt="GitHub Logo"></a></li>
-        <li><a href="https://twitter.com/bangsluke"><img src="/assets/images/Icons&Logos/TwitterLogo.png" class="footer-logo" alt="Twitter Logo"></a></li>
-        <li><a href="https://www.linkedin.com/in/bangsluke/"><img src="/assets/images/Icons&Logos/LinkedInLogo.png" class="footer-logo" alt="LinkedIn Logo"></a></li>
+        <li><a href="mailto:bangsluke@gmail.com"><img src="assets/images/Icons&Logos/EmailLogo.png" class="footer-logo" alt="Email Logo"></a></li>
+        <li><a href="https://github.com/bangsluke/bangsluke"><img src="assets/images/Icons&Logos/GitHubLogo.png" class="footer-logo" alt="GitHub Logo"></a></li>
+        <li><a href="https://twitter.com/bangsluke"><img src="assets/images/Icons&Logos/TwitterLogo.png" class="footer-logo" alt="Twitter Logo"></a></li>
+        <li><a href="https://www.linkedin.com/in/bangsluke/"><img src="assets/images/Icons&Logos/LinkedInLogo.png" class="footer-logo" alt="LinkedIn Logo"></a></li>
 
       </ul>
 
@@ -41,27 +41,24 @@ footerTemplate.innerHTML = `
 
 // Create a class for the element
 class Footer extends HTMLElement {
-  // Always call super first in constructor
-  constructor() {
-    super();
-  }
+	// Always call super first in constructor
+	constructor() {
+		super();
+	}
 
-  connectedCallback() {
-    // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: "open" });
+	connectedCallback() {
+		// Create a shadow root
+		const shadowRoot = this.attachShadow({ mode: "open" });
 
-    // Apply external styles to the shadow DOM
-    const styleSheet = document.createElement("link");
-    styleSheet.setAttribute("rel", "stylesheet");
-    styleSheet.setAttribute(
-      "href",
-      "/assets/components/Footer/FooterComponent.css"
-    );
-    shadowRoot.appendChild(styleSheet);
+		// Apply external styles to the shadow DOM
+		const styleSheet = document.createElement("link");
+		styleSheet.setAttribute("rel", "stylesheet");
+		styleSheet.setAttribute("href", "assets/components/Footer/FooterComponent.css");
+		shadowRoot.appendChild(styleSheet);
 
-    // Attach the created elements to the shadow DOM
-    shadowRoot.appendChild(footerTemplate.content);
-  }
+		// Attach the created elements to the shadow DOM
+		shadowRoot.appendChild(footerTemplate.content);
+	}
 }
 
 customElements.define("footer-component", Footer);

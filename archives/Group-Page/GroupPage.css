@@ -21,28 +21,28 @@ Key CSS Notes:
 /* :root is a pseudo-class selector that matches the root element of the document, usually the html element. By creating your variables in :root, they will be available globally and can be accessed from any other selector in the style sheet.*/
 
 :root {
-    /* CSS variables - Add variables below like the given example. */
-    /*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
-    --main-style-color: #2a3950;
-    --main-background-color: #2a3950;
-    --accent-color-blue: #41436A;
-    --accent-color-darkred: #974063;
-    --accent-color-red: #f54768;
-    --accent-color-orange: #ff9678;
-    --accent-color-green: #99b998;
-    --accent-color-white: #ffffff;
-    --main-font-family: 'Calibri', sans-serif;
-    /* line-height: 15px; */
+	/* CSS variables - Add variables below like the given example. */
+	/*Embers Color Palette: https://digitalsynopsis.com/wp-content/uploads/2019/09/color-schemes-palettes-combinations-2.jpg*/
+	--main-style-color: #2a3950;
+	--main-background-color: #2a3950;
+	--accent-color-blue: #41436a;
+	--accent-color-darkred: #974063;
+	--accent-color-red: #f54768;
+	--accent-color-orange: #ff9678;
+	--accent-color-green: #99b998;
+	--accent-color-white: #ffffff;
+	--main-font-family: "Calibri", sans-serif;
+	/* line-height: 15px; */
 }
 
 /* HTML updates to cover the full webpage. */
 
 html {
-    background: var(--main-background-color, #2a3950);
-    /* Smooth the scrolling function of any internal hyperlinks. */
-    scroll-behavior: smooth;
-    /* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
-    /* scroll-padding-top: 260px; */
+	background: var(--main-background-color, #2a3950);
+	/* Smooth the scrolling function of any internal hyperlinks. */
+	scroll-behavior: smooth;
+	/* Offset all anchor links by the height of the fixed header. https://stackoverflow.com/a/56467997/14290169 */
+	/* scroll-padding-top: 260px; */
 }
 
 /* Add code below. */
@@ -51,132 +51,129 @@ html {
 
 /* Remove all margin and padding from full page. Turn off if you want to see sizing colours for between devices. https://www.youtube.com/watch?v=FTlczfR82mQ&ab_channel=DevEd */
 * {
-    box-sizing: border-box;
-    margin: 0rem;
-    padding: 0rem;
+	box-sizing: border-box;
+	margin: 0rem;
+	padding: 0rem;
 }
-
 
 /* Generic body class for all HTML pages using this CSS format. */
 
 body {
-    background: #41436A;
-    background-color: #FF3CAC;
-    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-    font-family: var(--main-font-family, sans-serif);
-    width: 100%;
-    min-height: 100vh;
-    font-size: 25px;
+	background: #41436a;
+	background-color: #ff3cac;
+	background-image: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+	font-family: var(--main-font-family, sans-serif);
+	width: 100%;
+	min-height: 100vh;
+	font-size: 25px;
 }
-
-
 
 /* Have the homepage body in grid display to allow smooth layout changes from web to mobile. */
 
 .body-homepage {
-    display: grid;
-    grid-template-columns: 100%;
-    /* The below properties are commented out as the body structure is organised in media queries at bottom of file. */
-    /* grid-gap: 20px; */
-    /* grid-template-rows: auto auto; */
-    /* grid-template-areas: "header" "footer"; */
+	display: grid;
+	grid-template-columns: 100%;
+	/* The below properties are commented out as the body structure is organised in media queries at bottom of file. */
+	/* grid-gap: 20px; */
+	/* grid-template-rows: auto auto; */
+	/* grid-template-areas: "header" "footer"; */
 }
 
 .body-individuals {
-    background: var(--accent-color-blue, #41436A);
+	background: var(--accent-color-blue, #41436a);
 }
 
 /* Header styling. */
 
 .header {
-    grid-area: header;
-    background: #ff9678;
-    height: 200px;
-    width: 100%;
-    color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+	grid-area: header;
+	background: #ff9678;
+	height: 200px;
+	width: 100%;
+	color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .header-subpage {
-    background: #ff9678;
-    height: 50px;
-    width: 100%;
-    color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: fixed;
-    left: 0px;
-    top: 0px;
+	background: #ff9678;
+	height: 50px;
+	width: 100%;
+	color: #ffffff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: fixed;
+	left: 0px;
+	top: 0px;
 }
 
 /* Content styling. */
 
 .content {
-    grid-area: content;
-    background: #f54768;
-    height: 200px;
-    width: 100%;
-    color: #ffffff;
+	grid-area: content;
+	background: #f54768;
+	height: 200px;
+	width: 100%;
+	color: #ffffff;
 }
 
 .content-individuals {
-    background: #f54768;
-    height: max-content;
-    width: 100%;
-    top: 100px;
-    left: 0px;
-    color: #ffffff;
+	background: #f54768;
+	height: max-content;
+	width: 100%;
+	top: 100px;
+	left: 0px;
+	color: #ffffff;
 }
 
 /* Avatar class for the main image. */
 
 .avatar {
-    width: 100px;
-    height: auto;
-    border-radius: 100%;
-    display: inline-block;
-    margin: 0rem 0rem 2em 0rem;
-    padding: 0.2rem;
-    border: solid 1px rgba(255, 255, 255, 0.25);
-    background-color: rgba(255, 255, 255, 0.075);
+	width: 100px;
+	height: auto;
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0rem 0rem 2em 0rem;
+	padding: 0.2rem;
+	border: solid 1px rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.075);
 }
 
 /* Footer styling. */
 
 .footer {
-    grid-area: footer;
-    background: #974063;
-    height: max-content;
-    width: 100%;
-    color: #ffffff;
-    justify-self: center;
-    align-content: center;
+	grid-area: footer;
+	background: #974063;
+	height: max-content;
+	width: 100%;
+	color: #ffffff;
+	justify-self: center;
+	align-content: center;
 }
 
 .footer-subpage {
-    background: #974063;
-    height: max-content;
-    width: 100%;
-    color: #ffffff;
-    justify-self: center;
-    align-content: center;
+	background: #974063;
+	height: max-content;
+	width: 100%;
+	color: #ffffff;
+	justify-self: center;
+	align-content: center;
 }
 
 /* Text styling. */
 
 h6 {
-    font-size: 12pt;
+	font-size: 12pt;
 }
 
 p {
-    color: white;
+	color: white;
 }
 
 ul {
-    color: white;
+	color: white;
 }
 
 /* Resizing the webpage for all devices. */
@@ -201,14 +198,14 @@ ul {
 /* Covers most phones such as iPhone SE (my phone). */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    html {
-        /* background: blue; */
-    }
-    .body-homepage {
-        grid-gap: 20px;
-        grid-template-rows: auto auto;
-        grid-template-areas: "header" "footer";
-    }
+	/* html {
+		background: blue;
+	} */
+	.body-homepage {
+		grid-gap: 20px;
+		grid-template-rows: auto auto;
+		grid-template-areas: "header" "footer";
+	}
 }
 
 /* Reduced windows on Desktops and Laptops */
@@ -216,27 +213,27 @@ ul {
 /* For when a user reduces the size of their window. */
 
 @media only screen and (min-width: 480px) and (max-width: 1223px) {
-    html {
-        /* background: green; */
-    }
-    .body-homepage {
-        grid-gap: 20px;
-        grid-template-rows: 20% 90% auto;
-        grid-template-areas: "header" "content" "footer";
-    }
+	/* html {
+		background: green;
+	} */
+	.body-homepage {
+		grid-gap: 20px;
+		grid-template-rows: 20% 90% auto;
+		grid-template-areas: "header" "content" "footer";
+	}
 }
 
 /* iPads */
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-    html {
-        /* background: orange; */
-    }
-    .body-homepage {
-        grid-gap: 20px;
-        grid-template-rows: 20% 90% auto;
-        grid-template-areas: "header" "content" "footer";
-    }
+	/* html {
+		background: orange;
+	} */
+	.body-homepage {
+		grid-gap: 20px;
+		grid-template-rows: 20% 90% auto;
+		grid-template-areas: "header" "content" "footer";
+	}
 }
 
 /* Desktops and Laptops */
@@ -244,14 +241,14 @@ ul {
 /* For most normal size screen desktops and laptops. */
 
 @media only screen and (min-width: 1224px) {
-    html {
-        /* background: red; */
-    }
-    .body-homepage {
-        grid-gap: 20px;
-        grid-template-rows: 20% 90% auto;
-        grid-template-areas: "header" "content" "footer";
-    }
+	/* html {
+		background: red;
+	} */
+	.body-homepage {
+		grid-gap: 20px;
+		grid-template-rows: 20% 90% auto;
+		grid-template-areas: "header" "content" "footer";
+	}
 }
 
 /* Large Screens */
@@ -259,14 +256,14 @@ ul {
 /* For larger monitors and displays. */
 
 @media only screen and (min-width: 1824px) {
-    html {
-        /* background: yellow; */
-    }
-    .body-homepage {
-        grid-gap: 20px;
-        grid-template-rows: 20% 90% auto;
-        grid-template-areas: "header" "content" "footer";
-    }
+	/* html {
+		background: yellow;
+	} */
+	.body-homepage {
+		grid-gap: 20px;
+		grid-template-rows: 20% 90% auto;
+		grid-template-areas: "header" "content" "footer";
+	}
 }
 
 /* CSS Tips and Tricks. */
@@ -277,21 +274,21 @@ ul {
     background: var(--accent-color-pink, #F575FF);
 } */
 
-/* Add an id for fading in an item over two seconds. */
+/* Add an class for fading in an item over two seconds. */
 
-#fadein {
-    animation: fadein 2s ease forwards;
+.fadein {
+	animation: fadein 2s ease forwards;
 }
 
 @keyframes fadein {
-    from {
-        display: none;
-        opacity: 0;
-    }
-    to {
-        display: block;
-        opacity: 1;
-    }
+	from {
+		display: none;
+		opacity: 0;
+	}
+	to {
+		display: block;
+		opacity: 1;
+	}
 }
 
 /* Add a set up for media devices with preference for dark mode. */
@@ -300,15 +297,15 @@ ul {
 https://levelup.gitconnected.com/dynamic-dark-light-mode-on-the-web-d55e4c0d3aa9 */
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        background: #000000;
-        filter: invert(1) hue-rotate(180deg);
-    }
-    img {
-        opacity: .75;
-        transition: opacity .5s ease-in-out;
-    }
-    img:hover {
-        opacity: 1;
-    }
+	:root {
+		background: #000000;
+		filter: invert(1) hue-rotate(180deg);
+	}
+	img {
+		opacity: 0.75;
+		transition: opacity 0.5s ease-in-out;
+	}
+	img:hover {
+		opacity: 1;
+	}
 }

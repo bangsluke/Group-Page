@@ -32,7 +32,7 @@ sideMenuTemplate.innerHTML = `
             <div class="sideMenu-Main-Container">
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="/assets/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
+                        <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html"><img src="assets/images/Icons&Logos/HomeIcon.png" class="sideMenu-Icon" alt="Email Logo"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
                         <a href="/a1e0475283abec53e6cffaacba6e8888aec7bc5c/GroupHomePage.html">Home</a>
@@ -41,46 +41,46 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
+                        <a href="Sub-Pages/Users.html"><img src="assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Users.html">Users</a>
+                        <a href="Sub-Pages/Users.html">Users</a>
                     </div>
                 </div>
                 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
+                        <a href="Sub-Pages/Events.html"><img src="assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Events.html">Events</a>
+                        <a href="Sub-Pages/Events.html">Events</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                        <a href="Sub-Pages/Stats.html"><img src="assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Stats.html">Stats</a>
+                        <a href="Sub-Pages/Stats.html">Stats</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                        <a href="Sub-Pages/Titans.html"><img src="assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Titans.html">Titans</a>
+                        <a href="Sub-Pages/Titans.html">Titans</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
+                        <a href="Sub-Pages/Gallery.html"><img src="assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Gallery.html">Gallery</a>
+                        <a href="Sub-Pages/Gallery.html">Gallery</a>
                     </div>
                 </div>
 
@@ -108,10 +108,10 @@ sideMenuTemplate.innerHTML = `
 
                 <!-- <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="/Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
+                        <a href="Sub-Pages/Ideas.html"><img src="assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Ideas Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="/Sub-Pages/Ideas.html">Ideas</a>
+                        <a href="Sub-Pages/Ideas.html">Ideas</a>
                     </div>
                 </div> -->
 
@@ -125,27 +125,24 @@ sideMenuTemplate.innerHTML = `
 
 // Create a class for the element
 class sideMenu extends HTMLElement {
-  // Always call super first in constructor
-  constructor() {
-    super();
-  }
+	// Always call super first in constructor
+	constructor() {
+		super();
+	}
 
-  connectedCallback() {
-    // Create a shadow root
-    const shadowRoot = this.attachShadow({ mode: "open" });
+	connectedCallback() {
+		// Create a shadow root
+		const shadowRoot = this.attachShadow({ mode: "open" });
 
-    // Apply external styles to the shadow DOM
-    const styleSheet = document.createElement("link");
-    styleSheet.setAttribute("rel", "stylesheet");
-    styleSheet.setAttribute(
-      "href",
-      "/assets/components/SideMenu/SideMenuComponent.css"
-    );
-    shadowRoot.appendChild(styleSheet);
+		// Apply external styles to the shadow DOM
+		const styleSheet = document.createElement("link");
+		styleSheet.setAttribute("rel", "stylesheet");
+		styleSheet.setAttribute("href", "assets/components/SideMenu/SideMenuComponent.css");
+		shadowRoot.appendChild(styleSheet);
 
-    // Attach the created elements to the shadow DOM
-    shadowRoot.appendChild(sideMenuTemplate.content);
-  }
+		// Attach the created elements to the shadow DOM
+		shadowRoot.appendChild(sideMenuTemplate.content);
+	}
 }
 
 customElements.define("side-menu-component", sideMenu);
@@ -156,47 +153,43 @@ customElements.define("side-menu-component", sideMenu);
 // https://www.codingflicks.com/2020/12/toggle-sidebar-navigation-html-css-javascript.html
 
 function openNav() {
-  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-  document
-    .getElementsByTagName("side-menu-component")[0]
-    .shadowRoot.getElementById("side-menu").style.width = "15.6rem"; // Increase the width of the side-menu to make it visible.
-  document
-    .getElementsByTagName("side-menu-component")[0]
-    .shadowRoot.getElementById("side-menu").style.right = "0rem"; // Reset the side menu side to the edge of the screen.
+	// Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.width =
+		"15.6rem"; // Increase the width of the side-menu to make it visible.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.right =
+		"0rem"; // Reset the side menu side to the edge of the screen.
 
-  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
-  var myEle = document.getElementsByTagName("header-component")[0];
-  if (myEle) {
-    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-    document
-      .getElementsByTagName("header-component")[0]
-      .shadowRoot.getElementById("burgericon").style.display = "none"; // Hide the burger icon.
-  } else {
-    //console.log("not doing anything");
-  }
+	// Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+	var myEle = document.getElementsByTagName("header-component")[0];
+	if (myEle) {
+		// Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+		document
+			.getElementsByTagName("header-component")[0]
+			.shadowRoot.getElementById("burgericon").style.display = "none"; // Hide the burger icon.
+	} else {
+		//console.log("not doing anything");
+	}
 
-  // document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
+	// document.getElementById("content-area").style.marginRight = "18.75rem"; // Re-add if you want the content area to shrink on menu expansion.
 }
 
 function closeNav() {
-  // Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-  document
-    .getElementsByTagName("side-menu-component")[0]
-    .shadowRoot.getElementById("side-menu").style.width = "0"; // Reduce the width of the side-menu to make it invisible.
-  document
-    .getElementsByTagName("side-menu-component")[0]
-    .shadowRoot.getElementById("side-menu").style.right = "-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
+	// Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.width =
+		"0"; // Reduce the width of the side-menu to make it invisible.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.right =
+		"-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
 
-  // Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
-  var myEle = document.getElementsByTagName("header-component")[0];
-  if (myEle) {
-    // Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-    document
-      .getElementsByTagName("header-component")[0]
-      .shadowRoot.getElementById("burgericon").style.display = "inline"; // Show the burger icon.
-  } else {
-    //console.log("not doing anything");
-  }
+	// Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
+	var myEle = document.getElementsByTagName("header-component")[0];
+	if (myEle) {
+		// Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
+		document
+			.getElementsByTagName("header-component")[0]
+			.shadowRoot.getElementById("burgericon").style.display = "inline"; // Show the burger icon.
+	} else {
+		//console.log("not doing anything");
+	}
 
-  // document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
+	// document.getElementById("content-area").style.marginRight = "0"; // Re-add if you want the content area to shrink on menu expansion.
 }
