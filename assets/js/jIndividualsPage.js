@@ -59,7 +59,7 @@ function init() {
 function showSelectedInfo(results) {
 	var data = results.data;
 	//Alert("Successfully processed " + data.length + " rows!") // Provide an alert that the data has been processed.
-	//Console.log(data); // Log the data in the console.
+	console.log(data); // Log the data in the console.
 	// Initially receive the clicked user name from the User Page or Login Page. https://lage.us/Javascript-Pass-Variables-to-Another-Page.html
 	var selectedUserName = sessionStorage.getItem("selectedUserName"); // Retrieve the variable passed to session storage.
 	if (selectedUserName == null) {
@@ -166,10 +166,7 @@ function getData(data, selectedUserName) {
 							(i[o.id].style.position = "absolute"),
 							(i[o.id].style.top = "0"),
 							(i[o.id].onload = function () {
-								i[o.id].contentWindow.postMessage(
-									o,
-									"https://weatherwidget.io"
-								);
+								i[o.id].contentWindow.postMessage(o, "https://weatherwidget.io");
 							}),
 							(e.style.display = "block"),
 							(e.style.position = "relative"),
@@ -226,8 +223,7 @@ function getData(data, selectedUserName) {
 	// Old code solution.
 	//Var lrcode = data[foundRow].dorkiniansLeagueCode;
 	//GetDorkiniansTable(lrcode);
-	document.getElementById("dorkiniansMainHeaderText").innerHTML =
-		"Dorkinians " + data[foundRow].dorkiniansTeam + "s"; // Modify the text inside the element.
+	document.getElementById("dorkiniansMainHeaderText").innerHTML = "Dorkinians " + data[foundRow].dorkiniansTeam + "s"; // Modify the text inside the element.
 
 	// Add code here to show hide tables.
 	var DorkiniansTeam = parseInt(data[foundRow].dorkiniansTeam);
@@ -247,8 +243,7 @@ function getData(data, selectedUserName) {
 
 	/// Ashcombe
 	document.getElementById("ashcombeYear11YearBookQuote").innerHTML = data[foundRow].ashcombeYear11YearBookQuote; // Modify the text inside the element.
-	document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML =
-		data[foundRow].ashcombeSixthFormYearBookQuote; // Modify the text inside the element.
+	document.getElementById("ashcombeSixthFormYearBookQuote").innerHTML = data[foundRow].ashcombeSixthFormYearBookQuote; // Modify the text inside the element.
 
 	/// Brockham Badgers
 	document.getElementById("brockhamBadgersPicture").src = data[foundRow].brockhamBadgersImagePath; // Modify the source of the image.
@@ -299,9 +294,7 @@ function toggleResultsAndFixturesSection() {
 		element.classList.remove("hidden"); // Remove the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
 		toggleButton.innerText = "Hide results and fixtures details"; // Set the button text to change.
 		// Also remove the "page-section-added-bottom-margin" class for the page-section above results and fixtures section.
-		document.getElementById("dorkinians-tables-section").classList.remove(
-			"page-section-added-bottom-margin"
-		); // Remove the page-section-added-bottom-margin class.
+		document.getElementById("dorkinians-tables-section").classList.remove("page-section-added-bottom-margin"); // Remove the page-section-added-bottom-margin class.
 	} else {
 		element.classList.add("hidden"); // Add the hidden class. https://www.w3schools.com/howto/howto_js_remove_class.asp.
 		toggleButton.innerText = "Show results and fixtures details"; // Set the button text to change.
