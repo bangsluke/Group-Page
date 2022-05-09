@@ -41,46 +41,46 @@ sideMenuTemplate.innerHTML = `
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
+                        <a href="/Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="sideMenu-Icon" alt="Users Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="Sub-Pages/Users.html">Users</a>
+                        <a href="/Sub-Pages/Users.html">Users</a>
                     </div>
                 </div>
                 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
+                        <a href="/Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="sideMenu-Icon" alt="Events Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="Sub-Pages/Events.html">Events</a>
+                        <a href="/Sub-Pages/Events.html">Events</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
+                        <a href="/Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="sideMenu-Icon" alt="Stats Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="Sub-Pages/Stats.html">Stats</a>
+                        <a href="/Sub-Pages/Stats.html">Stats</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
+                        <a href="/Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="sideMenu-Icon" alt="Titans Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="Sub-Pages/Titans.html">Titans</a>
+                        <a href="/Sub-Pages/Titans.html">Titans</a>
                     </div>
                 </div>
 
                 <div class="sideMenu-Container">
                     <div class="sideMenu-Icon-Container">
-                        <a href="Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
+                        <a href="/Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="sideMenu-Icon" alt="Gallery Icon"></a>
                     </div>
                     <div class="sideMenu-Text-Container">
-                        <a href="Sub-Pages/Gallery.html">Gallery</a>
+                        <a href="/Sub-Pages/Gallery.html">Gallery</a>
                     </div>
                 </div>
 
@@ -156,16 +156,13 @@ function openNav() {
 	// Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
 	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.width =
 		"15.6rem"; // Increase the width of the side-menu to make it visible.
-	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.right =
-		"0rem"; // Reset the side menu side to the edge of the screen.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.right = "0rem"; // Reset the side menu side to the edge of the screen.
 
 	// Check if the tag 'header-component' really exists or not. If it does, action on it. If not (as for the home page), do nothing.
 	var myEle = document.getElementsByTagName("header-component")[0];
 	if (myEle) {
 		// Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-		document
-			.getElementsByTagName("header-component")[0]
-			.shadowRoot.getElementById("burgericon").style.display = "none"; // Hide the burger icon.
+		document.getElementsByTagName("header-component")[0].shadowRoot.getElementById("burgericon").style.display = "none"; // Hide the burger icon.
 	} else {
 		//Console.log("not doing anything");
 	}
@@ -175,8 +172,7 @@ function openNav() {
 
 function closeNav() {
 	// Work down the DOM, finding the 'side-menu-component' element and then look inside it for the id 'side-menu'.
-	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.width =
-		"0"; // Reduce the width of the side-menu to make it invisible.
+	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.width = "0"; // Reduce the width of the side-menu to make it invisible.
 	document.getElementsByTagName("side-menu-component")[0].shadowRoot.getElementById("side-menu").style.right =
 		"-0.1rem"; // Slightly position the side-menu off to the side to avoid seing the border.
 
@@ -184,9 +180,8 @@ function closeNav() {
 	var myEle = document.getElementsByTagName("header-component")[0];
 	if (myEle) {
 		// Work down the DOM, finding the 'header-component' element and then look inside it for the id 'burgericon'.
-		document
-			.getElementsByTagName("header-component")[0]
-			.shadowRoot.getElementById("burgericon").style.display = "inline"; // Show the burger icon.
+		document.getElementsByTagName("header-component")[0].shadowRoot.getElementById("burgericon").style.display =
+			"inline"; // Show the burger icon.
 	} else {
 		//Console.log("not doing anything");
 	}
