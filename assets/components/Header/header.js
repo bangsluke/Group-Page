@@ -50,38 +50,38 @@ headerTemplate.innerHTML = `
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="topMenu-Icon" alt="Users Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Users.html"><img src="/assets/images/Icons&Logos/UsersIcon.png" class="topMenu-Icon" alt="Users Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Users.html">Users</a>
+                    <a href="/Sub-Pages/Users.html">Users</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="topMenu-Icon" alt="Events Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Events.html"><img src="/assets/images/Icons&Logos/EventsIcon.png" class="topMenu-Icon" alt="Events Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Events.html">Events</a>
+                    <a href="/Sub-Pages/Events.html">Events</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Stats Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Stats.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Stats Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Stats.html">Stats</a>
+                    <a href="/Sub-Pages/Stats.html">Stats</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Titans.html"><img src="/assets/images/Icons&Logos/TitansIcon.png" class="topMenu-Icon" alt="Titans Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Titans.html">Titans</a>
+                    <a href="/Sub-Pages/Titans.html">Titans</a>
                 </div>
 
                 <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="topMenu-Icon" alt="Gallery Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Gallery.html"><img src="/assets/images/Icons&Logos/GalleryIcon.png" class="topMenu-Icon" alt="Gallery Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Gallery.html">Gallery</a>
+                    <a href="/Sub-Pages/Gallery.html">Gallery</a>
                 </div>
 
                 <div class="topMenu-Text-Container">
@@ -89,10 +89,10 @@ headerTemplate.innerHTML = `
                 </div>
 
                 <!-- <div class="topMenu-Icon-Container">
-                    <a href="Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon" width="48" height="48"></a>
+                    <a href="/Sub-Pages/Ideas.html"><img src="/assets/images/Icons&Logos/StatsIcon.png" class="topMenu-Icon" alt="Ideas Icon" width="48" height="48"></a>
                 </div>
                 <div class="topMenu-Text-Container">
-                    <a href="Sub-Pages/Ideas.html">Ideas</a>
+                    <a href="/Sub-Pages/Ideas.html">Ideas</a>
                 </div> -->
             </div>
         </nav>
