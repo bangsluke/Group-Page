@@ -119,6 +119,7 @@ var statsObject = {
 	},
 	"Skills, Games and Misc": {
 		"Breakfast Cooking": ["n/a"],
+		"Escape Rooms": ["n/a"],
 		Driving: ["n/a"],
 		Fifa: ["n/a"],
 		"Mario Kart": ["n/a"],
@@ -137,6 +138,7 @@ var statsObject = {
 		Chess: ["n/a"],
 		Cricket: ["n/a"],
 		Darts: ["n/a"],
+		"Dirt Karting": ["n/a"],
 		Golf: ["n/a"],
 		Skiing: ["n/a"],
 		"Table Tennis": ["n/a"],
@@ -196,9 +198,7 @@ function init() {
 
 	// 1st Dropdown - React when the user changes the statsCategoryDropdown.
 	statsCategoryDropdown.onchange = function () {
-		console.log(
-			"> NEW 1. statsCategoryDropdown.onchange called. statsSelectionDropdown populated with values."
-		); // Log the function call to the console.
+		console.log("> NEW 1. statsCategoryDropdown.onchange called. statsSelectionDropdown populated with values."); // Log the function call to the console.
 		statsSelectionDropdown.length = 1; // Empty the stat selection dropdown.
 		for (var y in statsObject[this.value]) {
 			// Display correct values in statsSelectionDropdown.
@@ -217,8 +217,7 @@ function init() {
 		filterHeaderSelectionDropdown.length = 1;
 		// Display correct values in filterHeaderSelectionDropdown.
 		for (var y in statsObject[this.value]) {
-			filterHeaderSelectionDropdown.options[filterHeaderSelectionDropdown.options.length] =
-				new Option(y, y);
+			filterHeaderSelectionDropdown.options[filterHeaderSelectionDropdown.options.length] = new Option(y, y);
 		}
 
 		// Set the focus onto the next dropdown box.
@@ -333,12 +332,7 @@ function getStatSelection(data) {
 	for (let x = 0; x < data.length; x++) {
 		//Console.log("x = " + x + ", data[x].TableName = " + data[x].TableName); // Show the looping process.
 		if (data[x].FullSelectionName == fullSelectionName) {
-			console.log(
-				">> fullSelectionName passed = " +
-					fullSelectionName +
-					", which is TableName = " +
-					data[x].TableName
-			);
+			console.log(">> fullSelectionName passed = " + fullSelectionName + ", which is TableName = " + data[x].TableName);
 			var selectedURL = data[x].URL;
 			var lastUpdatedDate = data[x].LastUpdated;
 			var sourceText = data[x].Source;
@@ -420,9 +414,7 @@ function updateStatsTitle(selectionText) {
 
 // Updates the stats source, last updated text and additional link.
 function updateAdditionalStatsInformation(lastUpdatedDate, sourceText) {
-	console.log(
-		"> Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called."
-	);
+	console.log("> Function: updateAdditionalStatsInformation(lastUpdatedDate, sourceText, additionalLink) called.");
 	var element = document.getElementById("stats-last-updated"); // Get the stats-last-updated element by id.
 	element.innerHTML = "Last Updated: " + lastUpdatedDate; // Update the text inside the element with the last updated date.
 	element = document.getElementById("stats-source"); // Get the stats-source element by id.
