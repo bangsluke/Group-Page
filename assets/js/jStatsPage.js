@@ -110,6 +110,7 @@ var statsObject = {
 		"August 2018": ["n/a"],
 		"August 2019": ["n/a"],
 		"April 2021": ["n/a"],
+		"July 2022": ["n/a"],
 	},
 	Karting: {
 		"Overall Karting": ["n/a"],
