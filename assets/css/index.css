@@ -24,7 +24,8 @@ body {
 	position: fixed;
 	top: 0rem;
 	left: 0rem;
-	width: 100%; /* Width of the black overlay of the background image. */
+	width: 100%;
+	/* Width of the black overlay of the background image. */
 	height: 100%;
 	background: rgba(10, 10, 10, 0.8);
 	text-align: center;
@@ -39,6 +40,10 @@ body {
 	font-size: var(--font-size, 1rem);
 }
 
+#wrongPassword {
+	display: none;
+}
+
 div.horizontal {
 	display: flex;
 	justify-content: center;
@@ -49,12 +54,14 @@ div.vertical {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: var(--pagewidth, 98%); /* Width of the lighter holding div box. */
+	width: var(--pagewidth, 98%);
+	/* Width of the lighter holding div box. */
 }
 
 /* The lighter coloured box with the content in it. */
 .box {
-	border-radius: var(--border-radius, 0.2rem); /* Add a border radius. */
+	border-radius: var(--border-radius, 0.2rem);
+	/* Add a border radius. */
 	background: rgba(101, 101, 101, 0.7);
 	margin: auto;
 	padding: 1rem;
@@ -118,6 +125,7 @@ button {
 	1024 pixels (iPad landscape) */
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+
 	/* Smartphones - Covers most phones such as iPhone SE (my phone). */
 	/* background: blue; */
 	body {
@@ -126,6 +134,7 @@ button {
 }
 
 @media only screen and (min-width: 480px) and (max-width: 768px) {
+
 	/* Landscape mobiles or Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 	/* background: green; */
 	body {
@@ -134,6 +143,7 @@ button {
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
 	/* Covers iPads and other tablets. */
 	/* background: orange; */
 	body {
@@ -142,6 +152,7 @@ button {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1223px) {
+
 	/* Reduced windows on Desktops and Laptops - for when a user reduces the size of their window. */
 	/* background: cyan; */
 	body {
@@ -150,6 +161,7 @@ button {
 }
 
 @media only screen and (min-width: 1224px) {
+
 	/* Desktops and Laptops - For most normal size screen desktops and laptops. */
 	/* background: red; */
 	body {
@@ -158,6 +170,7 @@ button {
 }
 
 @media only screen and (min-width: 1824px) {
+
 	/* Desktops and Laptops - For larger monitors and displays. */
 	/* background: yellow; */
 	body {
