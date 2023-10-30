@@ -43,3 +43,6 @@ assets/components/Footer/Archive/
 
 ## ignore all .pdf files in the doc/ directory and any of its subdirectories
 #doc/**/*.pdf
+
+# Hide the .env file
+.env
